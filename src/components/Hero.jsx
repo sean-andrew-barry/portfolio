@@ -1,4 +1,4 @@
-export default function Hero() {
+export default function Hero({ children }) {
   return (
     <section className="py-16 text-center">
       <h1 className="text-5xl font-bold">Sean Andrew Barry</h1>

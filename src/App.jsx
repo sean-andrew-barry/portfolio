@@ -1,19 +1,34 @@
-import { useState } from 'react'
-import Hero from "./components/Hero";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import MainLayout from './layouts/MainLayout';
+import NoNavLayout from './layouts/NoNavLayout';
+
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import SpecialPage from './pages/SpecialPage';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <div className="bg-gray-50">
-      <Hero />
-      <Skills />
-      <Projects />
-      <About />
-      <Contact />
-    </div>
+    <Router>
+      <Routes>
+        {/* Routes that use the MainLayout */}
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+
+        {/* Routes that use a layout without Navbar */}
+        <Route element={<NoNavLayout />}>
+          <Route path="/special" element={<SpecialPage />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

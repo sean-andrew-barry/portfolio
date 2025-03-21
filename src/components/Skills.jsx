@@ -1,5 +1,5 @@
 export default function Skills() {
-  const skills = ["JavaScript", "React", "Tailwind CSS", "Node.js"];
+  const skills = ["JavaScript", "React", "Tailwind CSS", "Node.js", "C++", "C#", "Lua"];
   return (
     <section className="py-16">
       <h2 className="text-3xl font-semibold mb-6">Skills</h2>
