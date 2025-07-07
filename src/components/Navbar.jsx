@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Menu, X, Home, Briefcase, User, Mail, BookOpen } from "lucide-react";
 
 const navLinks = [
@@ -13,15 +13,18 @@ const navLinks = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const shouldBeScrolled = window.scrollY > 50 || location.pathname !== '/';
+      setScrolled(shouldBeScrolled);
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
