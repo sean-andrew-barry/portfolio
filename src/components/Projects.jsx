@@ -1,84 +1,63 @@
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight, Code, Dumbbell, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Projects() {
   const projects = [
     {
-      title: 'Taggly',
-      description: 'A smart note-taking application with AI-powered tagging system. Built with React, Node.js, and machine learning algorithms to automatically categorize and organize notes.',
-      image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React', 'Node.js', 'AI/ML', 'MongoDB'],
+      title: 'Be Fit Beyond Fifty',
+      description: 'A comprehensive fitness platform designed specifically for users over 50. Built and maintained over 7 years, serving thousands of users with personalized workout plans, health monitoring, and progress tracking.',
+      icon: Dumbbell,
+      tags: ['7 Years Development', 'Production Website', 'Health & Fitness'],
+      link: '/projects/be-fit-beyond-fifty',
+      external: 'https://befitbeyondfifty.com',
       github: '#',
-      live: '#',
+      gradient: 'from-green-500 to-emerald-600',
+      bgColor: 'bg-green-50',
+      featured: true
+    },
+    {
+      title: 'Taggly',
+      description: 'A full-stack JavaScript web development framework that I created as an alternative to React and Vue. Focuses on simplicity, performance, and developer experience with innovative approaches to component architecture.',
+      icon: Code,
+      tags: ['Custom Framework', 'JavaScript', 'Web Development'],
+      link: '/projects/taggly',
+      external: '#',
+      github: '#',
+      gradient: 'from-blue-500 to-indigo-600',
+      bgColor: 'bg-blue-50',
       featured: true
     },
     {
       title: 'Warble',
-      description: 'A minimalist social platform experiment focusing on meaningful connections. Features real-time messaging, content sharing, and privacy-first design principles.',
-      image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React', 'Socket.io', 'Express', 'PostgreSQL'],
+      description: 'A precompiled programming language I\'m building that combines the performance of languages like C++ and Rust with the flexibility and ease of use found in scripting languages.',
+      icon: Zap,
+      tags: ['Programming Language', 'Compiler', 'Systems Programming'],
+      link: '/projects/warble',
+      external: '#',
       github: '#',
-      live: '#',
+      gradient: 'from-purple-500 to-pink-600',
+      bgColor: 'bg-purple-50',
       featured: true
-    },
-    {
-      title: 'Be Fit Beyond Fifty',
-      description: 'Comprehensive fitness tracking application designed specifically for users over 50. Includes workout plans, health monitoring, and progress tracking.',
-      image: 'https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React Native', 'Firebase', 'Health APIs'],
-      github: '#',
-      live: '#',
-      featured: true
-    },
-    {
-      title: 'Portfolio Dashboard',
-      description: 'A modern dashboard for tracking investment portfolios with real-time data visualization and analytics.',
-      image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['Vue.js', 'D3.js', 'Python', 'FastAPI'],
-      github: '#',
-      live: '#',
-      featured: false
-    },
-    {
-      title: 'Task Flow',
-      description: 'Team collaboration tool with advanced project management features and intuitive workflow automation.',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['Next.js', 'Prisma', 'tRPC', 'Tailwind'],
-      github: '#',
-      live: '#',
-      featured: false
-    },
-    {
-      title: 'Weather Insights',
-      description: 'Advanced weather application with predictive analytics and personalized recommendations.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React', 'Weather APIs', 'Chart.js'],
-      github: '#',
-      live: '#',
-      featured: false
     }
   ];
-
-  const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
 
   return (
     <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Featured Projects
+            Major Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-8"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A showcase of my recent work, demonstrating expertise in modern web 
-            technologies and problem-solving through code.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Rather than spreading my efforts across many small projects, I've focused deeply on three 
+            significant endeavors that represent years of dedicated development and innovation.
           </p>
         </div>
 
         {/* Featured Projects */}
-        <div className="space-y-16 mb-20">
-          {featuredProjects.map((project, index) => (
+        <div className="space-y-16">
+          {projects.map((project, index) => (
             <div 
               key={project.title}
               className={`grid lg:grid-cols-2 gap-12 items-center ${
@@ -86,25 +65,40 @@ export default function Projects() {
               }`}
             >
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className={`relative group overflow-hidden rounded-2xl shadow-2xl ${project.bgColor} p-12`}>
+                  <div className="text-center">
+                    <div className={`w-24 h-24 mx-auto mb-6 bg-gradient-to-r ${project.gradient} rounded-2xl flex items-center justify-center`}>
+                      <project.icon className="w-12 h-12 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{project.title}</h3>
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
                   <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {project.external !== '#' && (
+                      <a
+                        href={project.external}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 bg-white/90 rounded-full hover:bg-white transition-colors shadow-lg"
+                      >
+                        <ExternalLink size={20} className="text-gray-800" />
+                      </a>
+                    )}
                     <a
                       href={project.github}
-                      className="p-2 bg-white/90 rounded-full hover:bg-white transition-colors"
+                      className="p-3 bg-white/90 rounded-full hover:bg-white transition-colors shadow-lg"
                     >
                       <Github size={20} className="text-gray-800" />
-                    </a>
-                    <a
-                      href={project.live}
-                      className="p-2 bg-white/90 rounded-full hover:bg-white transition-colors"
-                    >
-                      <ExternalLink size={20} className="text-gray-800" />
                     </a>
                   </div>
                 </div>
@@ -114,104 +108,49 @@ export default function Projects() {
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
                   {project.title}
                 </h3>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                <p className="text-lg text-gray-600 leading-relaxed mb-8">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    to={project.link}
+                    className={`inline-flex items-center gap-2 bg-gradient-to-r ${project.gradient} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+                  >
+                    Learn More
+                    <ArrowRight size={18} />
+                  </Link>
+                  
+                  {project.external !== '#' && (
+                    <a
+                      href={project.external}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-gray-400 hover:bg-gray-50 transition-all duration-300"
                     >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-4">
-                  <a
-                    href={project.live}
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-                  >
-                    View Live
-                    <ExternalLink size={18} />
-                  </a>
-                  <a
-                    href={project.github}
-                    className="inline-flex items-center gap-2 border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-gray-400 hover:bg-gray-50 transition-all duration-300"
-                  >
-                    <Github size={18} />
-                    Code
-                  </a>
+                      Visit Site
+                      <ExternalLink size={18} />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Other Projects Grid */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            Other Notable Projects
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {otherProjects.map((project) => (
-              <div
-                key={project.title}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href={project.github}
-                      className="p-2 bg-white/90 rounded-full hover:bg-white transition-colors"
-                    >
-                      <Github size={16} className="text-gray-800" />
-                    </a>
-                    <a
-                      href={project.live}
-                      className="p-2 bg-white/90 rounded-full hover:bg-white transition-colors"
-                    >
-                      <ExternalLink size={16} className="text-gray-800" />
-                    </a>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                    {project.title}
-                  </h4>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {project.tags.slice(0, 3).map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+        {/* Philosophy Section */}
+        <div className="mt-20 text-center">
+          <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Deep Focus Over Breadth
+            </h3>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              While many developers showcase numerous small projects, I believe in going deep. 
+              Each of these projects represents years of dedicated work, continuous iteration, 
+              and real-world impact. This approach has allowed me to truly master the technologies 
+              and solve complex problems that matter.
+            </p>
           </div>
-        </div>
-
-        {/* View All Projects Link */}
-        <div className="text-center">
-          <Link
-            to="/projects"
-            className="inline-flex items-center gap-2 text-purple-600 font-semibold hover:text-purple-700 transition-colors group"
-          >
-            View All Projects
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
         </div>
       </div>
     </section>

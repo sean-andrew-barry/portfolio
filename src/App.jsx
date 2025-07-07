@@ -9,6 +9,9 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import BeFitBeyondFifty from './pages/projects/BeFitBeyondFifty';
+import Taggly from './pages/projects/Taggly';
+import Warble from './pages/projects/Warble';
 import SpecialPage from './pages/SpecialPage';
 import NotFound from './pages/NotFound';
 
@@ -23,6 +26,9 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/projects/be-fit-beyond-fifty" element={<BeFitBeyondFifty />} />
+          <Route path="/projects/taggly" element={<Taggly />} />
+          <Route path="/projects/warble" element={<Warble />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Route>
