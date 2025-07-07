@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -26,19 +26,13 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'seanandrewbarry@protonmail.com',
-      href: 'mailto:seanandrewbarry@protonmail.com'
-    },
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: 'sean.barry.developer@gmail.com',
+      href: 'mailto:sean.barry.developer@gmail.com'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Cascade, Idaho',
       href: '#'
     }
   ];
@@ -47,20 +41,14 @@ export default function Contact() {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/seanbarry',
+      href: 'https://github.com/sean-andrew-barry',
       color: 'hover:text-gray-900'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/seanbarry',
+      href: 'https://www.linkedin.com/in/sean-andrew-barry',
       color: 'hover:text-blue-600'
-    },
-    {
-      icon: Twitter,
-      label: 'Twitter',
-      href: 'https://twitter.com/seanbarry',
-      color: 'hover:text-blue-400'
     }
   ];
 
