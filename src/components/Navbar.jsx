@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Menu, X, Home, Briefcase, User, Mail, BookOpen } from "lucide-react";
 
 const navLinks = [
@@ -13,27 +13,43 @@ const navLinks = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location.pathname]);
+
+  // Close mobile menu when navigating to a new page
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+
+  const atTopHome = isHome && !scrolled;
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-        : 'bg-transparent'
-    }`}>
+    <nav
+      className={`${
+        isHome ? 'fixed' : 'sticky'
+      } top-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-lg'
+          : isHome
+          ? 'bg-transparent'
+          : 'bg-white/95'
+      }`}
+    >
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <NavLink 
-          to="/" 
+        <NavLink
+          to="/"
           className={`text-2xl font-bold transition-colors ${
-            scrolled ? 'text-gray-900' : 'text-white'
+            scrolled || !isHome ? 'text-gray-900' : 'text-white'
           }`}
         >
           Sean Barry
@@ -48,12 +64,12 @@ export default function Navbar() {
               className={({ isActive }) =>
                 `flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                   isActive
-                    ? scrolled 
-                      ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg" 
-                      : "bg-white/20 text-white backdrop-blur-sm"
-                    : scrolled
-                      ? "text-gray-700 hover:text-purple-600 hover:bg-gray-100"
-                      : "text-white/80 hover:text-white hover:bg-white/10"
+                    ? atTopHome
+                      ? "bg-white/20 text-white backdrop-blur-sm"
+                      : "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg"
+                    : atTopHome
+                      ? "text-white/80 hover:text-white hover:bg-white/10"
+                      : "text-gray-700 hover:text-purple-600 hover:bg-gray-100"
                 }`
               }
             >
@@ -67,8 +83,8 @@ export default function Navbar() {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className={`md:hidden p-2 rounded-lg transition-colors ${
-            scrolled 
-              ? 'text-gray-900 hover:bg-gray-100' 
+            scrolled || !isHome
+              ? 'text-gray-900 hover:bg-gray-100'
               : 'text-white hover:bg-white/10'
           }`}
         >
