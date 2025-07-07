@@ -12,7 +12,7 @@ export default function Hero() {
           <div className="w-32 h-32 mx-auto mb-8 relative">
             <div className="w-full h-full rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
               <img
-                src="/src/assets/images/sean-barry-portrait.jpg"
+                src="/src/assets/images/sean-barry-portrait-transparent-bg.png"
                 alt="Sean Barry"
                 className="w-full h-full rounded-full object-cover"
               />

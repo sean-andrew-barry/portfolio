@@ -124,7 +124,7 @@ export default function About() {
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 p-1">
                 <img
-                  src="/src/assets/images/sean-barry-portrait.jpg"
+                  src="/src/assets/images/sean-barry-portrait-transparent-bg.png"
                   alt="Sean Barry working"
                   className="w-full h-full object-cover rounded-2xl"
                 />
