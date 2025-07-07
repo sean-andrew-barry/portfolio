@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { NavLink } from 'react-router-dom';
-import { Menu, X, Briefcase, User, Mail } from "lucide-react";
+import { Menu, X, Briefcase, User, Mail, BookOpen } from "lucide-react";
 
 const navLinks = [
   { to: "/projects", label: "Projects", icon: Briefcase },
+  { to: "/blog", label: "Blog", icon: BookOpen },
   { to: "/about", label: "About", icon: User },
   { to: "/contact", label: "Contact", icon: Mail },
 ];
