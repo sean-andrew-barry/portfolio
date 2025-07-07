@@ -1,12 +1,67 @@
-# React + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for my personal portfolio site built with [React](https://react.dev/) and [Vite](https://vitejs.dev/). The application showcases projects, a blog, and contact information using a modern React stack.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React + Vite** for fast development and build performance
+- **React Router** for client-side navigation between pages
+- **Tailwind CSS** for utility‑first styling
+- **Reusable components** for sections like the hero, skills list, projects, and contact form
+- **Dynamic blog posts** stored in `src/data/posts.js`
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Install dependencies with npm:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:5173` in your browser to view the site.
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+Run the linter to check code quality:
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```
+public/          Static assets
+src/
+  assets/        Images and media used in the site
+  components/    Reusable React components
+  data/          Example blog post content
+  layouts/       Layout wrappers for pages
+  pages/         Route components (Home, About, Projects, Blog, Contact)
+  index.css      Tailwind CSS entry point
+  App.jsx        Application routes
+```
+
+## Tailwind Configuration
+
+Tailwind CSS is configured via `tailwind.config.js` and processed with PostCSS (see `postcss.config.js`). Adjust these files to customize your design system.
+
+---
+
+Feel free to use this project as a starting point for your own portfolio or React experiments.
