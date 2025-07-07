@@ -56,7 +56,7 @@ export default function Navbar() {
               to={to}
               onClick={() => setMenuOpen(false)} // close menu on click
               className={({ isActive }) =>
-                `block flex items-center gap-2 py-2 px-3 rounded transition-colors ${
+                `flex items-center gap-2 py-2 px-3 rounded transition-colors ${
                   isActive
                     ? "bg-blue-100 text-blue-600 font-semibold"
                     : "text-gray-700 hover:bg-gray-100"

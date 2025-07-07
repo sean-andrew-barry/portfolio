@@ -10,4 +10,12 @@ export default defineConfig({
     svgr(),
     tailwindcss(),
   ],
+  test: {
+    environment: 'jsdom',   // browser-like DOM
+    globals: true,          // use `describe/it/expect` without imports
+    setupFiles: './src/setupTests.js',
+    coverage: {
+      reporter: ['text', 'html']
+    }
+  }
 })
