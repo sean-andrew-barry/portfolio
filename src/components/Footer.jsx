@@ -1,4 +1,3 @@
-import { Github, Linkedin } from "lucide-react";
 import GithubIcon from '../assets/icons/github.svg?react';
 import LinkedinIcon from '../assets/icons/linkedin.svg?react';
 

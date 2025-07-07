@@ -1,5 +1,4 @@
 import Wave1 from "../assets/icons/wave1.svg?react";
-import Wave2 from "../assets/icons/wave2.svg?react";
 
 function Section({ title, text, children, odd = false }) {
   return (
