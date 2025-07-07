@@ -1,25 +1,20 @@
-import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 export default function Footer() {
   const socialLinks = [
     {
       icon: Github,
-      href: 'https://github.com/seanbarry',
+      href: 'https://github.com/sean-andrew-barry',
       label: 'GitHub'
     },
     {
       icon: Linkedin,
-      href: 'https://www.linkedin.com/in/seanbarry',
+      href: 'https://www.linkedin.com/in/sean-andrew-barry',
       label: 'LinkedIn'
     },
     {
-      icon: Twitter,
-      href: 'https://twitter.com/seanbarry',
-      label: 'Twitter'
-    },
-    {
       icon: Mail,
-      href: 'mailto:seanandrewbarry@protonmail.com',
+      href: 'mailto:sean.barry.developer@gmail.com',
       label: 'Email'
     }
   ];
@@ -80,12 +75,12 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
             <div className="space-y-2 text-gray-400">
-              <p>San Francisco, CA</p>
+              <p>Cascade, Idaho</p>
               <a
-                href="mailto:seanandrewbarry@protonmail.com"
+                href="mailto:sean.barry.developer@gmail.com"
                 className="hover:text-white transition-colors duration-300"
               >
-                seanandrewbarry@protonmail.com
+                sean.barry.developer@gmail.com
               </a>
               <p>Available for freelance work</p>
             </div>
