@@ -1,4 +1,4 @@
-import { Code, Palette, Zap, Users, Award, Coffee } from 'lucide-react';
+import { Code, Palette, Zap, Users, Coffee } from 'lucide-react';
 
 export default function About() {
   const stats = [
