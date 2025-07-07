@@ -121,7 +121,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pb-40 basis-94 dark:bg-gray-700">
+      <section className="pb-40 basis-96 dark:bg-gray-700">
         {/* <div className="text-left relative pointer-events-none z-0">
           <Wave2 className="absolute bottom-0 w-full h-auto text-gray-700" />
         </div> */}
