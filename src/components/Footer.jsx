@@ -1,31 +1,105 @@
-import GithubIcon from '../assets/icons/github.svg?react';
-import LinkedinIcon from '../assets/icons/linkedin.svg?react';
+import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
 
 export default function Footer() {
+  const socialLinks = [
+    {
+      icon: Github,
+      href: 'https://github.com/seanbarry',
+      label: 'GitHub'
+    },
+    {
+      icon: Linkedin,
+      href: 'https://www.linkedin.com/in/seanbarry',
+      label: 'LinkedIn'
+    },
+    {
+      icon: Twitter,
+      href: 'https://twitter.com/seanbarry',
+      label: 'Twitter'
+    },
+    {
+      icon: Mail,
+      href: 'mailto:seanandrewbarry@protonmail.com',
+      label: 'Email'
+    }
+  ];
+
+  const quickLinks = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Contact', href: '/contact' }
+  ];
+
   return (
-    <footer className="bg-white border-t mt-12">
-      <div className="max-w-4xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
-        <p>&copy; {new Date().getFullYear()} Sean Andrew Barry</p>
-        <div className="flex gap-4 mt-3 md:mt-0">
-          <a
-            href="https://github.com/seanbarry" // <- change to your real username
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-800 transition-colors"
-          >
-            {/* <Github size={20} /> */}
-            <GithubIcon className="w-5 h-5 text-gray-700" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/seanbarry" // <- change to your real LinkedIn
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-800 transition-colors"
-          >
-            {/* <Linkedin size={20} /> */}
-            {/* <LinkedinIcon className="w-5 h-5" /> */}
-            <LinkedinIcon className="w-5 h-5 text-gray-700" />
-          </a>
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        <div className="grid md:grid-cols-4 gap-8">
+          {/* Brand Section */}
+          <div className="md:col-span-2">
+            <h3 className="text-2xl font-bold mb-4">Sean Andrew Barry</h3>
+            <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
+              Full-stack developer passionate about creating exceptional digital 
+              experiences. Always learning, always building, always improving.
+            </p>
+            <div className="flex gap-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-110"
+                  aria-label={social.label}
+                >
+                  <social.icon size={18} />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
+            <div className="space-y-2 text-gray-400">
+              <p>San Francisco, CA</p>
+              <a
+                href="mailto:seanandrewbarry@protonmail.com"
+                className="hover:text-white transition-colors duration-300"
+              >
+                seanandrewbarry@protonmail.com
+              </a>
+              <p>Available for freelance work</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm">
+            &copy; {new Date().getFullYear()} Sean Andrew Barry. All rights reserved.
+          </p>
+          <p className="text-gray-400 text-sm flex items-center gap-1 mt-4 md:mt-0">
+            Made with <Heart size={16} className="text-red-500" /> and lots of coffee
+          </p>
         </div>
       </div>
     </footer>
