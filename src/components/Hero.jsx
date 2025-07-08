@@ -23,17 +23,15 @@ export default function Hero() {
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-          Sean Andrew Barry
+          Sean Barry
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">
-          Full-Stack Developer & Digital Craftsman
+          Experienced Full-Stack Developer & Independent Software Engineer
         </p>
         
         <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-          I build exceptional digital experiences with modern technologies. 
-          Specializing in React, Node.js, and creating scalable web applications 
-          that solve real-world problems.
+          I build high-performance web applications and innovative development tools, prioritizing efficiency, simplicity, and thoughtful design. I specialize in JavaScript and Node.js, with deep experience in custom frameworks, system architecture, and solving complex technical challenges.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

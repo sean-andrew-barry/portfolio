@@ -1,6 +1,9 @@
 import { ExternalLink, Github, Code, Zap, Layers, Puzzle, Cpu, Gauge } from 'lucide-react';
+import { projects } from '../../data/projects';
 
 export default function Taggly() {
+  const project = projects.find(p => p.title == "Taggly");
+
   const features = [
     {
       icon: Zap,
@@ -71,9 +74,7 @@ export default function Taggly() {
                 Taggly
               </h1>
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                A full-stack JavaScript web development framework I created as an alternative to React and Vue. 
-                Taggly focuses on simplicity, performance, and developer experience while solving common 
-                pain points I encountered in existing frameworks.
+                {project.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a

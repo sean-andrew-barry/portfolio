@@ -4,7 +4,9 @@ export const projects = [
   {
     title: 'Be Fit Beyond Fifty',
     description: 'A comprehensive fitness platform I\'ve built and maintained for over 7 years, specifically designed for users over 50. This has been my primary focus, serving thousands of users with personalized workout plans, health monitoring, and progress tracking.',
-    image: 'https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/src/assets/images/be-fit-beyond-fifty-sunflower-logo.png',
+    // image: 'https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=800',
+    imageAlt: "Be Fit Beyond Fifty sunflower logo",
     icon: Dumbbell,
     tags: ['7 Years Development', 'Production Website', 'Health & Fitness', 'PHP', 'MySQL'],
     link: '/projects/be-fit-beyond-fifty',
@@ -31,7 +33,7 @@ export const projects = [
   },
   {
     title: 'Warble',
-    description: 'A precompiled programming language I\'m building that combines the performance of languages like C++ and Rust with the flexibility and ease of use found in scripting languages. An ambitious project exploring the future of programming language design.',
+    description: `Warble is a modern programming language designed for simplicity, elegance, and performance. Drawing inspiration from C++, Rust, and JavaScript, Warble combines clear semantics, strong static typing, and intuitive syntax to produce concise, readable, and maintainable code. It offers expressive pattern matching, efficient polymorphism, intuitive concurrency, and lightning fast compilation, making Warble ideal for any application.`,
     image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800',
     icon: Zap,
     tags: ['Programming Language', 'Compiler', 'Systems Programming', 'LLVM'],

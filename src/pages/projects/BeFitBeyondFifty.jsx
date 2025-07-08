@@ -1,6 +1,9 @@
 import { ExternalLink, Github, Calendar, Users, TrendingUp, Shield, Smartphone, Globe } from 'lucide-react';
+import { projects } from '../../data/projects';
 
 export default function BeFitBeyondFifty() {
+  const project = projects.find(p => p.title == "Be Fit Beyond Fifty");
+
   const features = [
     {
       icon: Users,
@@ -21,14 +24,14 @@ export default function BeFitBeyondFifty() {
       icon: Smartphone,
       title: 'Mobile Optimized',
       description: 'Responsive design ensuring great experience across all devices'
-    }
+    },
   ];
 
   const stats = [
     { number: '7+', label: 'Years in Production' },
     { number: '1000+', label: 'Active Users' },
     { number: '50+', label: 'Exercise Programs' },
-    { number: '99.9%', label: 'Uptime' }
+    { number: '99.9%', label: 'Uptime' },
   ];
 
   const techStack = [
@@ -39,7 +42,7 @@ export default function BeFitBeyondFifty() {
     'Responsive Design',
     'Progressive Web App',
     'Payment Integration',
-    'Content Management'
+    'Content Management',
   ];
 
   return (
@@ -53,9 +56,7 @@ export default function BeFitBeyondFifty() {
                 Be Fit Beyond Fifty
               </h1>
               <p className="text-xl text-green-100 mb-8 leading-relaxed">
-                A comprehensive fitness platform I've built and maintained for over 7 years, 
-                specifically designed for users over 50. This has been my primary focus and 
-                represents thousands of hours of development, iteration, and real-world testing.
+                {project.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -78,7 +79,11 @@ export default function BeFitBeyondFifty() {
             </div>
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-white/10 backdrop-blur-sm p-8 flex items-center justify-center">
-                <Globe className="w-32 h-32 text-white/80" />
+                <img
+                  src={project.image}
+                  alt={project.imageAlt}
+                  className="w-full h-full rounded-full object-cover"
+                />
               </div>
             </div>
           </div>

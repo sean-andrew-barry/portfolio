@@ -37,19 +37,13 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              I'm a passionate full-stack developer with over 5 years of experience 
-              building web applications that make a difference. My journey started with 
-              curiosity about how things work on the web, and it's evolved into a career 
-              focused on creating exceptional digital experiences.
+              I'm a self-taught full-stack developer with over a decade of experience crafting high-performance web applications and custom software solutions. My journey began by making Lua addons in World of Warcraft and quickly grew into creating my own frameworks and tools, including Taggly and the Warble language.
             </p>
-            
+
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              When I'm not coding, you'll find me exploring new technologies, 
-              contributing to open-source projects, or sharing knowledge with the 
-              developer community. I believe in continuous learning and staying 
-              ahead of the curve in this ever-evolving field.
+              When I'm not immersed in personal coding projects, you'll find me spending time with my budgies, gaming, or exploring ideas about neuroscience. My passion for learning and curiosity about the world continuously drive me to understand things at a deeper level.
             </p>
-            
+
             <div className="flex flex-wrap gap-3">
               {['JavaScript', 'React', 'Node.js', 'TypeScript', 'Python', 'AWS'].map((tech) => (
                 <span 

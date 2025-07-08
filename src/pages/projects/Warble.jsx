@@ -1,6 +1,9 @@
 import { Github, Zap, Cpu, Code2, Layers, Terminal, Rocket } from 'lucide-react';
+import { projects } from '../../data/projects';
 
 export default function Warble() {
+  const project = projects.find(p => p.title == "Warble");
+
   const features = [
     {
       icon: Zap,
@@ -85,9 +88,7 @@ export default function Warble() {
                 Warble
               </h1>
               <p className="text-xl text-purple-100 mb-8 leading-relaxed">
-                A precompiled programming language I'm building that combines the performance of 
-                C++ and Rust with the flexibility and ease of use found in scripting languages. 
-                Warble aims to eliminate the traditional trade-off between performance and productivity.
+                {project.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
