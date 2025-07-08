@@ -20,7 +20,7 @@ export const projects = [
   {
     title: 'Taggly',
     description: 'A full-stack JavaScript web development framework I created as an alternative to React and Vue. Focuses on simplicity, performance, and developer experience with innovative approaches to component architecture and state management.',
-    image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
+    // image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
     icon: Code,
     tags: ['Custom Framework', 'JavaScript', 'Web Development', 'Performance'],
     link: '/projects/taggly',
@@ -34,7 +34,7 @@ export const projects = [
   {
     title: 'Warble',
     description: `Warble is a modern programming language designed for simplicity, elegance, and performance. Drawing inspiration from C++, Rust, and JavaScript, Warble combines clear semantics, strong static typing, and intuitive syntax to produce concise, readable, and maintainable code. It offers expressive pattern matching, efficient polymorphism, intuitive concurrency, and lightning fast compilation, making Warble ideal for any application.`,
-    image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800',
+    // image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800',
     icon: Zap,
     tags: ['Programming Language', 'Compiler', 'Systems Programming', 'LLVM'],
     link: '/projects/warble',

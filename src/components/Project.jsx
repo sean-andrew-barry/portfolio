@@ -12,12 +12,11 @@ export default function Project({ project, index }) {
         <div className={`relative group overflow-hidden rounded-2xl shadow-2xl ${project.bgColor} p-12`}>
           <div className="text-center">
             <div className={`w-24 h-24 mx-auto mb-6 bg-gradient-to-r ${project.gradient} rounded-2xl flex items-center justify-center`}>
-              {/* <project.icon className="w-12 h-12 text-white" /> */}
-              <img
+              {project.image ? <img
                 src={project.image}
                 alt={project.imageAlt}
                 className="w-full h-full rounded-2xl object-cover"
-              />
+              /> : <project.icon className="w-12 h-12 text-white" />}
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">{project.title}</h3>
             <div className="flex flex-wrap gap-2 justify-center">
