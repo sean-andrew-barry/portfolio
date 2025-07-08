@@ -21,9 +21,9 @@ export const developerValues = [
     title: 'Innovation',
     description: 'I enjoy pushing boundaries and creating unique solutions rather than relying solely on established conventions. Inventing new techniques is a core part of my development style.'
   },
-  {
-    icon: BugOff,
-    title: 'Robustness & Reliability',
-    description: 'I believe quality assurance is fundamental. Rigorous testing and careful design help me create resilient software that users and businesses can rely on.'
-  }
+  // {
+  //   icon: BugOff,
+  //   title: 'Robustness & Reliability',
+  //   description: 'I believe quality assurance is fundamental. Rigorous testing and careful design help me create resilient software that users and businesses can rely on.'
+  // }
 ];
