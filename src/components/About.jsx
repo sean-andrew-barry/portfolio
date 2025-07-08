@@ -1,29 +1,6 @@
-import { Code, Palette, Zap, Users } from 'lucide-react';
+import { developerValues } from '../data/developerValues';
 
 export default function About() {
-  const highlights = [
-    {
-      icon: Code,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable code that stands the test of time"
-    },
-    {
-      icon: Palette,
-      title: "Design-Focused",
-      description: "Creating beautiful interfaces with attention to user experience"
-    },
-    {
-      icon: Zap,
-      title: "Performance",
-      description: "Optimizing applications for speed and efficiency"
-    },
-    {
-      icon: Users,
-      title: "Collaboration",
-      description: "Working effectively with teams to deliver exceptional results"
-    }
-  ];
-
   return (
     <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4">
@@ -57,7 +34,7 @@ export default function About() {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {highlights.map((item, index) => (
+            {developerValues.map((item, index) => (
               <div 
                 key={index}
                 className="p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors group"

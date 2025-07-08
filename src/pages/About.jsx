@@ -1,4 +1,7 @@
-import { Code, Palette, Zap, Users, Coffee } from 'lucide-react';
+import { Coffee } from 'lucide-react';
+
+import { journey } from '../data/journey';
+import { developerValues } from '../data/developerValues';
 
 export default function About() {
   const stats = [
@@ -6,62 +9,6 @@ export default function About() {
     { number: '50+', label: 'Projects Completed' },
     { number: '20+', label: 'Happy Clients' },
     { number: '∞', label: 'Cups of Coffee' }
-  ];
-
-  const values = [
-    {
-      icon: Code,
-      title: 'Clean Code',
-      description: 'I believe in writing code that is not only functional but also maintainable, readable, and scalable. Every line of code should serve a purpose and be crafted with care.'
-    },
-    {
-      icon: Palette,
-      title: 'Design Thinking',
-      description: 'Great functionality deserves great design. I approach every project with a design-first mindset, ensuring that user experience is at the forefront of development.'
-    },
-    {
-      icon: Zap,
-      title: 'Performance',
-      description: 'Speed matters. I optimize every aspect of my applications to ensure they load fast, run smooth, and provide an exceptional user experience across all devices.'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'The best projects come from great teamwork. I thrive in collaborative environments and believe that diverse perspectives lead to better solutions.'
-    }
-  ];
-
-  const journey = [
-    {
-      year: 2011,
-      title: 'Started My Journey',
-      description: 'Began learning web development through online courses and building personal projects.'
-    },
-    {
-      year: 2020,
-      title: 'First Professional Role',
-      description: 'Joined a startup as a junior developer, working on React applications and learning from senior developers.'
-    },
-    {
-      year: 2021,
-      title: 'Full-Stack Development',
-      description: 'Expanded skills to backend development with Node.js and database management.'
-    },
-    {
-      year: 2022,
-      title: 'Freelance Success',
-      description: 'Started freelancing and successfully delivered projects for clients across various industries.'
-    },
-    {
-      year: 2023,
-      title: 'Technical Leadership',
-      description: 'Led development teams and mentored junior developers while continuing to build innovative solutions.'
-    },
-    {
-      year: 2024,
-      title: 'Continuous Growth',
-      description: 'Focusing on emerging technologies and building products that make a real impact.'
-    }
   ];
 
   return (
@@ -122,7 +69,7 @@ export default function About() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-purple-300 to-pink-300 p-1">
+              <div className="aspect-square rounded-2xl bg-gradient-to-br from-slate-700 to-slate-900 p-1">
                 <img
                   src="/src/assets/images/sean-barry-portrait-transparent-bg-1x1.png"
                   alt="Sean Barry portrait"
@@ -149,7 +96,7 @@ export default function About() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
+            {developerValues.map((value, index) => (
               <div key={index} className="p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors group">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <value.icon className="w-8 h-8 text-white" />
