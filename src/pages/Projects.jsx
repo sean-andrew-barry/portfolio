@@ -196,9 +196,6 @@ export default function Projects() {
       {/* Philosophy Section */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Deep Focus Over Breadth
-          </h2>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="p-6">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -227,15 +224,6 @@ export default function Projects() {
                 Building custom frameworks and languages demonstrates ability to innovate beyond existing tools.
               </p>
             </div>
-          </div>
-          
-          <div className="mt-12 bg-white rounded-2xl p-8 shadow-lg">
-            <p className="text-lg text-gray-600 leading-relaxed">
-              While many developers showcase numerous small projects, I believe in going deep. 
-              This approach has allowed me to truly understand complex systems, build production-ready 
-              software, and create innovative solutions that push the boundaries of what's possible. 
-              Each project represents not just technical skills, but years of dedication and real-world experience.
-            </p>
           </div>
         </div>
       </section>

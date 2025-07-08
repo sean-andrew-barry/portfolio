@@ -49,10 +49,6 @@ export default function Projects() {
             Major Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-8"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Rather than spreading my efforts across many small projects, I've focused deeply on three 
-            significant endeavors that represent years of dedicated development and innovation.
-          </p>
         </div>
 
         {/* Featured Projects */}
@@ -136,21 +132,6 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Philosophy Section */}
-        <div className="mt-20 text-center">
-          <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Deep Focus Over Breadth
-            </h3>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              While many developers showcase numerous small projects, I believe in going deep. 
-              Each of these projects represents years of dedicated work, continuous iteration, 
-              and real-world impact. This approach has allowed me to truly master the technologies 
-              and solve complex problems that matter.
-            </p>
-          </div>
         </div>
       </div>
     </section>
