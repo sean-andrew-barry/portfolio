@@ -1,46 +1,8 @@
-import { ExternalLink, Github, ArrowRight, Code, Dumbbell, Zap } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { projects } from '../data/projects';
 
 export default function Projects() {
-  const projects = [
-    {
-      title: 'Be Fit Beyond Fifty',
-      description: 'A comprehensive fitness platform designed specifically for users over 50. Built and maintained over 7 years, serving thousands of users with personalized workout plans, health monitoring, and progress tracking.',
-      icon: Dumbbell,
-      tags: ['7 Years Development', 'Production Website', 'Health & Fitness'],
-      link: '/projects/be-fit-beyond-fifty',
-      external: 'https://befitbeyondfifty.com',
-      github: '#',
-      gradient: 'from-green-500 to-emerald-600',
-      bgColor: 'bg-green-50',
-      featured: true
-    },
-    {
-      title: 'Taggly',
-      description: 'A full-stack JavaScript web development framework that I created as an alternative to React and Vue. Focuses on simplicity, performance, and developer experience with innovative approaches to component architecture.',
-      icon: Code,
-      tags: ['Custom Framework', 'JavaScript', 'Web Development'],
-      link: '/projects/taggly',
-      external: '#',
-      github: '#',
-      gradient: 'from-blue-500 to-indigo-600',
-      bgColor: 'bg-blue-50',
-      featured: true
-    },
-    {
-      title: 'Warble',
-      description: 'A precompiled programming language I\'m building that combines the performance of languages like C++ and Rust with the flexibility and ease of use found in scripting languages.',
-      icon: Zap,
-      tags: ['Programming Language', 'Compiler', 'Systems Programming'],
-      link: '/projects/warble',
-      external: '#',
-      github: '#',
-      gradient: 'from-purple-500 to-pink-600',
-      bgColor: 'bg-purple-50',
-      featured: true
-    }
-  ];
-
   return (
     <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4">

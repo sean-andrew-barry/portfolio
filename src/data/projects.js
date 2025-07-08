@@ -1,0 +1,46 @@
+import { Code, Dumbbell, Zap } from 'lucide-react';
+
+export const projects = [
+  {
+    title: 'Be Fit Beyond Fifty',
+    description: 'A comprehensive fitness platform I\'ve built and maintained for over 7 years, specifically designed for users over 50. This has been my primary focus, serving thousands of users with personalized workout plans, health monitoring, and progress tracking.',
+    image: 'https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=800',
+    icon: Dumbbell,
+    tags: ['7 Years Development', 'Production Website', 'Health & Fitness', 'PHP', 'MySQL'],
+    link: '/projects/be-fit-beyond-fifty',
+    external: 'https://befitbeyondfifty.com',
+    github: '#',
+    gradient: 'from-green-500 to-emerald-600',
+    bgColor: 'bg-green-50',
+    years: '2017-Present',
+    featured: true,
+  },
+  {
+    title: 'Taggly',
+    description: 'A full-stack JavaScript web development framework I created as an alternative to React and Vue. Focuses on simplicity, performance, and developer experience with innovative approaches to component architecture and state management.',
+    image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
+    icon: Code,
+    tags: ['Custom Framework', 'JavaScript', 'Web Development', 'Performance'],
+    link: '/projects/taggly',
+    external: '#',
+    github: '#',
+    gradient: 'from-blue-500 to-indigo-600',
+    bgColor: 'bg-blue-50',
+    years: '2022-Present',
+    featured: true,
+  },
+  {
+    title: 'Warble',
+    description: 'A precompiled programming language I\'m building that combines the performance of languages like C++ and Rust with the flexibility and ease of use found in scripting languages. An ambitious project exploring the future of programming language design.',
+    image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800',
+    icon: Zap,
+    tags: ['Programming Language', 'Compiler', 'Systems Programming', 'LLVM'],
+    link: '/projects/warble',
+    external: '#',
+    github: '#',
+    gradient: 'from-purple-500 to-pink-600',
+    bgColor: 'bg-purple-50',
+    years: '2023-Present',
+    featured: true,
+  }
+];
