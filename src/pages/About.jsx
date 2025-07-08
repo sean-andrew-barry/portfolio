@@ -33,32 +33,32 @@ export default function About() {
 
   const journey = [
     {
-      year: '2019',
+      year: 2011,
       title: 'Started My Journey',
       description: 'Began learning web development through online courses and building personal projects.'
     },
     {
-      year: '2020',
+      year: 2020,
       title: 'First Professional Role',
       description: 'Joined a startup as a junior developer, working on React applications and learning from senior developers.'
     },
     {
-      year: '2021',
+      year: 2021,
       title: 'Full-Stack Development',
       description: 'Expanded skills to backend development with Node.js and database management.'
     },
     {
-      year: '2022',
+      year: 2022,
       title: 'Freelance Success',
       description: 'Started freelancing and successfully delivered projects for clients across various industries.'
     },
     {
-      year: '2023',
+      year: 2023,
       title: 'Technical Leadership',
       description: 'Led development teams and mentored junior developers while continuing to build innovative solutions.'
     },
     {
-      year: '2024',
+      year: 2024,
       title: 'Continuous Growth',
       description: 'Focusing on emerging technologies and building products that make a real impact.'
     }
@@ -122,10 +122,10 @@ export default function About() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 p-1">
+              <div className="aspect-square rounded-2xl bg-gradient-to-br from-purple-300 to-pink-300 p-1">
                 <img
-                  src="/src/assets/images/sean-barry-portrait-transparent-bg.png"
-                  alt="Sean Barry working"
+                  src="/src/assets/images/sean-barry-portrait-transparent-bg-1x1.png"
+                  alt="Sean Barry portrait"
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </div>
@@ -177,7 +177,7 @@ export default function About() {
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-600 to-pink-600"></div>
             
             <div className="space-y-12">
-              {journey.map((item, index) => (
+              {journey.sort((a, b) => a.year - b.year).map((item, index) => (
                 <div key={index} className="relative flex items-start gap-8">
                   {/* Timeline dot */}
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
