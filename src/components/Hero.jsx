@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Download } from 'lucide-react';
+import { identity } from '../data/identity';
 
 export default function Hero() {
   const resumeID = "1cTJwaL0CsbM_A018sYk4Kg9mBOwbsbD_MDJiT3T0IGo";
@@ -15,7 +16,7 @@ export default function Hero() {
             <div className="w-full h-full rounded-full bg-gradient-to-r from-slate-700 to-slate-900 p-1 shadow-2xl">
               <img
                 src="/src/assets/images/sean-barry-portrait-transparent-bg-1x1.png"
-                alt="Sean Barry"
+                alt="Sean Barry portrait"
                 className="w-full h-full rounded-full object-cover"
               />
             </div>
@@ -23,7 +24,7 @@ export default function Hero() {
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-          Sean Barry
+          {identity.name}
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">

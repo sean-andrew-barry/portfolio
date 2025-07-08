@@ -17,7 +17,7 @@ export default function Projects() {
         {/* Featured Projects */}
         <div className="space-y-16">
           {projects.map((project, index) => (
-            <Project project={project} index={index} />
+            <Project key={project.title} project={project} index={index} />
           ))}
         </div>
       </div>

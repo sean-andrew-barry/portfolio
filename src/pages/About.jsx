@@ -5,10 +5,10 @@ import { developerValues } from '../data/developerValues';
 
 export default function About() {
   const stats = [
-    { number: '5+', label: 'Years Experience' },
-    { number: '50+', label: 'Projects Completed' },
-    { number: '20+', label: 'Happy Clients' },
-    { number: '∞', label: 'Cups of Coffee' }
+    { number: '10+', label: 'Years of Experience' },
+    { number: '17k+', label: 'Hours Coding' },
+    { number: '1m+', label: 'Lines of Code Written' },
+    { number: '∞', label: 'Bugs Squashed' }
   ];
 
   return (
@@ -20,9 +20,7 @@ export default function About() {
             About Me
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate full-stack developer who loves turning complex problems 
-            into simple, beautiful, and intuitive solutions. When I'm not coding, 
-            you'll find me exploring new technologies or sharing knowledge with the community.
+            I'm a self-taught full-stack developer who enjoys crafting clear, efficient, and carefully thought-out solutions to complex technical problems. When I'm not working, you'll usually find me gaming, taking care of my budgies, or diving deep into topics like compiler optimization and neuroscience.
           </p>
         </div>
       </section>
@@ -51,20 +49,15 @@ export default function About() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">My Story</h2>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  My journey into web development started with curiosity. I was fascinated 
-                  by how websites worked and wanted to understand the magic behind the screen. 
-                  What began as a hobby quickly became a passion, and eventually, a career.
+                  My journey into software development began with writing Lua addons for World of Warcraft during the long wait between expansions. Within days, I was completely hooked. Programming quickly became an obsession, and soon my entire life revolved around exploring new ideas, optimizing performance, and pushing my technical limits.
                 </p>
+
                 <p>
-                  Over the years, I've had the privilege of working with amazing teams, 
-                  learning from brilliant minds, and contributing to projects that have 
-                  made a real impact. Each project has taught me something new and pushed 
-                  me to grow as both a developer and a problem solver.
+                  Eventually, my passion for performance optimization led me deep into C++, where I spent years designing and building a game engine from scratch. While that project never reached completion, the lessons I learned shaped me into the developer I am today.
                 </p>
+
                 <p>
-                  Today, I'm focused on building applications that not only solve problems 
-                  but also provide delightful user experiences. I believe that technology 
-                  should be accessible, intuitive, and empowering for everyone.
+                  About seven years ago, I transitioned into web development when I began building the tech behind Be Fit Beyond Fifty, my mom's coaching business. This experience inspired me to create Taggly, my own full-stack JavaScript framework. Working solo has taught me independence, flexibility, and ownership—but also the importance of collaboration, which I look forward to exploring in future roles.
                 </p>
               </div>
             </div>
@@ -76,9 +69,9 @@ export default function About() {
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-xl">
+              {/* <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-xl">
                 <Coffee className="w-12 h-12 text-purple-600" />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -90,11 +83,11 @@ export default function About() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">What Drives Me</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              These core values guide every project I work on and every decision I make 
+              These core values guide every project I work on and every decision I make
               as a developer and collaborator.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {developerValues.map((value, index) => (
               <div key={index} className="p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors group">
@@ -118,11 +111,11 @@ export default function About() {
               A timeline of key milestones in my development career
             </p>
           </div>
-          
+
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-600 to-pink-600"></div>
-            
+
             <div className="space-y-12">
               {journey.sort((a, b) => a.year - b.year).map((item, index) => (
                 <div key={index} className="relative flex items-start gap-8">
@@ -130,7 +123,7 @@ export default function About() {
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
                     {item.year}
                   </div>
-                  
+
                   {/* Content */}
                   <div className="flex-1 bg-white p-6 rounded-xl shadow-md">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
@@ -148,7 +141,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Let's Build Something Amazing</h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            I'm always excited to work on new projects and collaborate with 
+            I'm always excited to work on new projects and collaborate with
             passionate people. Let's turn your ideas into reality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -165,6 +158,22 @@ export default function About() {
               View My Work
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Budgies Section */}
+      <section className="py-12 bg-gradient-to-br from-slate-700 to-slate-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <figure>
+            <img
+              src="/src/assets/images/budgies-eating-millet.jpg"
+              alt="My three budgies eating millet"
+              className="w-full h-full object-cover rounded-2xl"
+            />
+            <figcaption className="mt-4 text-sm italic text-slate-300">
+              My dedicated development team providing moral support.
+            </figcaption>
+          </figure>
         </div>
       </section>
     </div>

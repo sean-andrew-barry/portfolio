@@ -1,5 +1,6 @@
 import { Mail, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import { useState } from 'react';
+import { identity } from '../data/identity';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -26,13 +27,13 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'sean.barry.developer@gmail.com',
-      href: 'mailto:sean.barry.developer@gmail.com'
+      value: identity.email,
+      href: `mailto:${identity.email}`
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Cascade, Idaho',
+      value: identity.location,
       href: '#'
     }
   ];
@@ -40,16 +41,16 @@ export default function Contact() {
   const socialLinks = [
     {
       icon: Github,
+      href: identity.github,
       label: 'GitHub',
-      href: 'https://github.com/sean-andrew-barry',
-      color: 'hover:text-gray-900'
+      color: 'hover:text-gray-900',
     },
     {
       icon: Linkedin,
+      href: identity.linkedin,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/sean-andrew-barry',
-      color: 'hover:text-blue-600'
-    }
+      color: 'hover:text-blue-600',
+    },
   ];
 
   return (
@@ -188,7 +189,7 @@ export default function Contact() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center text-gray-600 ${social.color} transition-all duration-300 hover:shadow-lg hover:scale-110`}
+                    className={`w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center text-gray-600 ${social.color ? social.color : ""} transition-all duration-300 hover:shadow-lg hover:scale-110`}
                   >
                     <social.icon size={20} />
                   </a>
@@ -198,10 +199,9 @@ export default function Contact() {
 
             {/* Availability */}
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-6 text-white">
-              <h4 className="text-lg font-semibold mb-2">Currently Available</h4>
+              <h4 className="text-lg font-semibold mb-2">{identity.availability ? "Currently Available" : "Currently Unavailable"}</h4>
               <p className="text-purple-100">
-                I'm open to new freelance projects and full-time opportunities. 
-                Let's discuss how we can work together!
+                {identity.availability ? "I'm currently seeking full-time opportunities, but I'm also open to considering contract or freelance projects. Let's connect!" : "I'm not actively seeking new opportunities right now, but feel free to reach out and stay connected."}
               </p>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink, useLocation } from 'react-router-dom';
 import { Menu, X, Home, Briefcase, User, Mail, BookOpen } from "lucide-react";
+import { identity } from '../data/identity';
 
 const navLinks = [
   { to: "/", label: "Home", icon: Home },
@@ -61,7 +62,7 @@ export default function Navbar() {
             scrolled || !isHome ? 'text-gray-900' : 'text-white'
           }`}
         >
-          Sean Barry
+          {identity.name}
         </NavLink>
 
         {/* Desktop Nav */}

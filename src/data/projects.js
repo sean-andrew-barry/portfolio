@@ -5,7 +5,6 @@ export const projects = [
     title: 'Be Fit Beyond Fifty',
     description: 'A comprehensive fitness platform I\'ve built and maintained for over 7 years, specifically designed for users over 50. This has been my primary focus, serving thousands of users with personalized workout plans, health monitoring, and progress tracking.',
     image: '/src/assets/images/be-fit-beyond-fifty-sunflower-logo.png',
-    // image: 'https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=800',
     imageAlt: "Be Fit Beyond Fifty sunflower logo",
     icon: Dumbbell,
     tags: ['7 Years Development', 'Production Website', 'Health & Fitness', 'PHP', 'MySQL'],

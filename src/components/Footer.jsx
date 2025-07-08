@@ -1,24 +1,7 @@
 import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { identity } from '../data/identity';
 
 export default function Footer() {
-  const socialLinks = [
-    {
-      icon: Github,
-      href: 'https://github.com/sean-andrew-barry',
-      label: 'GitHub'
-    },
-    {
-      icon: Linkedin,
-      href: 'https://www.linkedin.com/in/sean-andrew-barry',
-      label: 'LinkedIn'
-    },
-    {
-      icon: Mail,
-      href: 'mailto:sean.barry.developer@gmail.com',
-      label: 'Email'
-    }
-  ];
-
   const quickLinks = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
@@ -27,16 +10,34 @@ export default function Footer() {
     { label: 'Contact', href: '/contact' }
   ];
 
+  const socialLinks = [
+    {
+      icon: Github,
+      href: identity.github,
+      label: 'GitHub',
+    },
+    {
+      icon: Linkedin,
+      href: identity.linkedin,
+      label: 'LinkedIn',
+    },
+    {
+      icon: Mail,
+      href: `mailto:${identity.email}`,
+      label: 'Email',
+    },
+  ];
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-4 py-16">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Sean Andrew Barry</h3>
+            <h3 className="text-2xl font-bold mb-4">{identity.name}</h3>
             <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
-              Full-stack developer passionate about creating exceptional digital 
-              experiences. Always learning, always building, always improving.
+              Self-taught developer focused on building clear, fast, and thoughtfully designed software.
+              Always curious, always experimenting.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
@@ -75,14 +76,14 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
             <div className="space-y-2 text-gray-400">
-              <p>Cascade, Idaho</p>
+              <p>{identity.location}</p>
               <a
                 href="mailto:sean.barry.developer@gmail.com"
                 className="hover:text-white transition-colors duration-300"
               >
-                sean.barry.developer@gmail.com
+                {identity.email}
               </a>
-              <p>Available for freelance work</p>
+              <p>{identity.availability ? "Currently available for hire" : ""}</p>
             </div>
           </div>
         </div>
@@ -90,10 +91,10 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Sean Andrew Barry. All rights reserved.
+            &copy; {new Date().getFullYear()} {identity.name}. All rights reserved.
           </p>
           <p className="text-gray-400 text-sm flex items-center gap-1 mt-4 md:mt-0">
-            Made with <Heart size={16} className="text-red-500" /> and lots of coffee
+            Made with <Heart size={16} className="text-red-500" /> and Vyvanse
           </p>
         </div>
       </div>
