@@ -94,7 +94,7 @@ export default function Navbar() {
                       className={({ isActive }) =>
                         `block px-6 py-4 text-sm font-medium whitespace-nowrap transition-all duration-200 border-l-4 border-transparent hover:border-purple-500 hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50 ${
                           isActive
-                            ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white border-l-purple-600"
+                            ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white border-l-purple-600 hover:text-gray-700"
                             : "text-gray-700 hover:text-purple-600"
                         }`
                       }
