@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Download } from 'lucide-react';
 
 export default function Hero() {
+  const resumeID = "1cTJwaL0CsbM_A018sYk4Kg9mBOwbsbD_MDJiT3T0IGo";
+  
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Background decoration */}
@@ -51,7 +53,7 @@ export default function Hero() {
           </Link>
           
           <a
-            href="#"
+            href={`https://docs.google.com/document/d/${resumeID}/export?format=pdf`}
             className="group text-gray-300 px-6 py-4 rounded-lg font-medium inline-flex items-center gap-2 hover:text-white transition-colors"
           >
             <Download size={18} />
