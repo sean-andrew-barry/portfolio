@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Zap, Cpu, Code2, Layers, Terminal, Rocket } from 'lucide-react';
+import { Github, Zap, Cpu, Code2, Layers, Terminal, Rocket } from 'lucide-react';
 
 export default function Warble() {
   const features = [
