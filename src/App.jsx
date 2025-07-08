@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 
 import MainLayout from './layouts/MainLayout';
 import NoNavLayout from './layouts/NoNavLayout';
@@ -18,6 +19,7 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         {/* Routes that use the MainLayout */}
         <Route element={<MainLayout />}>
@@ -41,5 +43,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;
