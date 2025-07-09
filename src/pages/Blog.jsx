@@ -7,7 +7,14 @@ export default function Blog() {
       <h1 className="text-4xl font-bold mb-6">Blog</h1>
       <ul className="space-y-6">
         {posts.map((post) => (
-          <li key={post.slug} className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow">
+          <li key={post.slug} className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow overflow-hidden">
+            {post.image && (
+              <img
+                src={post.image}
+                alt={post.imageAlt || post.title}
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
+            )}
             <h2 className="text-2xl font-semibold mb-2">
               <Link to={`/blog/${post.slug}`} className="text-blue-600 hover:underline">
                 {post.title}
