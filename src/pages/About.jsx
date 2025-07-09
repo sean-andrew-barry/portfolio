@@ -1,5 +1,3 @@
-import { Coffee } from 'lucide-react';
-
 import { journey } from '../data/journey';
 import { developerValues } from '../data/developerValues';
 

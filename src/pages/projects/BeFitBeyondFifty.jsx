@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Calendar, Users, TrendingUp, Shield, Smartphone, Globe } from 'lucide-react';
+import { ExternalLink, Github, Calendar, Users, TrendingUp, Shield, Smartphone } from 'lucide-react';
 import { projects } from '../../data/projects';
 
 export default function BeFitBeyondFifty() {
