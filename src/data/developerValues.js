@@ -1,4 +1,4 @@
-import { Code, Zap, BrainCircuit, Lightbulb, BugOff } from 'lucide-react';
+import { Code, Zap, BrainCircuit, Lightbulb } from 'lucide-react';
 
 export const developerValues = [
   {

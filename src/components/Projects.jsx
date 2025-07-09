@@ -1,5 +1,3 @@
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import Project from '../components/Project';
 
@@ -22,5 +20,4 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  );
-}
+  );}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ExternalLink, Github, Search, Code, Dumbbell, Zap, ArrowRight } from 'lucide-react';
+import { Search, Code, Dumbbell, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import Project from '../components/Project';
@@ -56,7 +56,7 @@ export default function Projects() {
           {filteredProjects.length > 0 ? (
             <div className="space-y-20">
               {filteredProjects.map((project, index) => (
-                <Project project={project} index={index} />
+                <Project key={project.title} project={project} index={index} />
               ))}
             </div>
           ) : (
