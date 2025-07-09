@@ -13,7 +13,6 @@ import BlogPost from './pages/BlogPost';
 import BeFitBeyondFifty from './pages/projects/BeFitBeyondFifty';
 import Taggly from './pages/projects/Taggly';
 import Warble from './pages/projects/Warble';
-import SpecialPage from './pages/SpecialPage';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -33,11 +32,6 @@ function App() {
           <Route path="/projects/warble" element={<Warble />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
-        </Route>
-
-        {/* Routes that use a layout without Navbar */}
-        <Route element={<NoNavLayout />}>
-          <Route path="/special" element={<SpecialPage />} />
         </Route>
       </Routes>
     </Router>
