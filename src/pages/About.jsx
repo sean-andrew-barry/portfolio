@@ -20,7 +20,7 @@ export default function About() {
             About Me
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            I'm a self-taught full-stack developer who enjoys crafting clear, efficient, and carefully thought-out solutions to complex technical problems. When I'm not working, you'll usually find me gaming, taking care of my budgies, or diving deep into topics like compiler optimization and neuroscience.
+            I'm a self-taught full-stack developer who enjoys crafting clear, efficient, and carefully thought-out solutions to complex technical problems. When I'm not working, you'll usually find me playing OSRS or OW2, taking care of my budgies, or diving deep into topics like compiler optimization and neuroscience.
           </p>
         </div>
       </section>
