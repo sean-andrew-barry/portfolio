@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { posts } from '../data/posts';
+import FormattedDate from '../components/FormattedDate';
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -17,7 +18,7 @@ export default function BlogPost() {
   return (
     <article className="p-8 max-w-3xl mx-auto space-y-4">
       <h1 className="text-4xl font-bold">{post.title}</h1>
-      <p className="text-sm text-gray-500">{post.date}</p>
+      <FormattedDate date={post.date} className="text-sm text-gray-500" />
       {post.image && (
         <img
           src={post.image}
