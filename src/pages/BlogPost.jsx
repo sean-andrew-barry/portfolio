@@ -18,6 +18,13 @@ export default function BlogPost() {
     <article className="p-8 max-w-3xl mx-auto space-y-4">
       <h1 className="text-4xl font-bold">{post.title}</h1>
       <p className="text-sm text-gray-500">{post.date}</p>
+      {post.image && (
+        <img
+          src={post.image}
+          alt={post.imageAlt || post.title}
+          className="w-full h-64 object-cover rounded-lg shadow"
+        />
+      )}
       <p className="text-gray-700 dark:text-gray-300 whitespace-pre-line">{post.content}</p>
       <Link to="/blog" className="text-blue-600 hover:underline block mt-8">Back to blog</Link>
     </article>
