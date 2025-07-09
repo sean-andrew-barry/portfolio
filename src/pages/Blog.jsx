@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { posts } from '../data/posts';
+import FormattedDate from '../components/FormattedDate';
 
 export default function Blog() {
   return (
@@ -22,7 +23,7 @@ export default function Blog() {
               <h2 className="text-2xl font-semibold mb-2 text-blue-600 hover:underline">
                 {post.title}
               </h2>
-              <p className="text-sm text-gray-500 mb-2">{post.date}</p>
+              <FormattedDate date={post.date} className="text-sm text-gray-500 mb-2" />
               <p className="text-gray-700 dark:text-gray-300">
                 {post.content.substring(0, 120)}{post.content.length > 120 ? '...' : ''}
               </p>
