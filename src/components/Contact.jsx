@@ -28,14 +28,14 @@ export default function Contact() {
       icon: Mail,
       label: 'Email',
       value: identity.email,
-      href: `mailto:${identity.email}`
+      href: `mailto:${identity.email}`,
     },
     {
       icon: MapPin,
       label: 'Location',
       value: identity.location,
-      href: '#'
-    }
+      href: undefined,
+    },
   ];
 
   const socialLinks = [
