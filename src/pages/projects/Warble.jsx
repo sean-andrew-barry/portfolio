@@ -1,6 +1,45 @@
 import { Github, Zap, Cpu, Code2, Layers, Terminal, Rocket, Clock, Shield, Lock, Gauge, Brain } from 'lucide-react';
 import { projects } from '../../data/projects';
 
+// Commentary/Fun Fact Component
+const Commentary = ({ children, type = 'fun-fact' }) => {
+  const styles = {
+    'fun-fact': {
+      bg: 'bg-blue-50 border-blue-200',
+      text: 'text-blue-800',
+      icon: '💡'
+    },
+    'insight': {
+      bg: 'bg-purple-50 border-purple-200',
+      text: 'text-purple-800',
+      icon: '🤔'
+    },
+    'warning': {
+      bg: 'bg-amber-50 border-amber-200',
+      text: 'text-amber-800',
+      icon: '⚠️'
+    },
+    'note': {
+      bg: 'bg-gray-50 border-gray-200',
+      text: 'text-gray-800',
+      icon: '📝'
+    }
+  };
+
+  const style = styles[type] || styles['fun-fact'];
+
+  return (
+    <div className={`${style.bg} border-l-4 ${style.text} p-4 my-6 rounded-r-lg`}>
+      <div className="flex items-start gap-3">
+        <span className="text-lg flex-shrink-0">{style.icon}</span>
+        <div className="text-sm leading-relaxed">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function Warble() {
   const project = projects.find(p => p.title == "Warble");
 
@@ -225,6 +264,11 @@ export default function Warble() {
                 <p>
                   This approach brings clarity, simplicity, and trustworthiness to your dependency management.
                 </p>
+                
+                <Commentary type="fun-fact">
+                  <strong>Fun fact:</strong> This website currently has 565 dependency packages. 
+                  I have no idea what 95% of them are.
+                </Commentary>
               </div>
             </div>
           </div>
