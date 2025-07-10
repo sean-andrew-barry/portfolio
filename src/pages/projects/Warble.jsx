@@ -1,79 +1,74 @@
-import { Github, Zap, Cpu, Code2, Layers, Terminal, Rocket } from 'lucide-react';
+import { Github, Zap, Cpu, Code2, Layers, Terminal, Rocket, Clock, Shield, Lock, Gauge, Brain } from 'lucide-react';
 import { projects } from '../../data/projects';
 
 export default function Warble() {
   const project = projects.find(p => p.title == "Warble");
 
-  const features = [
+  const coreInnovations = [
+    {
+      icon: Clock,
+      title: 'Lightning-Fast Compilation',
+      description: 'Fully concurrent compilation with minimalist syntax dramatically reduces build times, keeping developers in flow state.',
+      details: 'Meticulously engineered compiler and module system for ultra-fast compile times'
+    },
     {
       icon: Zap,
-      title: 'Compiled Performance',
-      description: 'Precompiled to native code for maximum performance, rivaling C++ and Rust execution speeds'
-    },
-    {
-      icon: Code2,
-      title: 'Scripting Flexibility',
-      description: 'Dynamic features and flexible syntax that make development as easy as Python or JavaScript'
-    },
-    {
-      icon: Layers,
-      title: 'Memory Safety',
-      description: 'Built-in memory management that prevents common bugs without sacrificing performance'
+      title: 'Dual Execution Model',
+      description: 'Seamlessly transitions between JIT compilation for development and optimized binaries for production.',
+      details: 'Hot-reloading modules with a tiny 4MB compiler perfect for embedding'
     },
     {
       icon: Cpu,
-      title: 'Systems Programming',
-      description: 'Low-level control when needed, high-level abstractions when preferred'
+      title: 'Native Concurrency',
+      description: 'Advanced runtime with sophisticated scheduling ensures safe, efficient concurrency with zero overhead.',
+      details: 'Lock-free scheduling with adaptive thread management and intelligent execution ordering'
+    },
+    {
+      icon: Shield,
+      title: 'Sandboxed Security',
+      description: 'Modules are sandboxed by default with explicit, allow-list-based permissions for external interactions.',
+      details: 'Transparent dependency management prevents hidden vulnerabilities and privilege escalation'
     }
   ];
 
-  const comparisons = [
+  const problemsSolved = [
     {
-      language: 'C++',
-      performance: 'Excellent',
-      ease: 'Complex',
-      safety: 'Manual',
-      warbleAdvantage: 'Matches performance with better safety and ease of use'
+      problem: 'Slow Iteration Cycles',
+      solution: 'Ultra-fast compilation keeps developers focused',
+      icon: Clock
     },
     {
-      language: 'Rust',
-      performance: 'Excellent',
-      ease: 'Steep Learning',
-      safety: 'Excellent',
-      warbleAdvantage: 'Similar safety with more intuitive syntax'
+      problem: 'Difficult Concurrency',
+      solution: 'Built-in concurrent runtime with zero-overhead scheduling',
+      icon: Cpu
     },
     {
-      language: 'Python',
-      performance: 'Slow',
-      ease: 'Excellent',
-      safety: 'Good',
-      warbleAdvantage: 'Maintains ease while delivering compiled performance'
+      problem: 'Insecure Dependencies',
+      solution: 'Sandboxed modules with explicit permission declarations',
+      icon: Lock
     },
     {
-      language: 'JavaScript',
-      performance: 'Variable',
-      ease: 'Good',
-      safety: 'Weak',
-      warbleAdvantage: 'Predictable performance with stronger type safety'
+      problem: 'Underutilized Hardware',
+      solution: 'Intelligent scheduling maximizes CPU potential',
+      icon: Gauge
     }
   ];
 
-  const designGoals = [
+  const technicalHighlights = [
     {
-      title: 'Performance Without Compromise',
-      description: 'Compile-time optimizations and native code generation deliver the speed of systems languages without the complexity.'
+      title: 'Compiler Intelligence',
+      description: 'Complete code structure awareness enables deeper optimizations and robust safety guarantees',
+      icon: Brain
     },
     {
-      title: 'Developer Happiness',
-      description: 'Syntax and semantics designed to be intuitive for developers coming from any background.'
+      title: 'Module-Based Concurrency',
+      description: 'Independent "tick" functions with automatic dependency resolution ensure data safety',
+      icon: Layers
     },
     {
-      title: 'Safety by Design',
-      description: 'Memory safety and type safety built into the language core, not added as an afterthought.'
-    },
-    {
-      title: 'Gradual Complexity',
-      description: 'Start simple and add complexity only when needed. The language grows with your expertise.'
+      title: 'Embeddable Runtime',
+      description: '4MB compiler enables runtime scripting for games, tools, and user customization',
+      icon: Code2
     }
   ];
 
@@ -87,15 +82,22 @@ export default function Warble() {
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 Warble
               </h1>
-              <p className="text-xl text-purple-100 mb-8 leading-relaxed">
-                {project.description}
+              <p className="text-xl text-purple-100 mb-6 leading-relaxed">
+                A New Vision for Modern Programming
+              </p>
+              <p className="text-lg text-purple-200 mb-8 leading-relaxed">
+                Warble revolutionizes software development by prioritizing speed, concurrency, security, 
+                and developer experience. Its powerful compiler, innovative runtime, and thoughtful design 
+                address the pain points commonly encountered in existing programming languages.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="#"
+                  href="https://github.com/sean-andrew-barry/warble/blob/main/docs/spec.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Try Warble
+                  Read Full Specification
                   <Terminal size={20} />
                 </a>
                 <a
@@ -116,217 +118,104 @@ export default function Warble() {
         </div>
       </section>
 
-      {/* The Vision */}
+      {/* Why Warble Matters */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">The Vision</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Warble Matters</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Why should developers have to choose between performance and productivity? 
-              Warble is my attempt to prove they don't have to.
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">The Problem</h3>
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-                <p>
-                  Current programming languages force developers into difficult trade-offs. 
-                  Want performance? Use C++ or Rust, but accept complex syntax and steep learning curves. 
-                  Want productivity? Use Python or JavaScript, but sacrifice execution speed.
-                </p>
-                <p>
-                  This artificial dichotomy has persisted for decades, but modern compiler technology 
-                  and language design principles make it possible to have both performance and 
-                  developer experience.
-                </p>
-                <p>
-                  Warble is my exploration of what's possible when you design a language from 
-                  the ground up with both goals in mind.
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Language Comparison</h3>
-              <div className="space-y-4">
-                {comparisons.map((comp, index) => (
-                  <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-bold text-gray-900">{comp.language}</span>
-                      <div className="text-xs text-gray-500">
-                        Perf: {comp.performance} | Ease: {comp.ease} | Safety: {comp.safety}
-                      </div>
-                    </div>
-                    <p className="text-sm text-purple-700 font-medium">
-                      Warble: {comp.warbleAdvantage}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Features */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Core Features</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Warble introduces innovative language features that bridge the gap between 
-              systems programming and scripting languages
+              Warble isn't just another programming language; it addresses core problems that persist in software engineering.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
+            {problemsSolved.map((item, index) => (
+              <div key={index} className="p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors group">
+                <div className="flex items-start gap-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                    <item.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{item.problem}</h3>
+                    <p className="text-gray-600 leading-relaxed">{item.solution}</p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Code Example */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Syntax Preview</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Clean, intuitive syntax that feels familiar while enabling powerful optimizations
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-900 rounded-lg p-8 overflow-x-auto">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <span className="text-gray-400 text-sm ml-4">example.warble</span>
-              </div>
-              <pre className="text-green-400 text-sm leading-relaxed">
-{`// Warble: Performance + Simplicity
-fn fibonacci(n: int) -> int {
-    if n <= 1 return n
-    return fibonacci(n-1) + fibonacci(n-2)
-}
-
-// Type inference and memory safety
-let numbers = [1, 2, 3, 4, 5]
-let doubled = numbers.map(x => x * 2)
-
-// Async/await built-in
-async fn fetch_data(url: string) -> Result<Data> {
-    let response = await http.get(url)
-    return response.json()
-}
-
-// Pattern matching
-match result {
-    Ok(data) => println("Success: {data}")
-    Err(error) => println("Error: {error}")
-}`}
-              </pre>
-            </div>
-            
-            <div className="mt-8 grid md:grid-cols-3 gap-6 text-center">
-              <div className="p-4 bg-purple-50 rounded-lg">
-                <h4 className="font-bold text-purple-900 mb-2">Familiar Syntax</h4>
-                <p className="text-sm text-purple-700">
-                  Borrows the best ideas from modern languages
-                </p>
-              </div>
-              <div className="p-4 bg-purple-50 rounded-lg">
-                <h4 className="font-bold text-purple-900 mb-2">Type Safety</h4>
-                <p className="text-sm text-purple-700">
-                  Strong typing with intelligent inference
-                </p>
-              </div>
-              <div className="p-4 bg-purple-50 rounded-lg">
-                <h4 className="font-bold text-purple-900 mb-2">Zero-Cost Abstractions</h4>
-                <p className="text-sm text-purple-700">
-                  High-level features compile to optimal code
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Design Goals */}
+      {/* Core Innovations */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Design Philosophy</h2>
-            <p className="text-lg text-gray-600">
-              The core principles guiding Warble's development
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Core Innovations</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Four revolutionary approaches that set Warble apart from existing programming languages
             </p>
           </div>
           
-          <div className="space-y-8">
-            {designGoals.map((goal, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{goal.title}</h3>
-                <p className="text-lg text-gray-600 leading-relaxed">{goal.description}</p>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {coreInnovations.map((innovation, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+                  <innovation.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{innovation.title}</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">{innovation.description}</p>
+                <p className="text-sm text-purple-700 font-medium">{innovation.details}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Technical Innovation */}
+      {/* Concurrency Deep Dive */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Technical Innovation</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Concurrency Revolution
+              </h2>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  Warble employs advanced compiler techniques including whole-program optimization, 
-                  aggressive inlining, and compile-time computation to achieve performance that 
-                  rivals hand-optimized C++.
+                  Concurrency is notoriously challenging yet critically important. Far too many modern 
+                  applications, especially games, fail to utilize available hardware fully, relying on 
+                  just a fraction of the CPU's potential.
                 </p>
                 <p>
-                  The language features a sophisticated type system that provides memory safety 
-                  guarantees without runtime overhead. Ownership and borrowing concepts are 
-                  simplified compared to Rust while maintaining the same safety properties.
+                  Warble solves this with an advanced, fully concurrent runtime system. Its sophisticated 
+                  scheduler ensures safe, efficient concurrency with virtually zero overhead.
                 </p>
                 <p>
-                  A key innovation is the "gradual systems" approach - developers can start with 
-                  high-level abstractions and gradually expose lower-level control as needed, 
-                  all within the same language and type system.
+                  Warble's concurrency is built around modules, each containing independent "tick" functions 
+                  that automatically execute only after their dependencies have ticked. This approach 
+                  guarantees data safety without cumbersome synchronization.
                 </p>
               </div>
             </div>
             <div className="space-y-6">
               <div className="bg-purple-50 p-6 rounded-xl">
                 <Cpu className="w-8 h-8 text-purple-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Compiler Technology</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Lock-Free Scheduling</h3>
                 <p className="text-gray-600">
-                  LLVM-based backend with custom optimization passes for maximum performance
+                  Intelligent algorithms optimize thread utilization and minimize contention
+                </p>
+              </div>
+              <div className="bg-purple-50 p-6 rounded-xl">
+                <Gauge className="w-8 h-8 text-purple-600 mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Adaptive Threading</h3>
+                <p className="text-gray-600">
+                  One thread per logical core by default, with intelligent load balancing
                 </p>
               </div>
               <div className="bg-purple-50 p-6 rounded-xl">
                 <Layers className="w-8 h-8 text-purple-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Memory Model</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Dependency Resolution</h3>
                 <p className="text-gray-600">
-                  Innovative ownership system that's easier to learn than Rust but equally safe
-                </p>
-              </div>
-              <div className="bg-purple-50 p-6 rounded-xl">
-                <Zap className="w-8 h-8 text-purple-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Performance</h3>
-                <p className="text-gray-600">
-                  Benchmarks show performance within 5% of optimized C++ for most workloads
+                  Automatic execution ordering ensures data safety without manual synchronization
                 </p>
               </div>
             </div>
@@ -334,41 +223,113 @@ match result {
         </div>
       </section>
 
-      {/* Development Status */}
+      {/* Security Model */}
       <section className="py-24 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-6">
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <Shield className="w-12 h-12 text-green-600 mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Sandboxed by Default</h3>
+                <p className="text-gray-600">
+                  Modules cannot cause harm beyond consuming CPU cycles or RAM
+                </p>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <Lock className="w-12 h-12 text-blue-600 mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Explicit Permissions</h3>
+                <p className="text-gray-600">
+                  External interactions occur through allow-list-based import system
+                </p>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <Terminal className="w-12 h-12 text-purple-600 mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Transparent Dependencies</h3>
+                <p className="text-gray-600">
+                  Every package declares permissions upfront—no hidden vulnerabilities
+                </p>
+              </div>
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Unmatched Security
+              </h2>
+              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+                <p>
+                  Security is a fundamental aspect of Warble's design. Unlike the unchecked dependency 
+                  chains common in ecosystems like Node.js—where one trusted package can bring along 
+                  hundreds of unknown, unverified dependencies—Warble's permission model prevents 
+                  packages from escalating privileges or introducing hidden vulnerabilities.
+                </p>
+                <p>
+                  Every third-party package explicitly declares its permissions upfront. This transparency 
+                  means you can confidently integrate external code without fear of hidden security risks.
+                </p>
+                <p>
+                  This approach brings clarity, simplicity, and trustworthiness to your dependency management.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Highlights */}
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Technical Excellence</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Advanced compiler technology and runtime innovations that make Warble uniquely powerful
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {technicalHighlights.map((highlight, index) => (
+              <div key={index} className="text-center p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <highlight.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{highlight.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{highlight.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Beyond Syntax */}
+      <section className="py-24 bg-gradient-to-r from-slate-900 to-purple-900 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Current Status</h2>
-          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            Warble is actively in development. Here's what's working and what's coming next.
+          <h2 className="text-4xl font-bold mb-6">Beyond the Syntax</h2>
+          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Warble's vision is not just about elegant syntax or efficient code; it's about reimagining 
+            how software is built, executed, and secured. It offers a solution to deeply-rooted issues 
+            that have long plagued developers: slow iteration cycles, difficult concurrency management, 
+            and opaque, insecure package ecosystems.
           </p>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl">✓</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Completed</h3>
-              <ul className="text-left space-y-2 text-gray-600">
-                <li>• Core language syntax and semantics</li>
-                <li>• Basic compiler infrastructure</li>
-                <li>• Type system and inference</li>
-                <li>• Memory safety analysis</li>
-                <li>• Standard library foundations</li>
-              </ul>
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="p-6">
+              <Clock className="w-12 h-12 mx-auto mb-4 text-purple-300" />
+              <h3 className="text-lg font-semibold mb-2">Fast Iteration</h3>
+              <p className="text-purple-200 text-sm">
+                Lightning-fast compilation keeps developers in flow state
+              </p>
             </div>
-            
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl">⚡</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">In Progress</h3>
-              <ul className="text-left space-y-2 text-gray-600">
-                <li>• Advanced optimization passes</li>
-                <li>• Package management system</li>
-                <li>• IDE integration and tooling</li>
-                <li>• Comprehensive standard library</li>
-                <li>• Documentation and tutorials</li>
-              </ul>
+            <div className="p-6">
+              <Cpu className="w-12 h-12 mx-auto mb-4 text-purple-300" />
+              <h3 className="text-lg font-semibold mb-2">Effortless Concurrency</h3>
+              <p className="text-purple-200 text-sm">
+                Built-in runtime makes parallel programming natural and safe
+              </p>
+            </div>
+            <div className="p-6">
+              <Shield className="w-12 h-12 mx-auto mb-4 text-purple-300" />
+              <h3 className="text-lg font-semibold mb-2">Trustworthy Ecosystem</h3>
+              <p className="text-purple-200 text-sm">
+                Transparent security model eliminates hidden vulnerabilities
+              </p>
             </div>
           </div>
         </div>
@@ -377,23 +338,25 @@ match result {
       {/* CTA */}
       <section className="py-24 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Join the Journey</h2>
+          <h2 className="text-4xl font-bold mb-6">Explore Warble's Future</h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Warble is an ambitious project that aims to reshape how we think about programming 
-            language design. Follow the development and be part of the future.
+            Dive deeper into Warble's technical specification and discover how it's reshaping 
+            the future of programming language design.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#"
+              href="https://github.com/sean-andrew-barry/warble/blob/main/docs/spec.md"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Follow Development
+              Read Full Specification
             </a>
             <a
               href="#"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Contribute on GitHub
+              Follow Development
             </a>
           </div>
         </div>
