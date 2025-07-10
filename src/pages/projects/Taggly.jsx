@@ -1,65 +1,92 @@
-import { ExternalLink, Github, Code, Zap, Layers, Puzzle, Cpu, Gauge } from 'lucide-react';
+import { ExternalLink, Github, Code, Zap, Layers, Puzzle, Cpu, Gauge, Globe, Database, Wrench, FileCode, Rocket, Shield } from 'lucide-react';
 import { projects } from '../../data/projects';
 
 export default function Taggly() {
   const project = projects.find(p => p.title == "Taggly");
 
-  const features = [
+  const coreGoals = [
     {
-      icon: Zap,
-      title: 'Performance First',
-      description: 'Built from the ground up with performance in mind, delivering faster rendering and smaller bundle sizes'
-    },
-    {
-      icon: Puzzle,
-      title: 'Intuitive API',
-      description: 'Clean, simple syntax that reduces boilerplate and makes development more enjoyable'
-    },
-    {
-      icon: Layers,
-      title: 'Component Architecture',
-      description: 'Innovative approach to component composition that eliminates common React/Vue pain points'
+      icon: Wrench,
+      title: 'Easy Development',
+      description: 'Greatly reduces web development complexity by unifying all different systems into a common design'
     },
     {
       icon: Cpu,
-      title: 'Minimal Runtime',
-      description: 'Lightweight runtime with smart optimizations that reduce overhead and improve user experience'
+      title: 'Client-Side Computing',
+      description: 'The client\'s computer does most computational work, with servers handling minimal processing'
+    },
+    {
+      icon: Zap,
+      title: 'Blazing Fast',
+      description: 'Static content renders in under 30ms with optimized data fetching for dynamic content'
+    },
+    {
+      icon: Database,
+      title: 'Efficient Data',
+      description: 'Fetch exactly the data needed with minimal overhead - no wasted bandwidth or unused data'
     }
   ];
 
-  const comparisons = [
+  const keyFeatures = [
     {
-      aspect: 'Bundle Size',
-      taggly: 'Minimal',
-      others: 'Heavy',
-      description: 'Taggly produces significantly smaller bundles through intelligent tree-shaking and minimal runtime overhead'
+      icon: Code,
+      title: 'No Build Tools Required',
+      description: '100% native standard JavaScript - no weird complicated build tools necessary'
     },
     {
-      aspect: 'Learning Curve',
-      taggly: 'Gentle',
-      others: 'Steep',
-      description: 'Intuitive API design that feels natural to developers familiar with modern JavaScript'
+      icon: Layers,
+      title: 'Powerful Layer System',
+      description: 'Near unlimited customization of the framework through an innovative file resolution system'
     },
     {
-      aspect: 'Performance',
-      taggly: 'Optimized',
-      others: 'Variable',
-      description: 'Built-in optimizations and smart rendering strategies deliver consistent performance'
+      icon: Puzzle,
+      title: 'Automatic Type Conversion',
+      description: 'Add strings, functions, promises, dates, errors, etc as children and they\'re automatically converted to Tags'
+    },
+    {
+      icon: Rocket,
+      title: 'Hot Reloading',
+      description: 'Partial reload (10-40ms), full reload (200ms), or hard reload - choose your speed'
+    },
+    {
+      icon: Globe,
+      title: 'Unified Codebase',
+      description: 'Client and server use the same code files, reducing redundancy and complexity'
+    },
+    {
+      icon: Database,
+      title: 'Dynamic Queries',
+      description: 'No API functions needed - write queries directly and the server handles them via WebSocket'
     }
   ];
 
-  const philosophies = [
+  const performanceStats = [
+    { metric: 'Page Load Time', value: '~10ms', description: 'Typical page load performance' },
+    { metric: 'Partial Reload', value: '10-40ms', description: 'Hot reload of edited files only' },
+    { metric: 'Full Reload', value: '~200ms', description: 'Complete file refresh' },
+    { metric: 'Server Throughput', value: '100x', description: 'Improvement with WebSockets vs HTTP' }
+  ];
+
+  const advancedFeatures = [
     {
-      title: 'Simplicity Over Complexity',
-      description: 'Every API decision prioritizes developer experience and code readability over feature bloat.'
+      title: 'Binary Data Format',
+      description: 'Custom format as fast as JSON but extremely compressed, with class instance support',
+      icon: FileCode
     },
     {
-      title: 'Performance by Default',
-      description: 'Optimizations are built into the framework, not added as an afterthought.'
+      title: 'Built-in Clustering',
+      description: 'Run multiple instances for better performance on multi-core systems',
+      icon: Cpu
     },
     {
-      title: 'Minimal Magic',
-      description: 'Transparent behavior with minimal hidden abstractions that developers need to understand.'
+      title: 'WebSocket by Default',
+      description: 'Extremely high performance for small packets - 100x server throughput improvement',
+      icon: Zap
+    },
+    {
+      title: 'Auto SSL Management',
+      description: 'Automatically generates certificates for development and handles SSL complexity',
+      icon: Shield
     }
   ];
 
@@ -73,8 +100,13 @@ export default function Taggly() {
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 Taggly
               </h1>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                {project.description}
+              <p className="text-xl text-blue-100 mb-6 leading-relaxed">
+                A Revolutionary JavaScript Web Development Framework
+              </p>
+              <p className="text-lg text-blue-200 mb-8 leading-relaxed">
+                A complete solution for Single Page Applications that unifies client and server development, 
+                dramatically reduces complexity, and delivers exceptional performance through innovative 
+                architecture and design principles.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -102,70 +134,48 @@ export default function Taggly() {
         </div>
       </section>
 
-      {/* Why I Built It */}
+      {/* Core Goals */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why I Built Taggly</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Design Goals</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              After years of working with React and Vue, I identified specific pain points and 
-              opportunities for improvement that led me to create my own framework.
+              Taggly was built with four fundamental goals that drive every design decision 
+              and architectural choice in the framework.
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">The Problems I Saw</h3>
-                  <ul className="space-y-3 text-lg text-gray-700">
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-3 flex-shrink-0"></div>
-                      <span>Excessive boilerplate code in React applications</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-3 flex-shrink-0"></div>
-                      <span>Complex state management patterns</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-3 flex-shrink-0"></div>
-                      <span>Performance overhead from virtual DOM</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-3 flex-shrink-0"></div>
-                      <span>Steep learning curves for new developers</span>
-                    </li>
-                  </ul>
+          <div className="grid md:grid-cols-2 gap-8">
+            {coreGoals.map((goal, index) => (
+              <div key={index} className="p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
+                <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+                  <goal.icon className="w-8 h-8 text-white" />
                 </div>
-                
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">My Solution</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    Taggly addresses these issues through innovative approaches to component architecture, 
-                    state management, and rendering optimization. The result is a framework that feels 
-                    familiar but eliminates the friction points that slow down development.
-                  </p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{goal.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{goal.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Performance Stats */}
+      <section className="py-16 bg-blue-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Performance by the Numbers</h2>
+            <p className="text-lg text-gray-600">Real-world performance metrics that matter</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {performanceStats.map((stat, index) => (
+              <div key={index} className="text-center bg-white p-6 rounded-xl shadow-sm">
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                  {stat.value}
                 </div>
+                <div className="text-sm font-semibold text-gray-900 mb-1">{stat.metric}</div>
+                <div className="text-xs text-gray-600">{stat.description}</div>
               </div>
-            </div>
-            
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Framework Comparison</h3>
-              <div className="space-y-4">
-                {comparisons.map((comp, index) => (
-                  <div key={index} className="bg-white p-4 rounded-lg">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-semibold text-gray-900">{comp.aspect}</span>
-                      <div className="flex gap-4 text-sm">
-                        <span className="text-blue-600 font-medium">Taggly: {comp.taggly}</span>
-                        <span className="text-gray-500">Others: {comp.others}</span>
-                      </div>
-                    </div>
-                    <p className="text-sm text-gray-600">{comp.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -174,16 +184,145 @@ export default function Taggly() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Key Innovations</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Key Features</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Taggly introduces several novel concepts that make web development more efficient and enjoyable
+              Innovative approaches that make web development faster, simpler, and more enjoyable
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {keyFeatures.map((feature, index) => (
+              <div key={index} className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tag System Deep Dive */}
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                The Tag System
+              </h2>
+              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+                <p>
+                  At the heart of Taggly is the <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono">Tag</code> concept - 
+                  a powerful wrapper around HTML nodes that provides an intuitive, chainable API for DOM manipulation.
+                </p>
+                <p>
+                  Tags automatically convert JavaScript types (strings, functions, promises, dates, errors) 
+                  into DOM nodes, eliminating the tedious conversion work that plagues other frameworks.
+                </p>
+                <p>
+                  The system supports both method chaining and template literal syntax, giving developers 
+                  flexibility in how they structure their code while maintaining readability.
+                </p>
+              </div>
+            </div>
+            <div className="bg-gray-900 rounded-2xl p-6 overflow-x-auto">
+              <h3 className="text-white text-lg font-semibold mb-4">Tag Example</h3>
+              <pre className="text-green-400 text-sm leading-relaxed">
+{`import {Body, Div, A} from "/js/Tags.js";
+
+Body.Get().Append(
+  new Div()
+    .Class("my-class")
+    .ID("my-id")
+    .Append(
+      new A()
+        .HRef("/my-page")
+        .Append("Click me!")
+    )
+);
+
+// Or using template literals:
+Body.Get().Append(
+  P.Append\`Here's some \${Strong.Append\`bold\`} text.\`
+);`}
+              </pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Layer System */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Revolutionary Layer System</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              The most powerful feature of Taggly - a file resolution system that allows 
+              near unlimited customization of the framework itself.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">How It Works</h3>
+              <div className="space-y-4 text-gray-700">
+                <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                  <h4 className="font-semibold text-gray-900 mb-2">1. Layer Resolution</h4>
+                  <p className="text-sm">Framework searches through layers (directories) in order: your project first, then Taggly framework</p>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-purple-500">
+                  <h4 className="font-semibold text-gray-900 mb-2">2. Domain Checking</h4>
+                  <p className="text-sm">Within each layer, checks domains (private, public) for the requested file</p>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                  <h4 className="font-semibold text-gray-900 mb-2">3. Override Capability</h4>
+                  <p className="text-sm">Your files automatically override framework files - even framework code uses your customizations</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-900 rounded-2xl p-6">
+              <h3 className="text-white text-lg font-semibold mb-4">Custom Div Example</h3>
+              <pre className="text-green-400 text-sm leading-relaxed">
+{`// public/js/Tags/Div.js
+import {Div as Base} from "/js/Tags/Div.js?next=/your-project/";
+
+export class Div extends Base {
+  // Add custom methods
+  Blue() { 
+    return this
+      .BackgroundColor("blue")
+      .Color("white"); 
+  }
+  
+  // Override framework behavior
+  ConvertString(string) {
+    string = string.replace("&nbsp;", "\\u00A0");
+    return super.ConvertString(string);
+  }
+}`}
+              </pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advanced Features */}
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Advanced Capabilities</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Enterprise-grade features that set Taggly apart from other frameworks
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+            {advancedFeatures.map((feature, index) => (
+              <div key={index} className="p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
@@ -194,137 +333,37 @@ export default function Taggly() {
         </div>
       </section>
 
-      {/* Code Example */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">See the Difference</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Compare how the same component looks in Taggly versus traditional frameworks
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <div className="w-4 h-4 bg-blue-600 rounded"></div>
-                Taggly
-              </h3>
-              <div className="bg-gray-900 rounded-lg p-6 overflow-x-auto">
-                <pre className="text-green-400 text-sm">
-{`// Simple, clean syntax
-const Counter = () => {
-  let count = 0;
-  
-  return tag\`
-    <div>
-      <p>Count: \${count}</p>
-      <button @click="\${() => count++}">
-        Increment
-      </button>
-    </div>
-  \`;
-};`}
-                </pre>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <div className="w-4 h-4 bg-gray-400 rounded"></div>
-                React
-              </h3>
-              <div className="bg-gray-900 rounded-lg p-6 overflow-x-auto">
-                <pre className="text-green-400 text-sm">
-{`// More boilerplate required
-import { useState } from 'react';
+      {/* Why Choose Taggly */}
+      <section className="py-24 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Why Choose Taggly?</h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Taggly represents a fundamental rethinking of web development. Instead of adding complexity, 
+            it removes it. Instead of fighting the platform, it embraces it. Instead of limiting 
+            customization, it makes everything customizable.
+          </p>
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
-  
-  return (
-    <div>
-      <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>
-        Increment
-      </button>
-    </div>
-  );
-};`}
-                </pre>
-              </div>
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="p-6">
+              <Gauge className="w-12 h-12 mx-auto mb-4 text-blue-300" />
+              <h3 className="text-lg font-semibold mb-2">Unmatched Performance</h3>
+              <p className="text-blue-200 text-sm">
+                10ms page loads and 100x server throughput improvements
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Design Philosophy */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Design Philosophy</h2>
-            <p className="text-lg text-gray-600">
-              The principles that guide every decision in Taggly's development
-            </p>
-          </div>
-          
-          <div className="space-y-8">
-            {philosophies.map((philosophy, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{philosophy.title}</h3>
-                <p className="text-lg text-gray-600 leading-relaxed">{philosophy.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Deep Dive */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Technical Innovation</h2>
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-                <p>
-                  Taggly implements several novel approaches to common web development challenges. 
-                  The framework uses a hybrid compilation strategy that combines the benefits of 
-                  compile-time optimizations with runtime flexibility.
-                </p>
-                <p>
-                  Instead of a virtual DOM, Taggly uses targeted DOM updates based on dependency 
-                  tracking, resulting in better performance with less complexity. The component 
-                  system is designed to be both powerful and intuitive.
-                </p>
-                <p>
-                  State management is built into the framework core, eliminating the need for 
-                  external libraries while providing patterns that scale from simple components 
-                  to complex applications.
-                </p>
-              </div>
+            <div className="p-6">
+              <Layers className="w-12 h-12 mx-auto mb-4 text-blue-300" />
+              <h3 className="text-lg font-semibold mb-2">Ultimate Flexibility</h3>
+              <p className="text-blue-200 text-sm">
+                Layer system allows customization of any framework component
+              </p>
             </div>
-            <div className="space-y-6">
-              <div className="bg-blue-50 p-6 rounded-xl">
-                <Gauge className="w-8 h-8 text-blue-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Performance Metrics</h3>
-                <p className="text-gray-600">
-                  Benchmarks show 40% faster initial load times and 60% smaller bundle sizes compared to React
-                </p>
-              </div>
-              <div className="bg-blue-50 p-6 rounded-xl">
-                <Code className="w-8 h-8 text-blue-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Developer Experience</h3>
-                <p className="text-gray-600">
-                  Reduced boilerplate code by an average of 30% while maintaining full functionality
-                </p>
-              </div>
-              <div className="bg-blue-50 p-6 rounded-xl">
-                <Layers className="w-8 h-8 text-blue-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Architecture</h3>
-                <p className="text-gray-600">
-                  Modular design allows developers to use only the features they need
-                </p>
-              </div>
+            <div className="p-6">
+              <Code className="w-12 h-12 mx-auto mb-4 text-blue-300" />
+              <h3 className="text-lg font-semibold mb-2">Developer Experience</h3>
+              <p className="text-blue-200 text-sm">
+                Intuitive APIs, hot reloading, and unified client-server development
+              </p>
             </div>
           </div>
         </div>
@@ -333,10 +372,10 @@ const Counter = () => {
       {/* CTA */}
       <section className="py-24 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Try Something New?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Development?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Taggly represents a fresh approach to web development. Experience the difference 
-            that thoughtful design and performance optimization can make.
+            Experience the future of web development with Taggly's revolutionary approach 
+            to building fast, maintainable, and highly customizable applications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
