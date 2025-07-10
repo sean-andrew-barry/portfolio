@@ -1,6 +1,42 @@
 import { ExternalLink, Github, Code, Zap, Layers, Puzzle, Cpu, Gauge, Globe, Database, Wrench, FileCode, Rocket, Shield } from 'lucide-react';
 import { projects } from '../../data/projects';
 
+const example1 = `import {Body, Div, A} from "/js/Tags.js";
+
+Body.Get().Append(
+  new Div()
+    .Class("my-class")
+    .ID("my-id")
+    .Append(
+      new A()
+        .HRef("/my-page")
+        .Append("Click me!")
+    )
+);
+
+// Or using template literals:
+Body.Get().Append(
+  P.Append\`Here's some \${Strong.Append\`bold\`} text.\`
+);`;
+
+const example2 = `// public/js/Tags/Div.js
+import {Div as Base} from "/js/Tags/Div.js?next=/your-project/";
+
+export class Div extends Base {
+  // Add custom methods
+  Blue() { 
+    return this
+      .BackgroundColor("blue")
+      .Color("white"); 
+  }
+  
+  // Override framework behavior
+  ConvertString(string) {
+    string = string.replace("&nbsp;", "\\u00A0");
+    return super.ConvertString(string);
+  }
+}`;
+
 export default function Taggly() {
   const project = projects.find(p => p.title == "Taggly");
 
@@ -93,7 +129,7 @@ export default function Taggly() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-700 text-white">
+      <section className="py-24 bg-gradient-to-br from-purple-600 via-pink-600 to-purple-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -104,8 +140,8 @@ export default function Taggly() {
                 A Revolutionary JavaScript Web Development Framework
               </p>
               <p className="text-lg text-blue-200 mb-8 leading-relaxed">
-                A complete solution for Single Page Applications that unifies client and server development, 
-                dramatically reduces complexity, and delivers exceptional performance through innovative 
+                A complete solution for Single Page Applications that unifies client and server development,
+                dramatically reduces complexity, and delivers exceptional performance through innovative
                 architecture and design principles.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -140,15 +176,15 @@ export default function Taggly() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Design Goals</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Taggly was built with four fundamental goals that drive every design decision 
+              Taggly was built with four fundamental goals that drive every design decision
               and architectural choice in the framework.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {coreGoals.map((goal, index) => (
               <div key={index} className="p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
-                <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+                <div className={`w-16 h-16 bg-gradient-to-r ${project.gradient} rounded-xl flex items-center justify-center mb-6`}>
                   <goal.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{goal.title}</h3>
@@ -189,11 +225,11 @@ export default function Taggly() {
               Innovative approaches that make web development faster, simpler, and more enjoyable
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {keyFeatures.map((feature, index) => (
               <div key={index} className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <div className={`w-12 h-12 bg-gradient-to-r ${project.gradient} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -214,15 +250,15 @@ export default function Taggly() {
               </h2>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  At the heart of Taggly is the <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono">Tag</code> concept - 
+                  At the heart of Taggly is the <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono">Tag</code> concept -
                   a powerful wrapper around HTML nodes that provides an intuitive, chainable API for DOM manipulation.
                 </p>
                 <p>
-                  Tags automatically convert JavaScript types (strings, functions, promises, dates, errors) 
+                  Tags automatically convert JavaScript types (strings, functions, promises, dates, errors)
                   into DOM nodes, eliminating the tedious conversion work that plagues other frameworks.
                 </p>
                 <p>
-                  The system supports both method chaining and template literal syntax, giving developers 
+                  The system supports both method chaining and template literal syntax, giving developers
                   flexibility in how they structure their code while maintaining readability.
                 </p>
               </div>
@@ -230,23 +266,7 @@ export default function Taggly() {
             <div className="bg-gray-900 rounded-2xl p-6 overflow-x-auto">
               <h3 className="text-white text-lg font-semibold mb-4">Tag Example</h3>
               <pre className="text-green-400 text-sm leading-relaxed">
-{`import {Body, Div, A} from "/js/Tags.js";
-
-Body.Get().Append(
-  new Div()
-    .Class("my-class")
-    .ID("my-id")
-    .Append(
-      new A()
-        .HRef("/my-page")
-        .Append("Click me!")
-    )
-);
-
-// Or using template literals:
-Body.Get().Append(
-  P.Append\`Here's some \${Strong.Append\`bold\`} text.\`
-);`}
+                {example1}
               </pre>
             </div>
           </div>
@@ -259,7 +279,7 @@ Body.Get().Append(
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Revolutionary Layer System</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              The most powerful feature of Taggly - a file resolution system that allows 
+              The most powerful feature of Taggly - a file resolution system that allows
               near unlimited customization of the framework itself.
             </p>
           </div>
@@ -282,27 +302,11 @@ Body.Get().Append(
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-gray-900 rounded-2xl p-6">
               <h3 className="text-white text-lg font-semibold mb-4">Custom Div Example</h3>
               <pre className="text-green-400 text-sm leading-relaxed">
-{`// public/js/Tags/Div.js
-import {Div as Base} from "/js/Tags/Div.js?next=/your-project/";
-
-export class Div extends Base {
-  // Add custom methods
-  Blue() { 
-    return this
-      .BackgroundColor("blue")
-      .Color("white"); 
-  }
-  
-  // Override framework behavior
-  ConvertString(string) {
-    string = string.replace("&nbsp;", "\\u00A0");
-    return super.ConvertString(string);
-  }
-}`}
+                {example2}
               </pre>
             </div>
           </div>
@@ -318,11 +322,11 @@ export class Div extends Base {
               Enterprise-grade features that set Taggly apart from other frameworks
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {advancedFeatures.map((feature, index) => (
               <div key={index} className="p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                <div className={`w-16 h-16 bg-gradient-to-r ${project.gradient} rounded-xl flex items-center justify-center mb-6`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
@@ -338,8 +342,8 @@ export class Div extends Base {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Why Choose Taggly?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Taggly represents a fundamental rethinking of web development. Instead of adding complexity, 
-            it removes it. Instead of fighting the platform, it embraces it. Instead of limiting 
+            Taggly represents a rethinking of web development. Instead of adding complexity,
+            it removes it. Instead of fighting the platform, it embraces it. Instead of limiting
             customization, it makes everything customizable.
           </p>
 
@@ -370,11 +374,11 @@ export class Div extends Base {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+      <section className={`py-24 bg-gradient-to-r ${project.gradient} text-white`}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Development?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Experience the future of web development with Taggly's revolutionary approach 
+            Experience the future of web development with Taggly's revolutionary approach
             to building fast, maintainable, and highly customizable applications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
