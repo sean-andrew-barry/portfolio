@@ -1,4 +1,5 @@
-import { Github, Zap, Cpu, Code2, Layers, Terminal, Rocket, Clock, Shield, Lock, Gauge, Brain } from 'lucide-react';
+import { Github, Zap, Cpu, Layers, Terminal, Clock, Shield, Lock, Gauge, ExternalLink, Braces, BugOff } from 'lucide-react';
+import { LightBulb, ThinkingFace, Warning, Notebook, CrossedFingers } from 'react-twemoji-components';
 import { projects } from '../../data/projects';
 
 // Commentary/Fun Fact Component
@@ -7,22 +8,22 @@ const Commentary = ({ children, type = 'fun-fact' }) => {
     'fun-fact': {
       bg: 'bg-blue-50 border-blue-200',
       text: 'text-blue-800',
-      icon: '💡'
+      icon: LightBulb,
     },
     'insight': {
       bg: 'bg-purple-50 border-purple-200',
       text: 'text-purple-800',
-      icon: '🤔'
+      icon: ThinkingFace,
     },
     'warning': {
       bg: 'bg-amber-50 border-amber-200',
       text: 'text-amber-800',
-      icon: '⚠️'
+      icon: Warning,
     },
     'note': {
       bg: 'bg-gray-50 border-gray-200',
       text: 'text-gray-800',
-      icon: '📝'
+      icon: Notebook,
     }
   };
 
@@ -31,7 +32,7 @@ const Commentary = ({ children, type = 'fun-fact' }) => {
   return (
     <div className={`${style.bg} border-l-4 ${style.text} p-4 my-6 rounded-r-lg`}>
       <div className="flex items-start gap-3">
-        <span className="text-lg flex-shrink-0">{style.icon}</span>
+        <style.icon className="text-lg flex-shrink-0 self-center w-16 h-16" />
         <div className="text-sm leading-relaxed">
           {children}
         </div>
@@ -45,48 +46,60 @@ export default function Warble() {
 
   const coreInnovations = [
     {
+      icon: Braces,
+      title: 'Intuitive Syntax',
+      description: 'Clean, expressive syntax reduces cognitive load and enhances readability, without sacrificing power.',
+      details: 'Minimalist yet powerful literals, clear declarations, and robust pattern matching.',
+    },
+    {
+      icon: BugOff,
+      title: 'Safe by Default',
+      description: 'Eliminates common pitfalls like dangling pointers and undefined behaviors through strict, enforced safety rules.',
+      details: 'Built-in type safety, automatic memory management, and rigorous compile-time checks prevent typical runtime errors.',
+    },
+    {
       icon: Clock,
       title: 'Lightning-Fast Compilation',
       description: 'Fully concurrent compilation with minimalist syntax dramatically reduces build times, keeping developers in flow state.',
-      details: 'Meticulously engineered compiler and module system for ultra-fast compile times'
+      details: 'Meticulously engineered compiler and module system for ultra-fast compile times',
     },
     {
       icon: Zap,
       title: 'Dual Execution Model',
       description: 'Seamlessly transitions between JIT compilation for development and optimized binaries for production.',
-      details: 'Hot-reloading modules with a tiny 4MB compiler perfect for embedding'
+      details: 'Hot-reloading modules with a tiny 4MB compiler perfect for embedding',
     },
     {
       icon: Cpu,
       title: 'Native Concurrency',
       description: 'Advanced runtime with sophisticated scheduling ensures safe, efficient concurrency with zero overhead.',
-      details: 'Lock-free scheduling with adaptive thread management and intelligent execution ordering'
+      details: 'Lock-free scheduling with adaptive thread management and intelligent execution ordering',
     },
     {
       icon: Shield,
       title: 'Sandboxed Security',
       description: 'Modules are sandboxed by default with explicit, allow-list-based permissions for external interactions.',
-      details: 'Transparent dependency management prevents hidden vulnerabilities and privilege escalation'
-    }
+      details: 'Transparent dependency management prevents hidden vulnerabilities and privilege escalation',
+    },
   ];
 
-  const technicalHighlights = [
-    {
-      title: 'Compiler Intelligence',
-      description: 'Complete code structure awareness enables deeper optimizations and robust safety guarantees',
-      icon: Brain
-    },
-    {
-      title: 'Module-Based Concurrency',
-      description: 'Independent "tick" functions with automatic dependency resolution ensure data safety',
-      icon: Layers
-    },
-    {
-      title: 'Embeddable Runtime',
-      description: '4MB compiler enables runtime scripting for games, tools, and user customization',
-      icon: Code2
-    }
-  ];
+  // const technicalHighlights = [
+  //   {
+  //     title: 'Compiler Intelligence',
+  //     description: 'Complete code structure awareness enables deeper optimizations and robust safety guarantees',
+  //     icon: Brain
+  //   },
+  //   {
+  //     title: 'Module-Based Concurrency',
+  //     description: 'Independent "tick" functions with automatic dependency resolution ensure data safety',
+  //     icon: Layers
+  //   },
+  //   {
+  //     title: 'Embeddable Runtime',
+  //     description: '4MB compiler enables runtime scripting for games, tools, and user customization',
+  //     icon: Code2
+  //   }
+  // ];
 
   return (
     <div className="pt-20">
@@ -126,8 +139,13 @@ export default function Warble() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-white/10 backdrop-blur-sm p-8 flex items-center justify-center">
-                <Rocket className="w-32 h-32 text-white/80" />
+              <div className={`aspect-square rounded-2xl bg-white/10 backdrop-blur-sm p-8 flex items-center justify-center bg-gradient-to-r ${project.gradient}`}>
+                {/* <Rocket className="w-32 h-32 text-white/80" /> */}
+                {project.image ? <img
+                  src={project.image}
+                  alt={project.imageAlt}
+                  className="w-full h-full rounded-2xl object-cover"
+                /> : <project.icon className="w-12 h-12 text-white" />}
               </div>
             </div>
           </div>
@@ -165,7 +183,7 @@ export default function Warble() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Concurrency Revolution
+                Concurrency by Default
               </h2>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
@@ -225,9 +243,9 @@ export default function Warble() {
                     href="https://en.wikipedia.org/wiki/Halting_problem"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
+                    className="inline-flex items-center gap-1 text-blue-600 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
                   >
-                    (Halting problem)
+                    (<ExternalLink size={16} strokeWidth={1.5} className="-mt-px shrink-0" aria-label="opens in new tab" /> Halting problem)
                   </a>}
                 </p>
               </div>
@@ -264,10 +282,12 @@ export default function Warble() {
                 <p>
                   This approach brings clarity, simplicity, and trustworthiness to your dependency management.
                 </p>
-                
+
                 <Commentary type="fun-fact">
-                  <strong>Fun fact:</strong> This website currently has 565 dependency packages. 
-                  I have no idea what 95% of them are.
+                  <strong>Fun fact:</strong> This website runs on&nbsp;
+                  <span className="font-semibold">575</span> dependency packages.
+                  I've personally installed maybe a dozen of them, and - like most devs - I haven't pored over the
+                  other 95%+. Realistically, nobody does, so we just have to trust the ecosystem - fingers crossed. <CrossedFingers className="inline-block w-6 h-6" />
                 </Commentary>
               </div>
             </div>
@@ -276,7 +296,7 @@ export default function Warble() {
       </section>
 
       {/* Technical Highlights */}
-      <section className="py-24 bg-white">
+      {/* <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Technical Excellence</h2>
@@ -297,7 +317,7 @@ export default function Warble() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Beyond Syntax */}
       <section className="py-24 bg-gradient-to-r from-slate-900 to-purple-900 text-white">
