@@ -31,29 +31,6 @@ export default function Warble() {
     }
   ];
 
-  const problemsSolved = [
-    {
-      problem: 'Slow Iteration Cycles',
-      solution: 'Ultra-fast compilation keeps developers focused',
-      icon: Clock
-    },
-    {
-      problem: 'Difficult Concurrency',
-      solution: 'Built-in concurrent runtime with zero-overhead scheduling',
-      icon: Cpu
-    },
-    {
-      problem: 'Insecure Dependencies',
-      solution: 'Sandboxed modules with explicit permission declarations',
-      icon: Lock
-    },
-    {
-      problem: 'Underutilized Hardware',
-      solution: 'Intelligent scheduling maximizes CPU potential',
-      icon: Gauge
-    }
-  ];
-
   const technicalHighlights = [
     {
       title: 'Compiler Intelligence',
@@ -86,8 +63,8 @@ export default function Warble() {
                 A New Vision for Modern Programming
               </p>
               <p className="text-lg text-purple-200 mb-8 leading-relaxed">
-                Warble revolutionizes software development by prioritizing speed, concurrency, security, 
-                and developer experience. Its powerful compiler, innovative runtime, and thoughtful design 
+                Warble revolutionizes software development by prioritizing speed, concurrency, security,
+                and developer experience. Its powerful compiler, innovative runtime, and thoughtful design
                 address the pain points commonly encountered in existing programming languages.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -118,34 +95,6 @@ export default function Warble() {
         </div>
       </section>
 
-      {/* Why Warble Matters */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Warble Matters</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Warble isn't just another programming language; it addresses core problems that persist in software engineering.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {problemsSolved.map((item, index) => (
-              <div key={index} className="p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors group">
-                <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
-                    <item.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{item.problem}</h3>
-                    <p className="text-gray-600 leading-relaxed">{item.solution}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Core Innovations */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -155,7 +104,7 @@ export default function Warble() {
               Four revolutionary approaches that set Warble apart from existing programming languages
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-2 gap-8">
             {coreInnovations.map((innovation, index) => (
               <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
@@ -181,17 +130,17 @@ export default function Warble() {
               </h2>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  Concurrency is notoriously challenging yet critically important. Far too many modern 
-                  applications, especially games, fail to utilize available hardware fully, relying on 
+                  Concurrency is notoriously challenging yet critically important. Far too many modern
+                  applications, especially games, fail to utilize available hardware fully, relying on
                   just a fraction of the CPU's potential.
                 </p>
                 <p>
-                  Warble solves this with an advanced, fully concurrent runtime system. Its sophisticated 
+                  Warble solves this with an advanced, fully concurrent runtime system. Its sophisticated
                   scheduler ensures safe, efficient concurrency with virtually zero overhead.
                 </p>
                 <p>
-                  Warble's concurrency is built around modules, each containing independent "tick" functions 
-                  that automatically execute only after their dependencies have ticked. This approach 
+                  Warble's concurrency is built around modules, each containing independent "tick" functions
+                  that automatically execute only after their dependencies have ticked. This approach
                   guarantees data safety without cumbersome synchronization.
                 </p>
               </div>
@@ -232,7 +181,15 @@ export default function Warble() {
                 <Shield className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Sandboxed by Default</h3>
                 <p className="text-gray-600">
-                  Modules cannot cause harm beyond consuming CPU cycles or RAM
+                  Modules cannot cause harm beyond consuming CPU cycles&nbsp;
+                  {<a
+                    href="https://en.wikipedia.org/wiki/Halting_problem"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline"
+                  >
+                    (Halting problem)
+                  </a>}
                 </p>
               </div>
               <div className="bg-white p-8 rounded-2xl shadow-lg">
@@ -256,13 +213,13 @@ export default function Warble() {
               </h2>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  Security is a fundamental aspect of Warble's design. Unlike the unchecked dependency 
-                  chains common in ecosystems like Node.js—where one trusted package can bring along 
-                  hundreds of unknown, unverified dependencies—Warble's permission model prevents 
+                  Security is a fundamental aspect of Warble's design. Unlike the unchecked dependency
+                  chains common in ecosystems like Node.js—where one trusted package can bring along
+                  hundreds of unknown, unverified dependencies—Warble's permission model prevents
                   packages from escalating privileges or introducing hidden vulnerabilities.
                 </p>
                 <p>
-                  Every third-party package explicitly declares its permissions upfront. This transparency 
+                  Every third-party package explicitly declares its permissions upfront. This transparency
                   means you can confidently integrate external code without fear of hidden security risks.
                 </p>
                 <p>
@@ -283,7 +240,7 @@ export default function Warble() {
               Advanced compiler technology and runtime innovations that make Warble uniquely powerful
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {technicalHighlights.map((highlight, index) => (
               <div key={index} className="text-center p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
@@ -303,12 +260,12 @@ export default function Warble() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Beyond the Syntax</h2>
           <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Warble's vision is not just about elegant syntax or efficient code; it's about reimagining 
-            how software is built, executed, and secured. It offers a solution to deeply-rooted issues 
-            that have long plagued developers: slow iteration cycles, difficult concurrency management, 
+            Warble's vision is not just about elegant syntax or efficient code; it's about reimagining
+            how software is built, executed, and secured. It offers a solution to deeply-rooted issues
+            that have long plagued developers: slow iteration cycles, difficult concurrency management,
             and opaque, insecure package ecosystems.
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="p-6">
               <Clock className="w-12 h-12 mx-auto mb-4 text-purple-300" />
@@ -340,7 +297,7 @@ export default function Warble() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Explore Warble's Future</h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Dive deeper into Warble's technical specification and discover how it's reshaping 
+            Dive deeper into Warble's technical specification and discover how it's reshaping
             the future of programming language design.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
