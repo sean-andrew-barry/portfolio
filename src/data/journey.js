@@ -11,7 +11,7 @@ export const journey = [
   },
   {
     year: 2018,
-    title: 'First Web Development Role',
+    title: 'Lead Web Development Role',
     description: 'Began building and managing the entire technology stack for Be Fit Beyond Fifty, gaining expertise in web development and server management.'
   },
   {
