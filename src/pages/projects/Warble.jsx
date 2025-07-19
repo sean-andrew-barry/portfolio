@@ -41,6 +41,8 @@ const Commentary = ({ children, type = 'fun-fact' }) => {
   );
 };
 
+const numPackages = 700;
+
 export default function Warble() {
   const project = projects.find(p => p.title == "Warble");
 
@@ -72,7 +74,7 @@ export default function Warble() {
     {
       icon: Cpu,
       title: 'Native Concurrency',
-      description: 'Advanced runtime with sophisticated scheduling ensures safe, efficient concurrency with zero overhead.',
+      description: 'Advanced runtime with sophisticated scheduling ensures safe, efficient concurrency with near zero overhead.',
       details: 'Lock-free scheduling with adaptive thread management and intelligent execution ordering',
     },
     {
@@ -285,9 +287,8 @@ export default function Warble() {
 
                 <Commentary type="fun-fact">
                   <strong>Fun fact:</strong> This website runs on&nbsp;
-                  <span className="font-semibold">575</span> dependency packages.
-                  I've personally installed maybe a dozen of them, and - like most devs - I haven't pored over the
-                  other 95%+. Realistically, nobody does, so we just have to trust the ecosystem - fingers crossed. <CrossedFingers className="inline-block w-6 h-6" />
+                  <span className="font-semibold">{numPackages}</span> dependency packages.
+                  I've personally installed maybe a couple dozen of them, and - like most devs - I haven't pored over the other 95%+. Realistically, nobody does, so we just have to trust the ecosystem - fingers crossed. <CrossedFingers className="inline-block w-6 h-6" />
                 </Commentary>
               </div>
             </div>
@@ -324,10 +325,7 @@ export default function Warble() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Beyond the Syntax</h2>
           <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Warble's vision is not just about elegant syntax or efficient code; it's about reimagining
-            how software is built, executed, and secured. It offers a solution to deeply-rooted issues
-            that have long plagued developers: slow iteration cycles, difficult concurrency management,
-            and opaque, insecure package ecosystems.
+            Warble's vision is not just about elegant syntax or efficient code; it's about reimagining how software is built, executed, and secured. It offers a solution to deeply-rooted issues that have long plagued developers: slow iteration cycles, difficult concurrency management, and opaque, insecure package ecosystems.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mt-12">
