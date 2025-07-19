@@ -154,6 +154,7 @@ export default function BeFitBeyondFifty() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Project Overview</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               A complete custom solution built to address the financial and operational challenges of a small health and fitness startup.
             </p>
@@ -218,6 +219,7 @@ export default function BeFitBeyondFifty() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Integrated Solutions</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               A comprehensive platform that replaces multiple expensive SaaS tools with custom-built functionality.
             </p>
@@ -258,12 +260,30 @@ export default function BeFitBeyondFifty() {
               <div className="mt-8 bg-white p-6 rounded-xl shadow-lg">
                 <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Achievements</h4>
                 <ul className="space-y-2 text-gray-600">
-                  <li>• 99.99% historical uptime over 6+ years</li>
-                  <li>• $2,500+ annual savings vs SaaS alternatives</li>
-                  <li>• $7/month total infrastructure costs</li>
-                  <li>• 7,000+ email subscribers via organic traffic</li>
-                  <li>• Seamless user experience across all devices</li>
-                  <li>• Automated workflows and integrations</li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>99.99% historical uptime over 6+ years</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>$12,000+ annual savings vs SaaS alternatives</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>$7/month total infrastructure costs</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>6,900+ email subscribers via organic traffic</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Seamless user experience across all devices</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Automated workflows and integrations</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -309,49 +329,113 @@ export default function BeFitBeyondFifty() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <div className="bg-green-50 p-6 rounded-xl border border-green-200">
-                <h3 className="text-xl font-bold text-green-800 mb-3">Financial Impact</h3>
-                <ul className="space-y-2 text-green-700">
-                  <li>• Over $2,500 saved annually compared to SaaS alternatives</li>
-                  <li>• Infrastructure costs reduced to just $7/month</li>
-                  <li>• Eliminated dependency on expensive third-party tools</li>
-                  <li>• Scalable architecture supporting business growth</li>
-                </ul>
+          <div className="flex flex-wrap gap-6">
+            <div className="flex-1 min-w-80 bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-200 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
+                  <DollarSign className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-green-800">Financial Impact</h3>
               </div>
-
-              <div className="bg-blue-50 p-6 rounded-xl border border-blue-200">
-                <h3 className="text-xl font-bold text-blue-800 mb-3">User Experience</h3>
-                <ul className="space-y-2 text-blue-700">
-                  <li>• Professional, cohesive brand experience</li>
-                  <li>• Fast, responsive Single Page Application</li>
-                  <li>• Seamless payment and course access</li>
-                  <li>• Mobile-optimized for all devices</li>
-                </ul>
-              </div>
+              <ul className="space-y-3 text-green-700">
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Over $12,000 saved annually compared to SaaS alternatives</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Infrastructure costs reduced to just $7/month</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Eliminated dependency on expensive third-party tools</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Scalable architecture supporting business growth</span>
+                </li>
+              </ul>
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-purple-50 p-6 rounded-xl border border-purple-200">
-                <h3 className="text-xl font-bold text-purple-800 mb-3">Operational Excellence</h3>
-                <ul className="space-y-2 text-purple-700">
-                  <li>• 99.99% historical uptime ensuring reliability</li>
-                  <li>• Automated workflows reducing manual tasks</li>
-                  <li>• Integrated analytics and reporting</li>
-                  <li>• Secure user data management and compliance</li>
-                </ul>
+            <div className="flex-1 min-w-80 bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
+                  <Smartphone className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-800">User Experience</h3>
               </div>
+              <ul className="space-y-3 text-blue-700">
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Professional, cohesive brand experience</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Fast, responsive Single Page Application</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Seamless payment and course access</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Mobile-optimized for all devices</span>
+                </li>
+              </ul>
+            </div>
 
-              <div className="bg-orange-50 p-6 rounded-xl border border-orange-200">
-                <h3 className="text-xl font-bold text-orange-800 mb-3">Growth & Marketing</h3>
-                <ul className="space-y-2 text-orange-700">
-                  <li>• 7,000+ email subscribers captured</li>
-                  <li>• SEO-optimized content management</li>
-                  <li>• Integrated marketing automation</li>
-                  <li>• Analytics-driven optimization</li>
-                </ul>
+            <div className="flex-1 min-w-80 bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-2xl border border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-purple-800">Operational Excellence</h3>
               </div>
+              <ul className="space-y-3 text-purple-700">
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>99.99% historical uptime ensuring reliability</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Automated workflows reducing manual tasks</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Integrated analytics and reporting</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Secure user data management and compliance</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex-1 min-w-80 bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl border border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-xl flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-orange-800">Growth & Marketing</h3>
+              </div>
+              <ul className="space-y-3 text-orange-700">
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>6,900+ email subscribers captured</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>SEO-optimized content management</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Integrated marketing automation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Analytics-driven optimization</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
