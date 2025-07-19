@@ -19,7 +19,7 @@ export default function About() {
   return (
     <div className="">
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+      <section className="pt-48 pb-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             About Me

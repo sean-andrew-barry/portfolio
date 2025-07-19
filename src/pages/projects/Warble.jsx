@@ -106,7 +106,7 @@ export default function Warble() {
   return (
     <div className="">
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-700 text-white">
+      <section className="pt-48 pb-24 bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

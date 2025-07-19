@@ -20,15 +20,17 @@ function App() {
       <ScrollToTop />
       <Routes>
         {/* Routes that use the MainLayout */}
-        <Route element={<MainLayout />}>
+        <Route element={<MainLayout hasHero />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/projects/be-fit-beyond-fifty" element={<BeFitBeyondFifty />} />
           <Route path="/projects/taggly" element={<Taggly />} />
           <Route path="/projects/warble" element={<Warble />} />
+        </Route>
+        <Route element={<MainLayout />}>
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Route>

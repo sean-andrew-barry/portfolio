@@ -130,7 +130,7 @@ export default function Taggly() {
   return (
     <div className="">
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-purple-600 via-pink-600 to-purple-700 text-white">
+      <section className="pt-48 pb-24 bg-gradient-to-br from-purple-600 via-pink-600 to-purple-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
