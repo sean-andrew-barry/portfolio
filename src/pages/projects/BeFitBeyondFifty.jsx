@@ -445,6 +445,7 @@ export default function BeFitBeyondFifty() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">What This Project Demonstrates</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
             This project showcases my ability to deliver high-quality, reliable, and cost-effective 
             solutions as a solo developer across the entire technology stack.
