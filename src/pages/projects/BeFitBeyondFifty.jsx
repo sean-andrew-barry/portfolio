@@ -266,7 +266,7 @@ export default function BeFitBeyondFifty() {
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>$12,000+ annual savings vs SaaS alternatives</span>
+                    <span>$2,500+ annual savings vs SaaS alternatives</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -330,7 +330,7 @@ export default function BeFitBeyondFifty() {
           </div>
 
           <div className="flex flex-wrap gap-6">
-            <div className="flex-1 min-w-80 bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-200 shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <div className="flex-1 basis-1/3 min-w-80 bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-200 shadow-lg hover:shadow-xl transition-all duration-300 group">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
                   <DollarSign className="w-6 h-6 text-white" />
@@ -340,7 +340,7 @@ export default function BeFitBeyondFifty() {
               <ul className="space-y-3 text-green-700">
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Over $12,000 saved annually compared to SaaS alternatives</span>
+                  <span>Over $2,500 saved annually compared to SaaS alternatives</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -357,7 +357,7 @@ export default function BeFitBeyondFifty() {
               </ul>
             </div>
 
-            <div className="flex-1 min-w-80 bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <div className="flex-1 basis-1/3 min-w-80 bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300 group">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
                   <Smartphone className="w-6 h-6 text-white" />
@@ -384,7 +384,7 @@ export default function BeFitBeyondFifty() {
               </ul>
             </div>
 
-            <div className="flex-1 min-w-80 bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-2xl border border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <div className="flex-1 basis-1/3 min-w-80 bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-2xl border border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300 group">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
                   <Shield className="w-6 h-6 text-white" />
@@ -411,7 +411,7 @@ export default function BeFitBeyondFifty() {
               </ul>
             </div>
 
-            <div className="flex-1 min-w-80 bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl border border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <div className="flex-1 basis-1/3 min-w-80 bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl border border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300 group">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-xl flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-white" />
