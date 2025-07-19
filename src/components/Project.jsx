@@ -32,7 +32,7 @@ export default function Project({ project, index }) {
           </div>
 
           <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            {project.external !== '#' && (
+            {project.external && (
               <a
                 href={project.external}
                 target="_blank"
@@ -42,12 +42,14 @@ export default function Project({ project, index }) {
                 <ExternalLink size={20} className="text-gray-800" />
               </a>
             )}
-            <a
-              href={project.github}
-              className="p-3 bg-white/90 rounded-full hover:bg-white transition-colors shadow-lg"
-            >
-              <Github size={20} className="text-gray-800" />
-            </a>
+            {project.github && (
+              <a
+                href={project.github}
+                className="p-3 bg-white/90 rounded-full hover:bg-white transition-colors shadow-lg"
+              >
+                <Github size={20} className="text-gray-800" />
+              </a>
+            )}
           </div>
         </div>
       </div>
