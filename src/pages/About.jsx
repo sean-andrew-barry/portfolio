@@ -2,11 +2,18 @@ import { journey } from '../data/journey';
 import { developerValues } from '../data/developerValues';
 
 export default function About() {
+  const current_year = new Date().getFullYear();
+  const programming_years = current_year - 2014;
+  const lead_developer_years = current_year - 2018;
+  const hours_per_day = 5;
+  const coding_hours = Math.floor((programming_years * 365 * hours_per_day) / 1000);
+
   const stats = [
-    { number: '10+', label: 'Years of Experience' },
-    { number: '17k+', label: 'Hours Coding' },
-    { number: '1m+', label: 'Lines of Code Written' },
-    { number: '∞', label: 'Bugs Squashed' }
+    { number: programming_years, label: 'Years of Experience' },
+    { number: lead_developer_years, label: 'Years as a Lead Developer' },
+    { number: `${coding_hours}k+`, label: 'Hours Coding' },
+    // { number: '1m+', label: 'Lines of Code Written' },
+    // { number: '∞', label: 'Bugs Squashed' },
   ];
 
   return (
@@ -26,9 +33,9 @@ export default function About() {
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="flex flex-wrap justify-center">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="basis-1/4 flex-shrink-0 text-center">
                 <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-2">
                   {stat.number}
                 </div>
@@ -112,11 +119,11 @@ export default function About() {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-600 to-pink-600"></div>
+            <span className="hidden md:block absolute left-8 -translate-x-1/2 top-16 bottom-16 w-2 bg-gradient-to-b from-purple-600 to-pink-600 pointer-events-none" />
 
             <div className="space-y-12">
               {journey.sort((a, b) => a.year - b.year).map((item, index) => (
-                <div key={index} className="relative flex items-start gap-8">
+                <div key={index} className="relative flex items-center gap-8">
                   {/* Timeline dot */}
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
                     {item.year}
