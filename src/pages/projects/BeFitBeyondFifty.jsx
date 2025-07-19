@@ -403,8 +403,7 @@ export default function BeFitBeyondFifty() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Experience the Platform</h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Visit the live platform to see six years of development, iteration, and 
-            real-world business impact in action.
+            Visit the live platform to see seven years of development, iteration, and real-world business impact in action.
           </p>
           <a
             href="https://befitbeyondfifty.com"
