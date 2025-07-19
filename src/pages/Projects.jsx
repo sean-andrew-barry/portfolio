@@ -24,10 +24,7 @@ export default function Projects() {
             My Projects
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Rather than spreading my efforts across many small projects, I've focused deeply on three 
-            significant endeavors. Each represents years of dedicated development, continuous iteration, 
-            and real-world impact. This approach has allowed me to truly master the technologies and 
-            solve complex problems that matter.
+            Rather than spreading my efforts across many small projects, I've focused deeply on three significant endeavors. Each represents years of dedicated development, continuous iteration, and real-world impact. This approach has allowed me to truly master the technologies and solve complex problems that matter.
           </p>
         </div>
       </section>
@@ -39,8 +36,10 @@ export default function Projects() {
             <div className="relative max-w-md w-full">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
               <input
+                id="search"
                 type="text"
                 placeholder="Search projects..."
+                autoComplete="off"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent w-full"
