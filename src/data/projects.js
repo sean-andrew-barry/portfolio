@@ -7,7 +7,7 @@ export const projects = [
     image: '/src/assets/images/be-fit-beyond-fifty-sunflower-logo.png',
     imageAlt: "Be Fit Beyond Fifty sunflower logo",
     icon: Dumbbell,
-    tags: ['6+ Years Development', 'Custom SPA Platform', 'Taggly.js Framework', 'Node.js', 'MongoDB', 'Stripe Integration'],
+    tags: ['7 Years Development', 'Custom SPA Platform', 'Taggly.js Framework', 'Node.js', 'MongoDB', 'Stripe'],
     link: '/projects/be-fit-beyond-fifty',
     external: 'https://befitbeyondfifty.com',
     github: undefined,

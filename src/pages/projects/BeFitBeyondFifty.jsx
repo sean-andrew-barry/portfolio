@@ -8,58 +8,58 @@ export default function BeFitBeyondFifty() {
     {
       icon: DollarSign,
       title: 'Unsustainable SaaS Costs',
-      description: 'External tools like Teachable, Stealth Seminar, and managed hosting were financially unsustainable for a two-person startup'
+      description: 'External tools like Teachable, Stealth Seminar, and managed hosting were financially unsustainable for a two-person startup',
     },
     {
       icon: Globe,
       title: 'Fragmented User Experience',
-      description: 'Users bouncing between multiple platforms created branding inconsistencies and unprofessional experiences'
+      description: 'Users bouncing between multiple platforms created branding inconsistencies and unprofessional experiences',
     },
     {
       icon: Shield,
       title: 'Limited Customization',
-      description: 'Third-party platforms restricted our ability to create the exact user experience we envisioned'
-    }
+      description: 'Third-party platforms restricted our ability to create the exact user experience we envisioned',
+    },
   ];
 
   const solutions = [
     {
       icon: Lock,
       title: 'Custom Course & Membership CMS',
-      description: 'Secure, members-only access with drip content system for gradual lesson release'
+      description: 'Secure, members-only access with drip content system for gradual lesson release',
     },
     {
       icon: DollarSign,
       title: 'Integrated Payments',
-      description: 'Seamless Stripe integration directly embedded into pages for smooth checkout experiences'
+      description: 'Seamless Stripe integration directly embedded into pages for smooth checkout experiences',
     },
     {
       icon: Users,
       title: 'Secure User Management',
-      description: 'Fully encrypted authentication and user management using bcrypt for maximum security'
+      description: 'Fully encrypted authentication and user management using bcrypt for maximum security',
     },
     {
       icon: Globe,
       title: 'In-house Webinar System',
-      description: 'Custom webinar platform eliminating the need for expensive third-party hosting'
+      description: 'Custom webinar platform eliminating the need for expensive third-party hosting',
     },
     {
       icon: Database,
       title: 'Blog and Podcast Platform',
-      description: 'Centralized content management for diverse offerings and improved SEO'
+      description: 'Centralized content management for diverse offerings and improved SEO',
     },
     {
       icon: Zap,
       title: 'Rich API Integrations',
-      description: 'Stripe, AWS, Monday.com, Kit.com, Facebook Ads, Google Docs, and Calendly integrations'
-    }
+      description: 'Stripe, AWS, Monday.com, Kit.com, Facebook Ads, Google Docs, and Calendly integrations',
+    },
   ];
 
   const results = [
-    { metric: '$12,000+', label: 'Annual Savings', description: 'Compared to equivalent SaaS platforms' },
+    { metric: '$2,500+', label: 'Annual Savings', description: 'Compared to equivalent SaaS platforms' },
     { metric: '$7/month', label: 'Infrastructure Cost', description: 'Total hosting and operational expenses' },
     { metric: '99.99%', label: 'Historical Uptime', description: 'Ensuring uninterrupted service reliability' },
-    { metric: '6,900+', label: 'Email Subscribers', description: 'Captured through organic web traffic' }
+    { metric: '7,000+', label: 'Email Subscribers', description: 'Captured through web traffic/ads' },
   ];
 
   const techStack = [
@@ -72,7 +72,7 @@ export default function BeFitBeyondFifty() {
     'Single Page Application',
     'RESTful APIs',
     'Responsive Design',
-    'SEO Optimization'
+    'SEO Optimization',
   ];
 
   const integrations = [
@@ -82,7 +82,7 @@ export default function BeFitBeyondFifty() {
     { name: 'Kit.com', purpose: 'Email Marketing' },
     { name: 'Facebook Ads', purpose: 'Marketing Analytics' },
     { name: 'Google Docs', purpose: 'Content Management' },
-    { name: 'Calendly', purpose: 'Appointment Scheduling' }
+    { name: 'Calendly', purpose: 'Appointment Scheduling' },
   ];
 
   return (
@@ -155,8 +155,7 @@ export default function BeFitBeyondFifty() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Project Overview</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A complete custom solution built to address the financial and operational challenges 
-              of a small health and fitness startup.
+              A complete custom solution built to address the financial and operational challenges of a small health and fitness startup.
             </p>
           </div>
 
@@ -164,11 +163,7 @@ export default function BeFitBeyondFifty() {
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">The Challenge</h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                Early on, relying on external SaaS tools like Teachable for course hosting, 
-                Stealth Seminar for webinars, and managed hosting solutions quickly proved 
-                financially unsustainable for a tiny two-person team. Additionally, fragmented 
-                user experiences from bouncing between multiple platforms posed challenges in 
-                branding consistency and professionalism.
+                Early on, relying on external SaaS tools like Teachable for course hosting, Stealth Seminar for webinars, and managed hosting solutions quickly proved financially unsustainable for a tiny two-person team. Additionally, fragmented user experiences from bouncing between multiple platforms posed challenges in branding consistency and professionalism.
               </p>
               
               <div className="space-y-4">
@@ -189,9 +184,7 @@ export default function BeFitBeyondFifty() {
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">The Solution</h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                I created a custom Single Page Application (SPA) built using my Taggly.js framework, 
-                Node.js, and MongoDB. This comprehensive platform integrates all necessary functionality 
-                into a single, cohesive system.
+                I created a custom Single Page Application (SPA) built using my Taggly.js framework, Node.js, and MongoDB. This comprehensive platform integrates all necessary functionality into a single, cohesive system.
               </p>
 
               <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -226,8 +219,7 @@ export default function BeFitBeyondFifty() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Integrated Solutions</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A comprehensive platform that replaces multiple expensive SaaS tools with 
-              custom-built functionality.
+              A comprehensive platform that replaces multiple expensive SaaS tools with custom-built functionality.
             </p>
           </div>
           
@@ -253,19 +245,13 @@ export default function BeFitBeyondFifty() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Technical Implementation</h2>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  Built with a focus on reliability, performance, and cost-effectiveness, 
-                  the platform uses a carefully chosen tech stack that prioritizes stability 
-                  and user experience over trendy frameworks.
+                  Built with a focus on reliability, performance, and cost-effectiveness, the platform uses a carefully chosen tech stack that prioritizes stability and user experience over trendy frameworks.
                 </p>
                 <p>
-                  The architecture leverages my custom Taggly.js framework for the frontend, 
-                  providing a smooth Single Page Application experience while maintaining 
-                  excellent SEO and performance characteristics.
+                  The architecture leverages my custom Taggly.js framework for the frontend, providing a smooth Single Page Application experience while maintaining excellent SEO and performance characteristics.
                 </p>
                 <p>
-                  Special attention has been paid to security, with bcrypt encryption for 
-                  user authentication, secure payment processing through Stripe, and 
-                  comprehensive data protection measures throughout the platform.
+                  Special attention has been paid to security, with bcrypt encryption for user authentication, secure payment processing through Stripe, and comprehensive data protection measures throughout the platform.
                 </p>
               </div>
 
@@ -273,9 +259,9 @@ export default function BeFitBeyondFifty() {
                 <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Achievements</h4>
                 <ul className="space-y-2 text-gray-600">
                   <li>• 99.99% historical uptime over 6+ years</li>
-                  <li>• $12,000+ annual savings vs SaaS alternatives</li>
+                  <li>• $2,500+ annual savings vs SaaS alternatives</li>
                   <li>• $7/month total infrastructure costs</li>
-                  <li>• 6,900+ email subscribers via organic traffic</li>
+                  <li>• 7,000+ email subscribers via organic traffic</li>
                   <li>• Seamless user experience across all devices</li>
                   <li>• Automated workflows and integrations</li>
                 </ul>
@@ -319,8 +305,7 @@ export default function BeFitBeyondFifty() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Results & Impact</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              The custom platform delivered significant cost savings, improved user experience, 
-              and operational efficiency for the business.
+              The custom platform delivered significant cost savings, improved user experience, and operational efficiency for the business.
             </p>
           </div>
 
@@ -329,7 +314,7 @@ export default function BeFitBeyondFifty() {
               <div className="bg-green-50 p-6 rounded-xl border border-green-200">
                 <h3 className="text-xl font-bold text-green-800 mb-3">Financial Impact</h3>
                 <ul className="space-y-2 text-green-700">
-                  <li>• Over $12,000 saved annually compared to SaaS alternatives</li>
+                  <li>• Over $2,500 saved annually compared to SaaS alternatives</li>
                   <li>• Infrastructure costs reduced to just $7/month</li>
                   <li>• Eliminated dependency on expensive third-party tools</li>
                   <li>• Scalable architecture supporting business growth</li>
@@ -361,7 +346,7 @@ export default function BeFitBeyondFifty() {
               <div className="bg-orange-50 p-6 rounded-xl border border-orange-200">
                 <h3 className="text-xl font-bold text-orange-800 mb-3">Growth & Marketing</h3>
                 <ul className="space-y-2 text-orange-700">
-                  <li>• 6,900+ email subscribers captured organically</li>
+                  <li>• 7,000+ email subscribers captured</li>
                   <li>• SEO-optimized content management</li>
                   <li>• Integrated marketing automation</li>
                   <li>• Analytics-driven optimization</li>
