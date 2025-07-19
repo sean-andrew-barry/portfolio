@@ -1,48 +1,88 @@
-import { ExternalLink, Github, Calendar, Users, TrendingUp, Shield, Smartphone } from 'lucide-react';
+import { ExternalLink, Github, Calendar, Users, TrendingUp, Shield, Smartphone, DollarSign, Zap, Lock, Globe, Server, Database } from 'lucide-react';
 import { projects } from '../../data/projects';
 
 export default function BeFitBeyondFifty() {
   const project = projects.find(p => p.title == "Be Fit Beyond Fifty");
 
-  const features = [
+  const challenges = [
     {
-      icon: Users,
-      title: 'Personalized Programs',
-      description: 'Customized workout plans based on individual fitness levels, health conditions, and goals'
+      icon: DollarSign,
+      title: 'Unsustainable SaaS Costs',
+      description: 'External tools like Teachable, Stealth Seminar, and managed hosting were financially unsustainable for a two-person startup'
     },
     {
-      icon: TrendingUp,
-      title: 'Progress Tracking',
-      description: 'Comprehensive analytics and reporting to monitor fitness improvements over time'
+      icon: Globe,
+      title: 'Fragmented User Experience',
+      description: 'Users bouncing between multiple platforms created branding inconsistencies and unprofessional experiences'
     },
     {
       icon: Shield,
-      title: 'Safety First',
-      description: 'Age-appropriate exercises with built-in safety guidelines and modifications'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile Optimized',
-      description: 'Responsive design ensuring great experience across all devices'
-    },
+      title: 'Limited Customization',
+      description: 'Third-party platforms restricted our ability to create the exact user experience we envisioned'
+    }
   ];
 
-  const stats = [
-    { number: '7+', label: 'Years in Production' },
-    { number: '1000+', label: 'Active Users' },
-    { number: '50+', label: 'Exercise Programs' },
-    { number: '99.9%', label: 'Uptime' },
+  const solutions = [
+    {
+      icon: Lock,
+      title: 'Custom Course & Membership CMS',
+      description: 'Secure, members-only access with drip content system for gradual lesson release'
+    },
+    {
+      icon: DollarSign,
+      title: 'Integrated Payments',
+      description: 'Seamless Stripe integration directly embedded into pages for smooth checkout experiences'
+    },
+    {
+      icon: Users,
+      title: 'Secure User Management',
+      description: 'Fully encrypted authentication and user management using bcrypt for maximum security'
+    },
+    {
+      icon: Globe,
+      title: 'In-house Webinar System',
+      description: 'Custom webinar platform eliminating the need for expensive third-party hosting'
+    },
+    {
+      icon: Database,
+      title: 'Blog and Podcast Platform',
+      description: 'Centralized content management for diverse offerings and improved SEO'
+    },
+    {
+      icon: Zap,
+      title: 'Rich API Integrations',
+      description: 'Stripe, AWS, Monday.com, Kit.com, Facebook Ads, Google Docs, and Calendly integrations'
+    }
+  ];
+
+  const results = [
+    { metric: '$12,000+', label: 'Annual Savings', description: 'Compared to equivalent SaaS platforms' },
+    { metric: '$7/month', label: 'Infrastructure Cost', description: 'Total hosting and operational expenses' },
+    { metric: '99.99%', label: 'Historical Uptime', description: 'Ensuring uninterrupted service reliability' },
+    { metric: '6,900+', label: 'Email Subscribers', description: 'Captured through organic web traffic' }
   ];
 
   const techStack = [
-    'HTML5 & CSS3',
-    'JavaScript (ES6+)',
-    'PHP',
-    'MySQL',
+    'Taggly.js Framework',
+    'Node.js Backend',
+    'MongoDB Database',
+    'Stripe Payments',
+    'AWS Integration',
+    'bcrypt Security',
+    'Single Page Application',
+    'RESTful APIs',
     'Responsive Design',
-    'Progressive Web App',
-    'Payment Integration',
-    'Content Management',
+    'SEO Optimization'
+  ];
+
+  const integrations = [
+    { name: 'Stripe', purpose: 'Payment Processing' },
+    { name: 'AWS', purpose: 'Cloud Services' },
+    { name: 'Monday.com', purpose: 'Project Management' },
+    { name: 'Kit.com', purpose: 'Email Marketing' },
+    { name: 'Facebook Ads', purpose: 'Marketing Analytics' },
+    { name: 'Google Docs', purpose: 'Content Management' },
+    { name: 'Calendly', purpose: 'Appointment Scheduling' }
   ];
 
   return (
@@ -55,8 +95,11 @@ export default function BeFitBeyondFifty() {
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 Be Fit Beyond Fifty
               </h1>
-              <p className="text-xl text-green-100 mb-8 leading-relaxed">
-                {project.description}
+              <p className="text-xl text-green-100 mb-6 leading-relaxed">
+                Custom Membership & Course Platform
+              </p>
+              <p className="text-lg text-green-200 mb-8 leading-relaxed">
+                Since 2018, I've served as the sole full-stack engineer and DevOps specialist for this health and fitness startup, building a comprehensive custom platform from scratch to replace expensive SaaS solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -65,15 +108,14 @@ export default function BeFitBeyondFifty() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Visit Live Site
+                  Visit Live Platform
                   <ExternalLink size={20} />
                 </a>
                 <a
-                  href="#"
+                  href="#technical-details"
                   className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  <Github size={20} />
-                  View Code
+                  Technical Details
                 </a>
               </div>
             </div>
@@ -90,16 +132,17 @@ export default function BeFitBeyondFifty() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Results Stats */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {results.map((result, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">
-                  {stat.number}
+                  {result.metric}
                 </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-gray-900 font-semibold mb-1">{result.label}</div>
+                <div className="text-sm text-gray-600">{result.description}</div>
               </div>
             ))}
           </div>
@@ -109,117 +152,67 @@ export default function BeFitBeyondFifty() {
       {/* Project Overview */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Seven Years of Dedicated Development
-              </h2>
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-                <p>
-                  Be Fit Beyond Fifty isn't just a website—it's been my life's work for the past seven years. 
-                  What started as a simple fitness site has evolved into a comprehensive platform serving 
-                  thousands of users worldwide.
-                </p>
-                <p>
-                  This project has taught me everything about building and maintaining production software: 
-                  from handling real user data and payments to optimizing for performance and accessibility. 
-                  Every feature has been battle-tested in the real world.
-                </p>
-                <p>
-                  The platform has grown organically based on user feedback, market demands, and my own 
-                  learning journey as a developer. It represents not just technical skills, but deep 
-                  understanding of user needs and business requirements.
-                </p>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <Calendar className="w-8 h-8 text-green-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Continuous Evolution</h3>
-                <p className="text-gray-600">
-                  Regular updates and feature additions based on user feedback and industry trends
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <Users className="w-8 h-8 text-green-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Real Users, Real Impact</h3>
-                <p className="text-gray-600">
-                  Serving actual customers with real fitness goals and health considerations
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Key Features</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Built specifically for the unique needs and challenges of fitness after 50
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Project Overview</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              A complete custom solution built to address the financial and operational challenges 
+              of a small health and fitness startup.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
-                <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Technical Details */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Technical Implementation</h2>
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-                <p>
-                  Built with a focus on reliability and performance, the platform uses a carefully 
-                  chosen tech stack that prioritizes stability and user experience over trendy frameworks.
-                </p>
-                <p>
-                  The architecture has evolved over seven years to handle increasing traffic, 
-                  new feature requirements, and changing web standards while maintaining 
-                  backward compatibility and data integrity.
-                </p>
-                <p>
-                  Special attention has been paid to accessibility, mobile responsiveness, 
-                  and performance optimization to serve users who may not be as tech-savvy 
-                  or may have slower internet connections.
-                </p>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Technology Stack</h3>
-              <div className="grid grid-cols-2 gap-3">
-                {techStack.map((tech, index) => (
-                  <div
-                    key={index}
-                    className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center font-medium text-gray-700"
-                  >
-                    {tech}
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">The Challenge</h3>
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                Early on, relying on external SaaS tools like Teachable for course hosting, 
+                Stealth Seminar for webinars, and managed hosting solutions quickly proved 
+                financially unsustainable for a tiny two-person team. Additionally, fragmented 
+                user experiences from bouncing between multiple platforms posed challenges in 
+                branding consistency and professionalism.
+              </p>
+              
+              <div className="space-y-4">
+                {challenges.map((challenge, index) => (
+                  <div key={index} className="flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm">
+                    <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <challenge.icon className="w-6 h-6 text-red-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">{challenge.title}</h4>
+                      <p className="text-sm text-gray-600">{challenge.description}</p>
+                    </div>
                   </div>
                 ))}
               </div>
-              
-              <div className="mt-8 bg-white p-6 rounded-xl shadow-lg">
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Achievements</h4>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• 99.9% uptime over 7 years</li>
-                  <li>• Secure payment processing</li>
-                  <li>• GDPR and accessibility compliant</li>
-                  <li>• Mobile-first responsive design</li>
-                  <li>• SEO optimized for organic growth</li>
+            </div>
+
+            <div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">The Solution</h3>
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                I created a custom Single Page Application (SPA) built using my Taggly.js framework, 
+                Node.js, and MongoDB. This comprehensive platform integrates all necessary functionality 
+                into a single, cohesive system.
+              </p>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4">Key Architecture</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="font-medium">Taggly.js Framework</span> - Custom SPA framework
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="font-medium">Node.js Backend</span> - Server-side processing
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="font-medium">MongoDB Database</span> - Flexible data storage
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="font-medium">Stripe Integration</span> - Secure payments
+                  </li>
                 </ul>
               </div>
             </div>
@@ -227,36 +220,193 @@ export default function BeFitBeyondFifty() {
         </div>
       </section>
 
-      {/* Lessons Learned */}
+      {/* Solutions */}
       <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Integrated Solutions</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              A comprehensive platform that replaces multiple expensive SaaS tools with 
+              custom-built functionality.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {solutions.map((solution, index) => (
+              <div key={index} className="p-6 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
+                <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-4">
+                  <solution.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{solution.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">{solution.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Implementation */}
+      <section id="technical-details" className="py-24 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Technical Implementation</h2>
+              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+                <p>
+                  Built with a focus on reliability, performance, and cost-effectiveness, 
+                  the platform uses a carefully chosen tech stack that prioritizes stability 
+                  and user experience over trendy frameworks.
+                </p>
+                <p>
+                  The architecture leverages my custom Taggly.js framework for the frontend, 
+                  providing a smooth Single Page Application experience while maintaining 
+                  excellent SEO and performance characteristics.
+                </p>
+                <p>
+                  Special attention has been paid to security, with bcrypt encryption for 
+                  user authentication, secure payment processing through Stripe, and 
+                  comprehensive data protection measures throughout the platform.
+                </p>
+              </div>
+
+              <div className="mt-8 bg-white p-6 rounded-xl shadow-lg">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Achievements</h4>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• 99.99% historical uptime over 6+ years</li>
+                  <li>• $12,000+ annual savings vs SaaS alternatives</li>
+                  <li>• $7/month total infrastructure costs</li>
+                  <li>• 6,900+ email subscribers via organic traffic</li>
+                  <li>• Seamless user experience across all devices</li>
+                  <li>• Automated workflows and integrations</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Technology Stack</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {techStack.map((tech, index) => (
+                    <div
+                      key={index}
+                      className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center font-medium text-gray-700"
+                    >
+                      {tech}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">API Integrations</h3>
+                <div className="space-y-3">
+                  {integrations.map((integration, index) => (
+                    <div key={index} className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex justify-between items-center">
+                      <span className="font-semibold text-gray-900">{integration.name}</span>
+                      <span className="text-sm text-gray-600">{integration.purpose}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Results & Impact */}
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Results & Impact</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              The custom platform delivered significant cost savings, improved user experience, 
+              and operational efficiency for the business.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <div className="bg-green-50 p-6 rounded-xl border border-green-200">
+                <h3 className="text-xl font-bold text-green-800 mb-3">Financial Impact</h3>
+                <ul className="space-y-2 text-green-700">
+                  <li>• Over $12,000 saved annually compared to SaaS alternatives</li>
+                  <li>• Infrastructure costs reduced to just $7/month</li>
+                  <li>• Eliminated dependency on expensive third-party tools</li>
+                  <li>• Scalable architecture supporting business growth</li>
+                </ul>
+              </div>
+
+              <div className="bg-blue-50 p-6 rounded-xl border border-blue-200">
+                <h3 className="text-xl font-bold text-blue-800 mb-3">User Experience</h3>
+                <ul className="space-y-2 text-blue-700">
+                  <li>• Professional, cohesive brand experience</li>
+                  <li>• Fast, responsive Single Page Application</li>
+                  <li>• Seamless payment and course access</li>
+                  <li>• Mobile-optimized for all devices</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-purple-50 p-6 rounded-xl border border-purple-200">
+                <h3 className="text-xl font-bold text-purple-800 mb-3">Operational Excellence</h3>
+                <ul className="space-y-2 text-purple-700">
+                  <li>• 99.99% historical uptime ensuring reliability</li>
+                  <li>• Automated workflows reducing manual tasks</li>
+                  <li>• Integrated analytics and reporting</li>
+                  <li>• Secure user data management and compliance</li>
+                </ul>
+              </div>
+
+              <div className="bg-orange-50 p-6 rounded-xl border border-orange-200">
+                <h3 className="text-xl font-bold text-orange-800 mb-3">Growth & Marketing</h3>
+                <ul className="space-y-2 text-orange-700">
+                  <li>• 6,900+ email subscribers captured organically</li>
+                  <li>• SEO-optimized content management</li>
+                  <li>• Integrated marketing automation</li>
+                  <li>• Analytics-driven optimization</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What This Project Demonstrates */}
+      <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">What This Project Taught Me</h2>
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">What This Project Demonstrates</h2>
+          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+            This project showcases my ability to deliver high-quality, reliable, and cost-effective 
+            solutions as a solo developer across the entire technology stack.
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-green-600" />
+                <Server className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">User-Centric Development</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Full-Stack Expertise</h3>
               <p className="text-gray-600">
-                Real users with real needs taught me to prioritize functionality and usability over flashy features.
+                Complete ownership of front-end, back-end, database design, DevOps, and security implementation.
               </p>
             </div>
             <div className="p-6">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-green-600" />
+                <DollarSign className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Scalable Architecture</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Business Impact</h3>
               <p className="text-gray-600">
-                Building for growth while maintaining performance and reliability at every stage.
+                Delivering measurable cost savings and operational efficiency improvements for real business needs.
               </p>
             </div>
             <div className="p-6">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Production Mindset</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Production Reliability</h3>
               <p className="text-gray-600">
-                Security, data protection, and reliability aren't optional—they're fundamental requirements.
+                Building and maintaining production systems with 99.99% uptime and robust security measures.
               </p>
             </div>
           </div>
@@ -266,9 +416,10 @@ export default function BeFitBeyondFifty() {
       {/* CTA */}
       <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Experience It Yourself</h2>
+          <h2 className="text-4xl font-bold mb-6">Experience the Platform</h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Visit the live site to see seven years of development and iteration in action.
+            Visit the live platform to see six years of development, iteration, and 
+            real-world business impact in action.
           </p>
           <a
             href="https://befitbeyondfifty.com"

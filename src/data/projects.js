@@ -3,17 +3,17 @@ import { Code, Dumbbell, Zap } from 'lucide-react';
 export const projects = [
   {
     title: 'Be Fit Beyond Fifty',
-    description: 'A comprehensive fitness platform I\'ve built and maintained for over 7 years, specifically designed for users over 50. This has been my primary focus, serving thousands of users with personalized workout plans, health monitoring, and progress tracking.',
+    description: 'A fully custom membership and course platform I\'ve built and maintained since 2018 as the sole full-stack engineer. Built from scratch to replace expensive SaaS solutions, saving over $12,000 annually while delivering a professional, unified user experience.',
     image: '/src/assets/images/be-fit-beyond-fifty-sunflower-logo.png',
     imageAlt: "Be Fit Beyond Fifty sunflower logo",
     icon: Dumbbell,
-    tags: ['7 Years Development', 'Production Website', 'Health & Fitness', 'JavaScript', 'MongoDB', 'Stripe'],
+    tags: ['6+ Years Development', 'Custom SPA Platform', 'Taggly.js Framework', 'Node.js', 'MongoDB', 'Stripe Integration'],
     link: '/projects/be-fit-beyond-fifty',
     external: 'https://befitbeyondfifty.com',
     github: undefined,
     gradient: 'from-green-500 to-emerald-600',
     bgColor: 'bg-green-50',
-    years: '2017-Present',
+    years: '2018-Present',
     featured: true,
   },
   {
