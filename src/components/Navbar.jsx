@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useMatch } from 'react-router-dom';
 import { Menu, X, Home, Briefcase, User, Mail, BookOpen } from "lucide-react";
 import { identity } from '../data/identity';
 import { projects } from '../data/projects';
@@ -93,34 +93,37 @@ export default function Navbar() {
               </NavLink>
               {children && (
                 <div className="absolute left-0 mt-2 w-64 rounded-xl bg-white/95 backdrop-blur-md shadow-xl border border-gray-200/50 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 z-50 overflow-hidden">
-                  {children.map(({ to: childTo, label: childLabel, gradient, bgColor, image, icon: ChildIcon, imageAlt }) => (
-                    <NavLink
-                      key={childTo}
-                      to={childTo}
-                      className={({ isActive }) =>
-                        `flex items-center gap-3 px-6 py-4 text-sm font-medium whitespace-nowrap transition-all duration-200 border-l-4 border-transparent hover:shadow-md ${
-                          isActive
-                            ? `bg-gradient-to-r ${gradient} text-white border-l-4`
-                            : `text-gray-700 hover:bg-gradient-to-r hover:${gradient} hover:text-white`
-                        }`
-                      }
-                    >
-                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                        isActive ? 'bg-white/20' : `bg-gradient-to-r ${gradient}`
-                      }`}>
-                        {image ? (
-                          <img
-                            src={image}
-                            alt={imageAlt || childLabel}
-                            className="w-6 h-6 rounded object-cover"
-                          />
-                        ) : (
-                          <ChildIcon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-white'}`} />
-                        )}
-                      </div>
-                      <span>{childLabel}</span>
-                    </NavLink>
-                  ))}
+                  {children.map(({ to: childTo, label: childLabel, gradient, bgColor, image, icon: ChildIcon, imageAlt }) => {
+                    const isChildActive = useMatch(childTo);
+                    return (
+                      <NavLink
+                        key={childTo}
+                        to={childTo}
+                        className={({ isActive }) =>
+                          `flex items-center gap-3 px-6 py-4 text-sm font-medium whitespace-nowrap transition-all duration-200 border-l-4 border-transparent hover:shadow-md ${
+                            isActive
+                              ? `bg-gradient-to-r ${gradient} text-white border-l-4`
+                              : `text-gray-700 hover:bg-gradient-to-r hover:${gradient} hover:text-white`
+                          }`
+                        }
+                      >
+                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                          isChildActive ? 'bg-white/20' : `bg-gradient-to-r ${gradient}`
+                        }`}>
+                          {image ? (
+                            <img
+                              src={image}
+                              alt={imageAlt || childLabel}
+                              className="w-6 h-6 rounded object-cover"
+                            />
+                          ) : (
+                            <ChildIcon className={`w-4 h-4 ${isChildActive ? 'text-white' : 'text-white'}`} />
+                          )}
+                        </div>
+                        <span>{childLabel}</span>
+                      </NavLink>
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -162,35 +165,38 @@ export default function Navbar() {
                 </NavLink>
                 {children && (
                   <div className="ml-6 mt-2 space-y-1 pl-4 border-l-2 border-gray-200">
-                    {children.map(({ to: childTo, label: childLabel, gradient, bgColor, image, icon: ChildIcon, imageAlt }) => (
-                      <NavLink
-                        key={childTo}
-                        to={childTo}
-                        onClick={() => setMenuOpen(false)}
-                        className={({ isActive }) =>
-                          `flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
-                            isActive
-                              ? `bg-gradient-to-r ${gradient} text-white shadow-lg`
-                              : `text-gray-600 hover:bg-gradient-to-r hover:${gradient} hover:text-white`
-                          }`
-                        }
-                      >
-                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                          isActive ? 'bg-white/20' : `bg-gradient-to-r ${gradient}`
-                        }`}>
-                          {image ? (
-                            <img
-                              src={image}
-                              alt={imageAlt || childLabel}
-                              className="w-6 h-6 rounded object-cover"
-                            />
-                          ) : (
-                            <ChildIcon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-white'}`} />
-                          )}
-                        </div>
-                        <span>{childLabel}</span>
-                      </NavLink>
-                    ))}
+                    {children.map(({ to: childTo, label: childLabel, gradient, bgColor, image, icon: ChildIcon, imageAlt }) => {
+                      const isChildActive = useMatch(childTo);
+                      return (
+                        <NavLink
+                          key={childTo}
+                          to={childTo}
+                          onClick={() => setMenuOpen(false)}
+                          className={({ isActive }) =>
+                            `flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                              isActive
+                                ? `bg-gradient-to-r ${gradient} text-white shadow-lg`
+                                : `text-gray-600 hover:bg-gradient-to-r hover:${gradient} hover:text-white`
+                            }`
+                          }
+                        >
+                          <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                            isChildActive ? 'bg-white/20' : `bg-gradient-to-r ${gradient}`
+                          }`}>
+                            {image ? (
+                              <img
+                                src={image}
+                                alt={imageAlt || childLabel}
+                                className="w-6 h-6 rounded object-cover"
+                              />
+                            ) : (
+                              <ChildIcon className={`w-4 h-4 ${isChildActive ? 'text-white' : 'text-white'}`} />
+                            )}
+                          </div>
+                          <span>{childLabel}</span>
+                        </NavLink>
+                      );
+                    })}
                   </div>
                 )}
               </div>
