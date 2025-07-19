@@ -128,7 +128,7 @@ export default function Taggly() {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="">
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-purple-600 via-pink-600 to-purple-700 text-white">
         <div className="max-w-6xl mx-auto px-4">

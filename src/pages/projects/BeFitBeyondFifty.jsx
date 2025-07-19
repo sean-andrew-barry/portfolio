@@ -86,7 +86,7 @@ export default function BeFitBeyondFifty() {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="">
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-green-600 via-emerald-600 to-green-700 text-white">
         <div className="max-w-6xl mx-auto px-4">

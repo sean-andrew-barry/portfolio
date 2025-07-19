@@ -16,7 +16,7 @@ export default function Projects() {
   });
 
   return (
-    <div className="pt-20">
+    <div className="">
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         <div className="max-w-6xl mx-auto px-4 text-center">

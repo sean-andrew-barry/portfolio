@@ -104,7 +104,7 @@ export default function Warble() {
   // ];
 
   return (
-    <div className="pt-20">
+    <div className="">
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
