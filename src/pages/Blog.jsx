@@ -7,7 +7,7 @@ export default function Blog() {
     <div className="p-8 max-w-3xl mx-auto">
       <h1 className="text-4xl font-bold mb-6">Blog</h1>
       <ul className="space-y-6">
-        {posts.map((post) => (
+        {posts.sort((a, b) => b.date - a.date).map((post) => (
           <li key={post.slug}>
             <Link
               to={`/blog/${post.slug}`}
@@ -25,7 +25,7 @@ export default function Blog() {
               </h2>
               <FormattedDate date={post.date} className="text-sm text-gray-500 mb-2" />
               <p className="text-gray-700 dark:text-gray-300">
-                {post.content.substring(0, 120)}{post.content.length > 120 ? '...' : ''}
+                {post.excerpt}
               </p>
             </Link>
           </li>
