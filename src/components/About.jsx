@@ -1,6 +1,9 @@
 import { developerValues } from '../data/developerValues';
+import { getTopSkills } from '../data/skills';
 
 export default function About() {
+  const skills = getTopSkills(5);
+
   return (
     <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4">
@@ -18,18 +21,26 @@ export default function About() {
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              When I'm not immersed in personal coding projects, you'll find me spending time with my budgies, gaming, or exploring ideas about neuroscience. My passion for learning and curiosity about the world continuously drive me to understand things at a deeper level.
+              When I'm not working, you'll usually find me taking care of my budgies, playing Old School RuneScape or Overwatch 2, or diving deep into topics like compiler optimization and neuroscience.
             </p>
 
             <div className="flex flex-wrap gap-3">
-              {['JavaScript', 'React', 'Node.js', 'TypeScript', 'Python', 'AWS'].map((tech) => (
+              {skills.map((skill) => (
+                <span 
+                  key={skill.name}
+                  className="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-medium"
+                >
+                  {skill.name}
+                </span>
+              ))}
+              {/* {['JavaScript', 'React', 'Node.js', 'TypeScript', 'Python', 'AWS'].map((tech) => (
                 <span 
                   key={tech}
                   className="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-medium"
                 >
                   {tech}
                 </span>
-              ))}
+              ))} */}
             </div>
           </div>
           
