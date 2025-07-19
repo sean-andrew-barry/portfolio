@@ -1,5 +1,6 @@
 import { ExternalLink, Github, Code, Zap, Layers, Puzzle, Cpu, Gauge, Globe, Database, Wrench, FileCode, Rocket, Shield } from 'lucide-react';
 import { projects } from '../../data/projects';
+import { ShikiHighlighter } from 'react-shiki';
 
 const example1 = `import {Body, Div, A} from "/js/Tags.js";
 
@@ -137,12 +138,10 @@ export default function Taggly() {
                 Taggly
               </h1>
               <p className="text-xl text-blue-100 mb-6 leading-relaxed">
-                A Revolutionary JavaScript Web Development Framework
+                A Powerful JavaScript Web Development Framework
               </p>
               <p className="text-lg text-blue-200 mb-8 leading-relaxed">
-                A complete solution for Single Page Applications that unifies client and server development,
-                dramatically reduces complexity, and delivers exceptional performance through innovative
-                architecture and design principles.
+                A complete solution for Single Page Applications that unifies client and server development, dramatically reduces complexity, and delivers exceptional performance through innovative architecture and design principles.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -263,11 +262,15 @@ export default function Taggly() {
                 </p>
               </div>
             </div>
-            <div className="bg-gray-900 rounded-2xl p-6 overflow-x-auto">
-              <h3 className="text-white text-lg font-semibold mb-4">Tag Example</h3>
-              <pre className="text-green-400 text-sm leading-relaxed">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Tag Example</h3>
+              <ShikiHighlighter
+                language="js"
+                theme="one-dark-pro"
+                className="rounded-xl text-sm"
+              >
                 {example1}
-              </pre>
+              </ShikiHighlighter>
             </div>
           </div>
         </div>
@@ -277,7 +280,7 @@ export default function Taggly() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Revolutionary Layer System</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Layer System</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               The most powerful feature of Taggly - a file resolution system that allows
               near unlimited customization of the framework itself.
@@ -303,11 +306,16 @@ export default function Taggly() {
               </div>
             </div>
 
-            <div className="bg-gray-900 rounded-2xl p-6">
-              <h3 className="text-white text-lg font-semibold mb-4">Custom Div Example</h3>
-              <pre className="text-green-400 text-sm leading-relaxed">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Custom Div Example</h3>
+              <ShikiHighlighter
+                code={`console.log("Hello Shiki!")`}
+                language="js"
+                theme="one-dark-pro"
+                className="rounded-xl text-sm"
+              >
                 {example2}
-              </pre>
+              </ShikiHighlighter>
             </div>
           </div>
         </div>
@@ -343,8 +351,7 @@ export default function Taggly() {
           <h2 className="text-4xl font-bold mb-6">Why Choose Taggly?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
             Taggly represents a rethinking of web development. Instead of adding complexity,
-            it removes it. Instead of fighting the platform, it embraces it. Instead of limiting
-            customization, it makes everything customizable.
+            it removes it. Instead of fighting the platform, it embraces it. Instead of limiting customization, it makes everything customizable.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mt-12">
