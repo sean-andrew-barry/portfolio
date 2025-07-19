@@ -71,7 +71,7 @@ export default function Project({ project, index }) {
             <ArrowRight size={18} />
           </Link>
 
-          {project.external !== '#' && (
+          {project.external && project.external !== '#' && (
             <a
               href={project.external}
               target="_blank"
