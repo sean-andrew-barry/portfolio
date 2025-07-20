@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { identity } from '../data/identity';
 
 export default function Footer() {
@@ -61,12 +62,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-gray-400 hover:text-white transition-colors duration-300"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
