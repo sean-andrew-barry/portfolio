@@ -33,14 +33,6 @@ export default function About() {
                   {skill.name}
                 </span>
               ))}
-              {/* {['JavaScript', 'React', 'Node.js', 'TypeScript', 'Python', 'AWS'].map((tech) => (
-                <span 
-                  key={tech}
-                  className="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-medium"
-                >
-                  {tech}
-                </span>
-              ))} */}
             </div>
           </div>
           
