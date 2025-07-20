@@ -1,6 +1,6 @@
 export const identity = {
   name: "Sean Barry",
-  email: "sean.barry.developer@gmail.com",
+  email: "contact@seanandrewbarry.com",
   location: "Cascade, Idaho",
   availability: true,
   github: "https://github.com/sean-andrew-barry",
