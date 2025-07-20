@@ -16,6 +16,7 @@
     "tw:init": "tailwindcss init -p"
   },
   "dependencies": {
+    "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "lucide-react": "^0.483.0",
     "nodemailer": "^7.0.5",
