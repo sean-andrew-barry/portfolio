@@ -183,7 +183,7 @@ export default function Taggly() {
           <div className="grid md:grid-cols-2 gap-8">
             {coreGoals.map((goal, index) => (
               <div key={index} className="p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
-                <div className={`w-16 h-16 bg-gradient-to-r ${project.gradient} rounded-xl flex items-center justify-center mb-6`}>
+                <div className={`w-16 h-16 bg-gradient-to-r ${project.gradient.join(" ")} rounded-xl flex items-center justify-center mb-6`}>
                   <goal.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{goal.title}</h3>
@@ -228,7 +228,7 @@ export default function Taggly() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {keyFeatures.map((feature, index) => (
               <div key={index} className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className={`w-12 h-12 bg-gradient-to-r ${project.gradient} rounded-lg flex items-center justify-center mb-4`}>
+                <div className={`w-12 h-12 bg-gradient-to-r ${project.gradient.join(" ")} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -334,7 +334,7 @@ export default function Taggly() {
           <div className="grid md:grid-cols-2 gap-8">
             {advancedFeatures.map((feature, index) => (
               <div key={index} className="p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
-                <div className={`w-16 h-16 bg-gradient-to-r ${project.gradient} rounded-xl flex items-center justify-center mb-6`}>
+                <div className={`w-16 h-16 bg-gradient-to-r ${project.gradient.join(" ")} rounded-xl flex items-center justify-center mb-6`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
@@ -381,7 +381,7 @@ export default function Taggly() {
       </section>
 
       {/* CTA */}
-      <section className={`py-24 bg-gradient-to-r ${project.gradient} text-white`}>
+      <section className={`py-24 bg-gradient-to-r ${project.gradient.join(" ")} text-white`}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Development?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">

@@ -11,7 +11,7 @@ export default function Project({ project, index }) {
       <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
         <div className={`relative group overflow-hidden rounded-2xl shadow-2xl ${project.bgColor} p-12`}>
           <div className="text-center">
-            <div className={`w-24 h-24 mx-auto mb-6 bg-gradient-to-r ${project.gradient} rounded-2xl flex items-center justify-center`}>
+            <div className={`w-24 h-24 mx-auto mb-6 bg-gradient-to-r ${project.gradient.join(" ")} rounded-2xl flex items-center justify-center`}>
               {project.image ? <img
                 src={project.image}
                 alt={project.imageAlt}
@@ -65,7 +65,7 @@ export default function Project({ project, index }) {
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
             to={project.link}
-            className={`inline-flex items-center gap-2 bg-gradient-to-r ${project.gradient} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+            className={`inline-flex items-center gap-2 bg-gradient-to-r ${project.gradient.join(" ")} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
           >
             Learn More
             <ArrowRight size={18} />

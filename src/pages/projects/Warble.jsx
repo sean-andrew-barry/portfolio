@@ -141,7 +141,7 @@ export default function Warble() {
               </div>
             </div>
             <div className="relative">
-              <div className={`aspect-square rounded-2xl bg-white/10 backdrop-blur-sm p-8 flex items-center justify-center bg-gradient-to-r ${project.gradient}`}>
+              <div className={`aspect-square rounded-2xl bg-white/10 backdrop-blur-sm p-8 flex items-center justify-center bg-gradient-to-r ${project.gradient.join(" ")}`}>
                 {/* <Rocket className="w-32 h-32 text-white/80" /> */}
                 {project.image ? <img
                   src={project.image}
@@ -167,7 +167,7 @@ export default function Warble() {
           <div className="grid lg:grid-cols-2 gap-8">
             {coreInnovations.map((innovation, index) => (
               <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className={`w-16 h-16 bg-gradient-to-r ${project.gradient} rounded-xl flex items-center justify-center mb-6`}>
+                <div className={`w-16 h-16 bg-gradient-to-r ${project.gradient.join(" ")} rounded-xl flex items-center justify-center mb-6`}>
                   <innovation.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{innovation.title}</h3>
@@ -355,7 +355,7 @@ export default function Warble() {
       </section>
 
       {/* CTA */}
-      <section className={`py-24 bg-gradient-to-r ${project.gradient} text-white`}>
+      <section className={`py-24 bg-gradient-to-r ${project.gradient.join(" ")} text-white`}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Explore Warble's Future</h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">

@@ -4,15 +4,13 @@ import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import Project from '../components/Project';
 
-
 export default function Projects() {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredProjects = projects.filter(project => {
-    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesSearch;
+    return project.title.toLowerCase().includes(searchTerm.toLowerCase())
+        || project.description.toLowerCase().includes(searchTerm.toLowerCase())
+        || project.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
   });
 
   return (
