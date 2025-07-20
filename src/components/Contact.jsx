@@ -7,20 +7,54 @@ export default function Contact() {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    company: '',
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false);
+
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const validate = () => {
+    if (!formData.name.trim()) return "Name required.";
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(formData.email)) return "Invalid email.";
+    if (!formData.subject.trim()) return "Subject required.";
+    if (formData.message.trim().length < 10) return "Message too short.";
+    return null;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setError(null);
+    setSuccess(false);
+
+    const v = validate();
+    if (v) { setError(v); return; }
+
+    setIsSubmitting(true);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (!res.ok) {
+        const text = await res.text().catch(() => '');
+        throw new Error(text || `Server error (${res.status})`);
+      }
+      setSuccess(true);
+      setFormData({ name: '', email: '', subject: '', message: '', company: '', });
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -62,7 +96,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Have a project in mind or just want to chat about technology? 
+            Have a project in mind or just want to chat about technology?
             I'd love to hear from you. Let's create something amazing together.
           </p>
         </div>
@@ -71,7 +105,7 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -90,7 +124,7 @@ export default function Contact() {
                     placeholder="Your name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
                     Email
@@ -108,7 +142,7 @@ export default function Contact() {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
                   Subject
@@ -124,7 +158,7 @@ export default function Contact() {
                   placeholder="What's this about?"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
                   Message
@@ -140,14 +174,26 @@ export default function Contact() {
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
-              
+
+              {/* Simple honeypot */}
+              <input
+                type="text"
+                name="company"
+                value={formData.company || ''}
+                onChange={handleChange}
+                className="hidden"
+              />
+
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
                 <Send size={18} />
               </button>
+              {error && <p className="text-red-600 text-sm mt-2">{error}</p>}
+              {success && <p className="text-green-600 text-sm mt-2">Message sent! I’ll reply soon.</p>}
             </form>
           </div>
 
@@ -156,8 +202,8 @@ export default function Contact() {
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
               <p className="text-gray-600 leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, interesting projects, 
-                or just having a conversation about technology and development. 
+                I'm always open to discussing new opportunities, interesting projects,
+                or just having a conversation about technology and development.
                 Feel free to reach out through any of the channels below.
               </p>
             </div>
