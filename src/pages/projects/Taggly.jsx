@@ -144,15 +144,15 @@ export default function Taggly() {
                 A complete solution for Single Page Applications that unifies client and server development, dramatically reduces complexity, and delivers exceptional performance through innovative architecture and design principles.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
+                {/* <a
                   href="#"
                   className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Try Taggly
                   <ExternalLink size={20} />
-                </a>
+                </a> */}
                 <a
-                  href="#"
+                  href={project.github}
                   className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   <Github size={20} />
@@ -381,7 +381,7 @@ export default function Taggly() {
       </section>
 
       {/* CTA */}
-      <section className={`py-24 bg-gradient-to-r ${project.gradient.join(" ")} text-white`}>
+      {/* <section className={`py-24 bg-gradient-to-r ${project.gradient.join(" ")} text-white`}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Development?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -403,7 +403,7 @@ export default function Taggly() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
