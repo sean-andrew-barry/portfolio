@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Download } from 'lucide-react';
 import { identity } from '../data/identity';
+import Portrait from '/src/assets/images/sean-barry-portrait-transparent-bg-1x1.png';
 
 export default function Hero() {
   const resumeID = "1cTJwaL0CsbM_A018sYk4Kg9mBOwbsbD_MDJiT3T0IGo";
@@ -15,7 +16,7 @@ export default function Hero() {
           <div className="w-64 h-64 mx-auto mb-8 relative">
             <div className="w-full h-full rounded-full bg-gradient-to-r from-slate-700 to-slate-900 p-1 shadow-2xl">
               <img
-                src="/src/assets/images/sean-barry-portrait-transparent-bg-1x1.png"
+                src={Portrait}
                 alt="Sean Barry portrait"
                 className="w-full h-full rounded-full object-cover"
               />

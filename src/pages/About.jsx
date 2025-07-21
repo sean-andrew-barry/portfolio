@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { journey } from '../data/journey';
 import { developerValues } from '../data/developerValues';
+import Portrait from '/src/assets/images/sean-barry-portrait-transparent-bg-1x1.png';
+import BudgiesEating from '/src/assets/images/budgies-eating-millet.jpg';
 
 export default function About() {
   const current_year = new Date().getFullYear();
@@ -68,7 +70,7 @@ export default function About() {
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-slate-700 to-slate-900 p-1">
                 <img
-                  src="/src/assets/images/sean-barry-portrait-transparent-bg-1x1.png"
+                  src={Portrait}
                   alt="Sean Barry portrait"
                   className="w-full h-full object-cover rounded-2xl"
                 />
@@ -170,7 +172,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <figure>
             <img
-              src="/src/assets/images/budgies-eating-millet.jpg"
+              src={BudgiesEating}
               alt="My three budgies eating millet"
               className="w-full h-full object-cover rounded-2xl"
             />

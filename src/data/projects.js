@@ -1,10 +1,12 @@
 import { Code, Dumbbell, Zap } from 'lucide-react';
+import BFBF from '/src/assets/images/be-fit-beyond-fifty-sunflower-logo.png';
+import Warble from '/src/assets/images/warble-logo.svg';
 
 export const projects = [
   {
     title: 'Be Fit Beyond Fifty',
     description: 'A fully custom membership and course platform I\'ve built and maintained since 2018 as the sole full-stack engineer. Built from scratch to replace expensive SaaS solutions, saving over $12,000 annually while delivering a professional, unified user experience.',
-    image: '/src/assets/images/be-fit-beyond-fifty-sunflower-logo.png',
+    image: BFBF,
     imageAlt: "Be Fit Beyond Fifty sunflower logo",
     icon: Dumbbell,
     tags: ['Custom SPA Platform', 'Taggly.js Framework', 'Node.js', 'MongoDB', 'Stripe'],
@@ -19,7 +21,6 @@ export const projects = [
   {
     title: 'Taggly',
     description: 'A full-stack JavaScript web development framework I created as an alternative to React and Vue. Focuses on simplicity, performance, and developer experience with innovative approaches to component architecture and state management.',
-    // image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
     icon: Code,
     tags: ['Custom Framework', 'JavaScript', 'Web Development', 'Performance'],
     link: '/projects/taggly',
@@ -33,8 +34,7 @@ export const projects = [
   {
     title: 'Warble',
     description: `Warble is a modern programming language designed for simplicity, elegance, and performance. Drawing inspiration from C++, Rust, and JavaScript, Warble combines clear semantics, strong static typing, and intuitive syntax to produce concise, readable, and maintainable code. It offers expressive pattern matching, efficient polymorphism, intuitive concurrency, and lightning fast compilation, making Warble ideal for any application.`,
-    // image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800',
-    image: '/src/assets/images/warble-logo.svg',
+    image: Warble,
     imageAlt: "Warble flying budgie logo",
     icon: Zap,
     tags: ['Programming Language', 'Compiler', 'Systems Programming'],
