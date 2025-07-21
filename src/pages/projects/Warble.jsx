@@ -1,5 +1,5 @@
-import { Github, Zap, Cpu, Layers, Terminal, Clock, Shield, Lock, Gauge, ExternalLink, Braces, BugOff } from 'lucide-react';
-import { LightBulb, ThinkingFace, Warning, Notebook, CrossedFingers } from 'react-twemoji-components';
+import { Github, Zap, Cpu, Layers, Terminal, Clock, Shield, Lock, Gauge, ExternalLink, Braces, BugOff, Lightbulb, Brain, OctagonAlert, Notebook } from 'lucide-react';
+// import { LightBulb, ThinkingFace, Warning, Notebook, CrossedFingers } from 'react-twemoji-components';
 import { projects } from '../../data/projects';
 
 // Commentary/Fun Fact Component
@@ -8,17 +8,17 @@ const Commentary = ({ children, type = 'fun-fact' }) => {
     'fun-fact': {
       bg: 'bg-blue-50 border-blue-200',
       text: 'text-blue-800',
-      icon: LightBulb,
+      icon: Lightbulb,
     },
     'insight': {
       bg: 'bg-purple-50 border-purple-200',
       text: 'text-purple-800',
-      icon: ThinkingFace,
+      icon: Brain,
     },
     'warning': {
       bg: 'bg-amber-50 border-amber-200',
       text: 'text-amber-800',
-      icon: Warning,
+      icon: OctagonAlert,
     },
     'note': {
       bg: 'bg-gray-50 border-gray-200',
