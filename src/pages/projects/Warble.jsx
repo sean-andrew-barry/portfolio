@@ -288,7 +288,8 @@ export default function Warble() {
                 <Commentary type="fun-fact">
                   <strong>Fun fact:</strong> This website runs on&nbsp;
                   <span className="font-semibold">{numPackages}</span> dependency packages.
-                  I've personally installed maybe a couple dozen of them, and - like most devs - I haven't pored over the other 95%+. Realistically, nobody does, so we just have to trust the ecosystem - fingers crossed. <CrossedFingers className="inline-block w-6 h-6" />
+                  I've personally installed maybe a couple dozen of them, and - like most devs - I haven't pored over the other 95%+. Realistically, nobody does, so we just have to trust the ecosystem - fingers crossed.
+                  {/* <CrossedFingers className="inline-block w-6 h-6" /> */}
                 </Commentary>
               </div>
             </div>
