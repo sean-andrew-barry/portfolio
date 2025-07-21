@@ -83,7 +83,7 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'development') {
   // DEV – inject Vite’s middleware for HMR, TS transform, etc.
   const { createServer } = await import('vite');
   const vite = await createServer({ server: { middlewareMode: true } }); // :contentReference[oaicite:0]{index=0}
