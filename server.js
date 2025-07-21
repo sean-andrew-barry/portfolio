@@ -93,7 +93,7 @@ if (process.env.NODE_ENV !== 'production') {
   const dist = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'dist');
   app.use(express.static(dist));
   // history-fallback so React Router works:
-  app.get('*', (_, res) => res.sendFile(path.join(dist, 'index.html')));
+  app.get(/.*/, (_, res) => res.sendFile(path.join(dist, 'index.html')));
 }
 
 // Boot
