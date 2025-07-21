@@ -79,7 +79,7 @@ export default function Footer() {
             <div className="space-y-2 text-gray-400">
               <p>{identity.location}</p>
               <a
-                href="mailto:sean.barry.developer@gmail.com"
+                href={`mailto:${identity.email}`}
                 className="hover:text-white transition-colors duration-300"
               >
                 {identity.email}
