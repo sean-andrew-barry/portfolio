@@ -175,8 +175,7 @@ export default function Taggly() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Design Goals</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Taggly was built with four fundamental goals that drive every design decision
-              and architectural choice in the framework.
+              Taggly was built with four fundamental goals that drive every design decision and architectural choice in the framework.
             </p>
           </div>
 
@@ -253,12 +252,10 @@ export default function Taggly() {
                   a powerful wrapper around HTML nodes that provides an intuitive, chainable API for DOM manipulation.
                 </p>
                 <p>
-                  Tags automatically convert JavaScript types (strings, functions, promises, dates, errors)
-                  into DOM nodes, eliminating the tedious conversion work that plagues other frameworks.
+                  Tags automatically convert JavaScript types (strings, functions, promises, dates, errors) into DOM nodes, eliminating the tedious conversion work that plagues other frameworks.
                 </p>
                 <p>
-                  The system supports both method chaining and template literal syntax, giving developers
-                  flexibility in how they structure their code while maintaining readability.
+                  The system supports both method chaining and template literal syntax, giving developers flexibility in how they structure their code while maintaining readability.
                 </p>
               </div>
             </div>
@@ -282,8 +279,7 @@ export default function Taggly() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Layer System</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              The most powerful feature of Taggly - a file resolution system that allows
-              near unlimited customization of the framework itself.
+              The most powerful feature of Taggly - a file resolution system that allows near unlimited customization of the framework itself.
             </p>
           </div>
 
@@ -350,8 +346,7 @@ export default function Taggly() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Why Choose Taggly?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Taggly represents a rethinking of web development. Instead of adding complexity,
-            it removes it. Instead of fighting the platform, it embraces it. Instead of limiting customization, it makes everything customizable.
+            Taggly represents a rethinking of web development. Instead of adding complexity, it removes it. Instead of fighting the platform, it embraces it. Instead of limiting customization, it makes everything customizable.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mt-12">
@@ -381,12 +376,11 @@ export default function Taggly() {
       </section>
 
       {/* CTA */}
-      {/* <section className={`py-24 bg-gradient-to-r ${project.gradient.join(" ")} text-white`}>
+      <section className={`py-24 bg-gradient-to-r ${project.gradient.join(" ")} text-white`}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Development?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Experience the future of web development with Taggly's revolutionary approach
-            to building fast, maintainable, and highly customizable applications.
+            Experience the future of web development with Taggly's revolutionary approach to building fast, maintainable, and highly customizable applications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -403,7 +397,7 @@ export default function Taggly() {
             </a>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }

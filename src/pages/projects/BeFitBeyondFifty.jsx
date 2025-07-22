@@ -3,6 +3,9 @@ import { projects } from '../../data/projects';
 
 export default function BeFitBeyondFifty() {
   const project = projects.find(p => p.title == "Be Fit Beyond Fifty");
+  const savings = "$2,500";
+  const email_subscribers = "7,000";
+  const bfbf_url = "https://befitbeyondfifty.com";
 
   const challenges = [
     {
@@ -56,10 +59,10 @@ export default function BeFitBeyondFifty() {
   ];
 
   const results = [
-    { metric: '$2,500+', label: 'Annual Savings', description: 'Compared to equivalent SaaS platforms' },
+    { metric: `${savings}+`, label: 'Annual Savings', description: 'Compared to equivalent SaaS platforms' },
     { metric: '$7/month', label: 'Infrastructure Cost', description: 'Total hosting and operational expenses' },
     { metric: '99.99%', label: 'Historical Uptime', description: 'Ensuring uninterrupted service reliability' },
-    { metric: '7,000+', label: 'Email Subscribers', description: 'Captured through web traffic/ads' },
+    { metric: `${email_subscribers}+`, label: 'Email Subscribers', description: 'Captured through web traffic/ads' },
   ];
 
   const techStack = [
@@ -103,7 +106,7 @@ export default function BeFitBeyondFifty() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://befitbeyondfifty.com"
+                  href={bfbf_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -141,8 +144,12 @@ export default function BeFitBeyondFifty() {
                 <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">
                   {result.metric}
                 </div>
-                <div className="text-gray-900 font-semibold mb-1">{result.label}</div>
-                <div className="text-sm text-gray-600">{result.description}</div>
+                <div className="text-gray-900 font-semibold mb-1">
+                  {result.label}
+                </div>
+                <div className="text-sm text-gray-600">
+                  {result.description}
+                </div>
               </div>
             ))}
           </div>
@@ -260,30 +267,18 @@ export default function BeFitBeyondFifty() {
               <div className="mt-8 bg-white p-6 rounded-xl shadow-lg">
                 <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Achievements</h4>
                 <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>99.99% historical uptime over 6+ years</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>$2,500+ annual savings vs SaaS alternatives</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>$7/month total infrastructure costs</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>6,900+ email subscribers via organic traffic</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Seamless user experience across all devices</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Automated workflows and integrations</span>
-                  </li>
+                  {[
+                    "99.99% historical uptime over 6+ years",
+                    `${savings}+ annual savings vs SaaS alternatives`,
+                    `${email_subscribers}+ email subscribers captured`,
+                    "Seamless user experience across all devices",
+                    "Automated workflows and integrations",
+                  ].map((text, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>{text}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -338,22 +333,17 @@ export default function BeFitBeyondFifty() {
                 <h3 className="text-2xl font-bold text-green-800">Financial Impact</h3>
               </div>
               <ul className="space-y-3 text-green-700">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Over $2,500 saved annually compared to SaaS alternatives</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Infrastructure costs reduced to just $7/month</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Eliminated dependency on expensive third-party tools</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Scalable architecture supporting business growth</span>
-                </li>
+                {[
+                  `Over ${savings} annual savings vs SaaS alternatives saved annually compared to SaaS alternatives`,
+                  "Infrastructure costs reduced to just $7/month",
+                  "Eliminated dependency on expensive third-party tools",
+                  "Scalable architecture supporting business growth",
+                ].map((text, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>{text}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -365,22 +355,17 @@ export default function BeFitBeyondFifty() {
                 <h3 className="text-2xl font-bold text-blue-800">User Experience</h3>
               </div>
               <ul className="space-y-3 text-blue-700">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Professional, cohesive brand experience</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Fast, responsive Single Page Application</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Seamless payment and course access</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Mobile-optimized for all devices</span>
-                </li>
+                {[
+                  "Professional, cohesive brand experience",
+                  "Fast, responsive Single Page Application",
+                  "Seamless payment and course access",
+                  "Mobile-optimized for all devices",
+                ].map((text, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>{text}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -392,22 +377,17 @@ export default function BeFitBeyondFifty() {
                 <h3 className="text-2xl font-bold text-purple-800">Operational Excellence</h3>
               </div>
               <ul className="space-y-3 text-purple-700">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>99.99% historical uptime ensuring reliability</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Automated workflows reducing manual tasks</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Integrated analytics and reporting</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Secure user data management and compliance</span>
-                </li>
+                {[
+                  "99.99% historical uptime ensuring reliability",
+                  "Automated workflows reducing manual tasks",
+                  "Integrated analytics and reporting",
+                  "Secure user data management and compliance",
+                ].map((text, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>{text}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -419,22 +399,17 @@ export default function BeFitBeyondFifty() {
                 <h3 className="text-2xl font-bold text-orange-800">Growth & Marketing</h3>
               </div>
               <ul className="space-y-3 text-orange-700">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>6,900+ email subscribers captured</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>SEO-optimized content management</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Integrated marketing automation</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Analytics-driven optimization</span>
-                </li>
+                {[
+                  `${email_subscribers}+ email subscribers captured`,
+                  "SEO-optimized content management",
+                  "Integrated marketing automation",
+                  "Analytics-driven optimization",
+                ].map((text, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>{text}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -447,8 +422,7 @@ export default function BeFitBeyondFifty() {
           <h2 className="text-4xl font-bold text-gray-900 mb-6">What This Project Demonstrates</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            This project showcases my ability to deliver high-quality, reliable, and cost-effective 
-            solutions as a solo developer across the entire technology stack.
+            This project showcases my ability to deliver high-quality, reliable, and cost-effective solutions as a solo developer across the entire technology stack.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -491,7 +465,7 @@ export default function BeFitBeyondFifty() {
             Visit the live platform to see seven years of development, iteration, and real-world business impact in action.
           </p>
           <a
-            href="https://befitbeyondfifty.com"
+            href={bfbf_url}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
