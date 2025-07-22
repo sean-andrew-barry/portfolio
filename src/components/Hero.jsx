@@ -29,12 +29,16 @@ export default function Hero() {
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">
-          Experienced Full-Stack Developer & Independent Software Engineer
+          Experienced Full-Stack Developer & Software Engineer
         </p>
-        
-        <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+
+        <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
           I build high-performance web applications and innovative development tools, prioritizing efficiency, simplicity, and thoughtful design. I specialize in JavaScript and Node.js, with deep experience in custom frameworks, system architecture, and solving complex technical challenges.
         </p>
+
+        {/* <p className="text-lg md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto">
+          <em>If there is a solution to be found, I'll find it.</em>
+        </p> */}
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
