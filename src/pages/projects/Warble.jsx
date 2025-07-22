@@ -353,7 +353,7 @@ export default function Warble() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Explore Warble's Future</h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Dive deeper into Warble's technical specification and discover how it's reshaping the future of programming language design.
+            Dive deeper into Warble's technical specification and see how it's going to change the future of programming language design.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
