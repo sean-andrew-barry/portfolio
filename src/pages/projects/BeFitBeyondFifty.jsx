@@ -7,6 +7,7 @@ export default function BeFitBeyondFifty() {
   const project = projects.find(p => p.title == "Be Fit Beyond Fifty");
   const savings = "$3,000";
   const email_subscribers = "7,000";
+  const years = new Date().getUTCFullYear() - 2018;
   const bfbf_url = "https://befitbeyondfifty.com";
 
   const storyMilestones = [
@@ -14,13 +15,13 @@ export default function BeFitBeyondFifty() {
       icon: Lightbulb,
       title: 'The Beginning',
       year: '2018',
-      description: 'My mother approached me about developing a website for her health and fitness startup. We initially considered WordPress templates, but my inventive nature demanded something more tailored.',
+      description: 'My mom approached me about developing a website for her health and fitness startup. We initially considered WordPress templates, but my inventive nature demanded something more tailored.',
     },
     {
       icon: Code,
       title: 'Technical Evolution',
       year: '2018-2019',
-      description: 'Experiments with C# revealed constraints. Existing frameworks like React felt too abstract. This led me to build Taggly.js - prioritizing transparency and simplicity over hidden complexity.',
+      description: 'Experiments with C# revealed constraints. Existing frameworks like React felt too abstract. This led me to build Taggly - prioritizing transparency and simplicity over hidden complexity.',
     },
     {
       icon: Wrench,
@@ -39,7 +40,7 @@ export default function BeFitBeyondFifty() {
   const results = [
     { metric: `${savings}+`, label: 'Annual Savings', description: 'Compared to SaaS platforms like Teachable' },
     { metric: '$7/month', label: 'Infrastructure Cost', description: 'Total hosting on DigitalOcean droplet' },
-    { metric: '99.99%', label: 'Historical Uptime', description: 'Reliable service for 6+ years' },
+    { metric: '99.99%', label: 'Historical Uptime', description: `Reliable service for ${years} years` },
     { metric: `${email_subscribers}+`, label: 'Email Subscribers', description: 'Captured through platform' },
   ];
 
@@ -100,7 +101,7 @@ export default function BeFitBeyondFifty() {
                 A Story of Practical Ingenuity and Technical Adaptability
               </p>
               <p className="text-lg text-green-200 mb-8 leading-relaxed">
-                What started as a simple website request from my mother became a six-year journey of innovation, 
+                What started as a simple website request from my mom became a {years} year journey of innovation, 
                 problem-solving, and technical mastery. This is the story of building a comprehensive platform 
                 from scratch while wearing every hat imaginable.
               </p>
@@ -173,7 +174,7 @@ export default function BeFitBeyondFifty() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">The Beginning</h3>
                   <p>
-                    In 2018, when my mother approached me about developing a website for her health and fitness startup, 
+                    In 2018, when my mom approached me about developing a website for her health and fitness startup, 
                     Be Fit Beyond Fifty (BFBF), we initially considered simple, off-the-shelf solutions like WordPress templates. 
                     However, given my nature as an inventive, deeply curious developer, I quickly realized that a generic 
                     solution wouldn't satisfy either of us. I thrive on innovation and crafting solutions tailored exactly 
@@ -212,7 +213,7 @@ export default function BeFitBeyondFifty() {
                   <p>
                     As the sole developer on the BFBF project, my responsibilities quickly expanded beyond mere programming. 
                     I handled every layer of the operation, from initial idea translation to final deployment. My role involved 
-                    listening to my mother's non-technical business ideas—such as a new landing page or automated email marketing 
+                    listening to my mom's non-technical business ideas—such as a new landing page or automated email marketing 
                     campaign—and quickly translating these concepts into fully functioning technical solutions. Whether integrating 
                     Stripe payments securely, building a robust user authentication system with bcrypt, or designing complex 
                     database structures in MongoDB to manage dripped course content, I consistently delivered robust solutions rapidly.
@@ -256,7 +257,7 @@ export default function BeFitBeyondFifty() {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="hidden md:block absolute left-8 top-16 bottom-16 w-2 bg-gradient-to-b from-green-600 to-emerald-600 rounded-full"></div>
+            <div className="hidden md:block absolute left-8 top-16 bottom-16 w-2 bg-gradient-to-b from-green-600 to-emerald-600 rounded-full -translate-x-1/2"></div>
 
             <div className="space-y-12">
               {storyMilestones.map((milestone, index) => (
@@ -316,10 +317,10 @@ export default function BeFitBeyondFifty() {
             <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto mb-8"></div>
           </div>
 
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-200 shadow-lg">
+          <div className="">
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
               <p className="text-lg mb-6">
-                My approach has saved BFBF more than <strong className="text-green-700">${savings} a year</strong> in 
+                My approach has saved BFBF more than <strong className="text-green-700">{savings} a year</strong> in 
                 subscription costs that would have otherwise gone to third-party SaaS solutions like Teachable and 
                 Stealth Seminar. That is a big deal to a tiny two person startup where everything is paid out of pocket.
               </p>
@@ -351,7 +352,7 @@ export default function BeFitBeyondFifty() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Technical Foundation</h2>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  Built on my custom Taggly.js framework with Node.js and MongoDB, the platform represents years 
+                  Built on my custom Taggly framework with Node.js and MongoDB, the platform represents years 
                   of iteration and refinement. Every technical decision was made with purpose: prioritizing 
                   transparency over abstraction, simplicity over complexity.
                 </p>
@@ -456,7 +457,7 @@ export default function BeFitBeyondFifty() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Experience the Platform</h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Visit the live platform to see six years of development, iteration, and real-world business impact in action.
+            Visit the live platform to see {years} years of development, iteration, and real-world business impact in action.
           </p>
           <a
             href={bfbf_url}
