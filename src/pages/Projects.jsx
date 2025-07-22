@@ -3,8 +3,10 @@ import { Search, Code, Dumbbell, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import Project from '../components/Project';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function Projects() {
+  usePageTitle('Projects');
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredProjects = projects.filter(project => {

@@ -1,6 +1,7 @@
-import { ExternalLink, Github, Code, Zap, Layers, Puzzle, Cpu, Gauge, Globe, Database, Wrench, FileCode, Rocket, Shield } from 'lucide-react';
+import { Github, Code, Zap, Layers, Puzzle, Cpu, Gauge, Globe, Database, Wrench, FileCode, Rocket, Shield } from 'lucide-react';
 import { projects } from '../../data/projects';
 import { ShikiHighlighter } from 'react-shiki';
+import usePageTitle from '../../hooks/usePageTitle';
 
 const example1 = `import {Body, Div, A} from "/js/Tags.js";
 
@@ -39,6 +40,7 @@ export class Div extends Base {
 }`;
 
 export default function Taggly() {
+  usePageTitle('Taggly');
   const project = projects.find(p => p.title == "Taggly");
 
   const coreGoals = [

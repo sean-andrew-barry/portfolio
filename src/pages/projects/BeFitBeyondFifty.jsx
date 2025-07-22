@@ -1,7 +1,9 @@
-import { ExternalLink, Github, Calendar, Users, TrendingUp, Shield, Smartphone, DollarSign, Zap, Lock, Globe, Server, Database } from 'lucide-react';
+import { ExternalLink, Users, TrendingUp, Shield, Smartphone, DollarSign, Zap, Lock, Globe, Server, Database } from 'lucide-react';
 import { projects } from '../../data/projects';
+import usePageTitle from '../../hooks/usePageTitle';
 
 export default function BeFitBeyondFifty() {
+  usePageTitle('Be Fit Beyond Fifty');
   const project = projects.find(p => p.title == "Be Fit Beyond Fifty");
   const savings = "$2,500";
   const email_subscribers = "7,000";

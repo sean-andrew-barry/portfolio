@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import { BookOpen, PenTool, Coffee } from 'lucide-react';
 import { posts } from '../data/posts';
 import FormattedDate from '../components/FormattedDate';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function Blog() {
+  usePageTitle('Blog');
   const hasPosts = posts.length > 0;
 
   return (

@@ -3,8 +3,10 @@ import { journey } from '../data/journey';
 import { developerValues } from '../data/developerValues';
 import Portrait from '/src/assets/images/sean-barry-portrait-transparent-bg-1x1.png';
 import BudgiesEating from '/src/assets/images/budgies-eating-millet.jpg';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function About() {
+  usePageTitle('About');
   const current_year = new Date().getFullYear();
   const programming_years = current_year - 2014;
   const lead_developer_years = current_year - 2018;
