@@ -10,33 +10,6 @@ export default function BeFitBeyondFifty() {
   const years = new Date().getUTCFullYear() - 2018;
   const bfbf_url = "https://befitbeyondfifty.com";
 
-  const storyMilestones = [
-    {
-      icon: Lightbulb,
-      title: 'The Beginning',
-      year: '2018',
-      description: 'My mom approached me about developing a website for her health and fitness startup. We initially considered WordPress templates, but my inventive nature demanded something more tailored.',
-    },
-    {
-      icon: Code,
-      title: 'Technical Evolution',
-      year: '2018-2019',
-      description: 'Experiments with C# revealed constraints. Existing frameworks like React felt too abstract. This led me to build Taggly - prioritizing transparency and simplicity over hidden complexity.',
-    },
-    {
-      icon: Wrench,
-      title: 'Expanding Responsibilities',
-      year: '2019-2020',
-      description: 'My role evolved beyond programming. I became translator of non-technical business ideas into technical solutions, wearing hats as developer, QA, designer, and DevOps engineer.',
-    },
-    {
-      icon: Server,
-      title: 'Full-Stack Mastery',
-      year: '2020-Present',
-      description: 'Built comprehensive infrastructure on a $7/month server, integrated multiple APIs, achieved 99.99% uptime, and saved over $3,000 annually in SaaS costs.',
-    },
-  ];
-
   const results = [
     { metric: `${savings}+`, label: 'Annual Savings', description: 'Compared to SaaS platforms like Teachable' },
     { metric: '$7/month', label: 'Infrastructure Cost', description: 'Total hosting on DigitalOcean droplet' },
@@ -87,6 +60,37 @@ export default function BeFitBeyondFifty() {
     { name: 'Calendly', purpose: 'Appointment Scheduling' },
   ];
 
+  const story = [
+    {
+      title: "The Beginning",
+      years: "2018",
+      icon: Heart,
+      colors: { from: "from-green-500", to: "to-emerald-600", text: "text-green-600", bg: "bg-green-100", line: "to-blue-500" },
+      prose: `In 2018, when my mom approached me about developing a website for her health coaching startup, Be Fit Beyond Fifty (BFBF), we initially considered simple, off-the-shelf solutions like WordPress templates. However, given my nature as an inventive, deeply curious developer, I quickly realized that a generic solution wouldn't satisfy either of us. I thrive on innovation and crafting solutions tailored exactly to specific needs, so I proposed developing something entirely custom.`,
+    },
+    {
+      title: "Technical Evolution",
+      years: "2018-2019",
+      icon: Code,
+      colors: { from: "from-blue-500", to: "to-indigo-600", text: "text-blue-600", bg: "bg-blue-100", line: "to-purple-500" },
+      prose: `My initial experiments with traditional approaches like C# quickly revealed their constraints, prompting me to explore Single Page Applications (SPAs). Existing frameworks such as React and Vue.js, despite their popularity, felt overly abstract and opaque to me. I prefer solutions that are transparent, intuitive, and easy to reason about, with minimal "behind-the-scenes magic." This philosophy led me to build my own JavaScript framework, Taggly, which prioritized simplicity, customizability, and clarity, minimizing hidden complexity while maximizing flexibility.`,
+    },
+    {
+      title: "Expanding Responsibilities",
+      years: "2019-2020",
+      icon: Users,
+      colors: { from: "from-purple-500", to: "to-pink-600", text: "text-purple-600", bg: "bg-purple-100", line: "to-orange-500" },
+      prose: `As the sole developer on the BFBF project, my responsibilities quickly expanded beyond mere programming. I handled every layer of the operation, from initial idea translation to final deployment. My role involved listening to my mom's non-technical business ideas—such as a new landing page or automated email marketing campaign—and quickly translating these concepts into fully functioning technical solutions. Whether integrating Stripe payments securely, building a robust user authentication system with bcrypt, or designing complex database structures in MongoDB to manage dripped course content, I consistently delivered robust solutions rapidly.`,
+    },
+    {
+      title: "Full-Stack Mastery",
+      years: "2020-Present",
+      icon: Wrench,
+      colors: { from: "from-orange-500", to: "to-red-600", text: "text-orange-600", bg: "bg-orange-100", line: "to-transparent" },
+      prose: `Working alone meant wearing many hats: web developer, QA specialist, graphic designer, DevOps engineer, and more. I designed and set up our entire infrastructure on a single, cost-effective $7/month DigitalOcean droplet, maintained secure SSL certifications, managed integration with third-party APIs (Stripe, AWS, Monday.com, Kit.com, Facebook Ads, Google Docs, Calendly), and created comprehensive content management tools to simplify administrative also tremendous adaptability, creativity, and practical problem-solving.`,
+    },
+  ];
+
   return (
     <div className="">
       {/* Hero Section */}
@@ -97,13 +101,11 @@ export default function BeFitBeyondFifty() {
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 Be Fit Beyond Fifty
               </h1>
-              <p className="text-xl text-green-100 mb-6 leading-relaxed">
-                A Story of Practical Ingenuity and Technical Adaptability
+              <p className="text-lg text-green-200 mb-8 leading-relaxed">
+                What began as a simple website request from my mom evolved into a {years}-year exercise in rapid problem-solving and relentless adaptability.
               </p>
               <p className="text-lg text-green-200 mb-8 leading-relaxed">
-                What started as a simple website request from my mom became a {years} year journey of innovation, 
-                problem-solving, and technical mastery. This is the story of building a comprehensive platform 
-                from scratch while wearing every hat imaginable.
+                As the sole developer behind Be Fit Beyond Fifty, I've handled every aspect of development—front-end, back-end, infrastructure, security, and more—without ever hitting a wall. This experience has proven that I can quickly grasp and overcome any technical challenge, delivering reliable solutions that work, no matter what's thrown my way.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -137,7 +139,7 @@ export default function BeFitBeyondFifty() {
       </section>
 
       {/* Results Stats */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {results.map((result, index) => (
@@ -158,158 +160,39 @@ export default function BeFitBeyondFifty() {
       </section>
 
       {/* The Story */}
-      <section id="the-story" className="py-24 bg-gray-50">
+      <section id="the-story" className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">The Story</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto mb-8"></div>
           </div>
 
-          <div className="relative">
-            {/* Decorative timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-green-500 via-blue-500 via-purple-500 to-orange-500 rounded-full opacity-30 hidden lg:block"></div>
-            
-            <div className="space-y-16">
-              {/* The Beginning */}
-              <div className="relative">
-                <div className="flex items-start gap-8">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg z-10">
-                    <Heart className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1 pt-2">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                      The Beginning
-                      <span className="text-sm font-medium text-green-600 bg-green-100 px-3 py-1 rounded-full">2018</span>
-                    </h3>
-                    <div className="prose prose-lg text-gray-700 leading-relaxed">
-                      <p>
-                        In 2018, when my mom approached me about developing a website for her health and fitness startup, 
-                        Be Fit Beyond Fifty (BFBF), we initially considered simple, off-the-shelf solutions like WordPress templates. 
-                        However, given my nature as an inventive, deeply curious developer, I quickly realized that a generic 
-                        solution wouldn't satisfy either of us. I thrive on innovation and crafting solutions tailored exactly 
-                        to specific needs, so I proposed developing something entirely custom.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          {story.map((item, index) => {
+            return (
+              <div className="relative" key={item.title}>
+                {/* Line */}
+                <div className={`absolute left-8 top-0 bottom-0 w-2 bg-gradient-to-b ${item.colors.from} ${item.colors.line} hidden lg:block -translate-x-1/2${index === 0 ? " rounded-t-full" : ""}${index === story.length - 1 ? " rounded-b-full" : ""}`}></div>
 
-              {/* Technical Evolution */}
-              <div className="relative">
-                <div className="flex items-start gap-8">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg z-10">
-                    <Code className="w-8 h-8 text-white" />
+                <div className="flex items-start flex-col md:flex-row gap-8  pb-16">
+                  {/* Icon */}
+                  <div className={`w-16 h-16 bg-gradient-to-r ${item.colors.from} ${item.colors.to} rounded-full flex items-center justify-center flex-shrink-0 shadow-lg z-10 place-self-center md:place-self-start`}>
+                    <item.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex-1 pt-2">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                      Technical Evolution
-                      <span className="text-sm font-medium text-blue-600 bg-blue-100 px-3 py-1 rounded-full">2018-2019</span>
-                    </h3>
-                    <div className="prose prose-lg text-gray-700 leading-relaxed">
-                      <p>
-                        My initial experiments with traditional approaches like C# quickly revealed their constraints, prompting 
-                        me to explore Single Page Applications (SPAs). Existing frameworks such as React and Vue.js, despite their 
-                        popularity, felt overly abstract and opaque to me. I prefer solutions that are transparent, intuitive, 
-                        and easy to reason about, with minimal "behind-the-scenes magic." This philosophy led me to build my own 
-                        JavaScript framework, Taggly.js, which prioritized simplicity, customizability, and clarity, minimizing 
-                        hidden complexity while maximizing flexibility.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Expanding Responsibilities */}
-              <div className="relative">
-                <div className="flex items-start gap-8">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg z-10">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1 pt-2">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                      Expanding Responsibilities
-                      <span className="text-sm font-medium text-purple-600 bg-purple-100 px-3 py-1 rounded-full">2019-2020</span>
-                    </h3>
-                    <div className="prose prose-lg text-gray-700 leading-relaxed">
-                      <p>
-                        As the sole developer on the BFBF project, my responsibilities quickly expanded beyond mere programming. 
-                        I handled every layer of the operation, from initial idea translation to final deployment. My role involved 
-                        listening to my mom's non-technical business ideas—such as a new landing page or automated email marketing 
-                        campaign—and quickly translating these concepts into fully functioning technical solutions. Whether integrating 
-                        Stripe payments securely, building a robust user authentication system with bcrypt, or designing complex 
-                        database structures in MongoDB to manage dripped course content, I consistently delivered robust solutions rapidly.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Full-Stack Mastery */}
-              <div className="relative">
-                <div className="flex items-start gap-8">
-                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg z-10">
-                    <Wrench className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1 pt-2">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                      Full-Stack Mastery
-                      <span className="text-sm font-medium text-orange-600 bg-orange-100 px-3 py-1 rounded-full">2020-Present</span>
-                    </h3>
-                    <div className="prose prose-lg text-gray-700 leading-relaxed">
-                      <p>
-                        Working alone meant wearing many hats: web developer, QA specialist, graphic designer, DevOps engineer, 
-                        and more. I designed and set up our entire infrastructure on a single, cost-effective $7/month DigitalOcean 
-                        droplet, maintained secure SSL certifications, managed integration with third-party APIs (Stripe, AWS, 
-                        Monday.com, Kit.com, Facebook Ads, Google Docs, Calendly), and created comprehensive content management 
-                        tools to simplify administrative tasks. This broad responsibility required not only technical skill but 
-                        also tremendous adaptability, creativity, and practical problem-solving.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Journey Timeline */}
-      <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">The Journey</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto mb-8"></div>
-            <p className="text-lg text-gray-600">
-              A timeline of evolution, challenges, and growth
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="hidden md:block absolute left-8 top-16 bottom-16 w-2 bg-gradient-to-b from-green-600 to-emerald-600 rounded-full -translate-x-1/2"></div>
-
-            <div className="space-y-12">
-              {storyMilestones.map((milestone, index) => (
-                <div key={index} className="relative flex items-center gap-8">
-                  {/* Timeline dot */}
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center text-white shadow-lg z-10">
-                    <milestone.icon className="w-8 h-8" />
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-1 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                    <div className="flex items-center gap-3 mb-3">
-                      <h3 className="text-xl font-bold text-gray-900">{milestone.title}</h3>
-                      <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-                        {milestone.year}
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center justify-between md:justify-normal gap-3">
+                      {item.title}
+                      <span className={`text-sm font-medium ${item.colors.text} ${item.colors.bg} px-3 py-1 rounded-full text-nowrap`}>
+                        {item.years}
                       </span>
-                    </div>
-                    <p className="text-gray-600 leading-relaxed">{milestone.description}</p>
+                    </h3>
+                    <p className="prose prose-lg text-gray-700 leading-relaxed">
+                      {item.prose}
+                    </p>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -349,24 +232,17 @@ export default function BeFitBeyondFifty() {
           <div className="">
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
               <p className="text-lg mb-6">
-                My approach has saved BFBF more than <strong className="text-green-700">{savings} a year</strong> in 
-                subscription costs that would have otherwise gone to third-party SaaS solutions like Teachable and 
+                My approach has saved BFBF more than <strong className="text-green-700">{savings} a year</strong> in
+                subscription costs that would have otherwise gone to third-party SaaS solutions like Teachable and
                 Stealth Seminar. That is a big deal to a tiny two person startup where everything is paid out of pocket.
               </p>
-              
+
               <p className="text-lg mb-6">
-                It provided a seamless, unified user experience, avoiding the fragmented feel of bouncing between 
-                different platforms. Our platform reliably maintained <strong className="text-green-700">99.99% uptime</strong>, 
-                and I personally ensured every aspect—from database security and user experience to automated integrations 
-                and dynamic content management—ran smoothly and efficiently.
+                It provided a seamless, unified user experience, avoiding the fragmented feel of bouncing between different platforms. Our platform reliably maintained <strong className="text-green-700">99.99% uptime</strong>, and I personally ensured every aspect—from database security and user experience to automated integrations and dynamic content management—ran smoothly and efficiently.
               </p>
 
               <p className="text-lg">
-                More than just a technical exercise, this project highlighted my ability to rapidly pivot, translating 
-                non-technical ideas into concrete, actionable solutions. It taught me invaluable lessons about iteration, 
-                responsiveness, and the critical importance of understanding every piece of the system intimately. 
-                Ultimately, Be Fit Beyond Fifty demonstrates not just technical capability, but my relentless determination 
-                to find practical, elegant solutions to real-world problems—qualities I bring to every project.
+                More than just a technical exercise, this project highlighted my ability to rapidly pivot, translating non-technical ideas into concrete, actionable solutions. It taught me invaluable lessons about iteration, responsiveness, and the critical importance of understanding every piece of the system intimately. Ultimately, Be Fit Beyond Fifty demonstrates not just technical capability, but my relentless determination to find practical, elegant solutions to real-world problems—qualities I bring to every project.
               </p>
             </div>
           </div>
@@ -381,12 +257,10 @@ export default function BeFitBeyondFifty() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Technical Foundation</h2>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  Built on my custom Taggly framework with Node.js and MongoDB, the platform represents years 
-                  of iteration and refinement. Every technical decision was made with purpose: prioritizing 
-                  transparency over abstraction, simplicity over complexity.
+                  Built on my custom Taggly framework with Node.js and MongoDB, the platform represents years of iteration and refinement. Every technical decision was made with purpose: prioritizing transparency over abstraction, simplicity over complexity.
                 </p>
                 <p>
-                  The architecture handles everything from secure user authentication and payment processing 
+                  The architecture handles everything from secure user authentication and payment processing
                   to complex content management and automated workflows—all running efficiently on minimal infrastructure.
                 </p>
               </div>
@@ -403,7 +277,7 @@ export default function BeFitBeyondFifty() {
                 </div>
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">API Integrations</h3>
               <div className="space-y-3">
@@ -445,10 +319,10 @@ export default function BeFitBeyondFifty() {
           <h2 className="text-4xl font-bold text-gray-900 mb-6">What This Project Demonstrates</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            Beyond technical skills, this project showcases adaptability, business acumen, and the ability 
+            Beyond technical skills, this project showcases adaptability, business acumen, and the ability
             to deliver real-world value as a solo developer.
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -484,9 +358,9 @@ export default function BeFitBeyondFifty() {
       {/* CTA */}
       <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Experience the Platform</h2>
+          <h2 className="text-4xl font-bold mb-6">Visit Be Fit Beyond Fifty</h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Visit the live platform to see {years} years of development, iteration, and real-world business impact in action.
+            It's not made to look flashy—just practical, reliable, and exactly what the business needed. Take a look.
           </p>
           <a
             href={bfbf_url}
