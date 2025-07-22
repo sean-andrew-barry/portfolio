@@ -165,78 +165,107 @@ export default function BeFitBeyondFifty() {
             <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto mb-8"></div>
           </div>
 
-          <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8">
-            <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-green-500">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Heart className="w-6 h-6 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">The Beginning</h3>
-                  <p>
-                    In 2018, when my mom approached me about developing a website for her health and fitness startup, 
-                    Be Fit Beyond Fifty (BFBF), we initially considered simple, off-the-shelf solutions like WordPress templates. 
-                    However, given my nature as an inventive, deeply curious developer, I quickly realized that a generic 
-                    solution wouldn't satisfy either of us. I thrive on innovation and crafting solutions tailored exactly 
-                    to specific needs, so I proposed developing something entirely custom.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-blue-500">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Code className="w-6 h-6 text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Technical Evolution</h3>
-                  <p>
-                    My initial experiments with traditional approaches like C# quickly revealed their constraints, prompting 
-                    me to explore Single Page Applications (SPAs). Existing frameworks such as React and Vue.js, despite their 
-                    popularity, felt overly abstract and opaque to me. I prefer solutions that are transparent, intuitive, 
-                    and easy to reason about, with minimal "behind-the-scenes magic." This philosophy led me to build my own 
-                    JavaScript framework, Taggly.js, which prioritized simplicity, customizability, and clarity, minimizing 
-                    hidden complexity while maximizing flexibility.
-                  </p>
+          <div className="relative">
+            {/* Decorative timeline line */}
+            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-green-500 via-blue-500 via-purple-500 to-orange-500 rounded-full opacity-30 hidden lg:block"></div>
+            
+            <div className="space-y-16">
+              {/* The Beginning */}
+              <div className="relative">
+                <div className="flex items-start gap-8">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg z-10">
+                    <Heart className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                      The Beginning
+                      <span className="text-sm font-medium text-green-600 bg-green-100 px-3 py-1 rounded-full">2018</span>
+                    </h3>
+                    <div className="prose prose-lg text-gray-700 leading-relaxed">
+                      <p>
+                        In 2018, when my mom approached me about developing a website for her health and fitness startup, 
+                        Be Fit Beyond Fifty (BFBF), we initially considered simple, off-the-shelf solutions like WordPress templates. 
+                        However, given my nature as an inventive, deeply curious developer, I quickly realized that a generic 
+                        solution wouldn't satisfy either of us. I thrive on innovation and crafting solutions tailored exactly 
+                        to specific needs, so I proposed developing something entirely custom.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-purple-500">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Users className="w-6 h-6 text-purple-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Expanding Responsibilities</h3>
-                  <p>
-                    As the sole developer on the BFBF project, my responsibilities quickly expanded beyond mere programming. 
-                    I handled every layer of the operation, from initial idea translation to final deployment. My role involved 
-                    listening to my mom's non-technical business ideas—such as a new landing page or automated email marketing 
-                    campaign—and quickly translating these concepts into fully functioning technical solutions. Whether integrating 
-                    Stripe payments securely, building a robust user authentication system with bcrypt, or designing complex 
-                    database structures in MongoDB to manage dripped course content, I consistently delivered robust solutions rapidly.
-                  </p>
+              {/* Technical Evolution */}
+              <div className="relative">
+                <div className="flex items-start gap-8">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg z-10">
+                    <Code className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                      Technical Evolution
+                      <span className="text-sm font-medium text-blue-600 bg-blue-100 px-3 py-1 rounded-full">2018-2019</span>
+                    </h3>
+                    <div className="prose prose-lg text-gray-700 leading-relaxed">
+                      <p>
+                        My initial experiments with traditional approaches like C# quickly revealed their constraints, prompting 
+                        me to explore Single Page Applications (SPAs). Existing frameworks such as React and Vue.js, despite their 
+                        popularity, felt overly abstract and opaque to me. I prefer solutions that are transparent, intuitive, 
+                        and easy to reason about, with minimal "behind-the-scenes magic." This philosophy led me to build my own 
+                        JavaScript framework, Taggly.js, which prioritized simplicity, customizability, and clarity, minimizing 
+                        hidden complexity while maximizing flexibility.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-orange-500">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Wrench className="w-6 h-6 text-orange-600" />
+              {/* Expanding Responsibilities */}
+              <div className="relative">
+                <div className="flex items-start gap-8">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg z-10">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                      Expanding Responsibilities
+                      <span className="text-sm font-medium text-purple-600 bg-purple-100 px-3 py-1 rounded-full">2019-2020</span>
+                    </h3>
+                    <div className="prose prose-lg text-gray-700 leading-relaxed">
+                      <p>
+                        As the sole developer on the BFBF project, my responsibilities quickly expanded beyond mere programming. 
+                        I handled every layer of the operation, from initial idea translation to final deployment. My role involved 
+                        listening to my mom's non-technical business ideas—such as a new landing page or automated email marketing 
+                        campaign—and quickly translating these concepts into fully functioning technical solutions. Whether integrating 
+                        Stripe payments securely, building a robust user authentication system with bcrypt, or designing complex 
+                        database structures in MongoDB to manage dripped course content, I consistently delivered robust solutions rapidly.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Wearing Many Hats</h3>
-                  <p>
-                    Working alone meant wearing many hats: web developer, QA specialist, graphic designer, DevOps engineer, 
-                    and more. I designed and set up our entire infrastructure on a single, cost-effective $7/month DigitalOcean 
-                    droplet, maintained secure SSL certifications, managed integration with third-party APIs (Stripe, AWS, 
-                    Monday.com, Kit.com, Facebook Ads, Google Docs, Calendly), and created comprehensive content management 
-                    tools to simplify administrative tasks. This broad responsibility required not only technical skill but 
-                    also tremendous adaptability, creativity, and practical problem-solving.
-                  </p>
+              </div>
+
+              {/* Full-Stack Mastery */}
+              <div className="relative">
+                <div className="flex items-start gap-8">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg z-10">
+                    <Wrench className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                      Full-Stack Mastery
+                      <span className="text-sm font-medium text-orange-600 bg-orange-100 px-3 py-1 rounded-full">2020-Present</span>
+                    </h3>
+                    <div className="prose prose-lg text-gray-700 leading-relaxed">
+                      <p>
+                        Working alone meant wearing many hats: web developer, QA specialist, graphic designer, DevOps engineer, 
+                        and more. I designed and set up our entire infrastructure on a single, cost-effective $7/month DigitalOcean 
+                        droplet, maintained secure SSL certifications, managed integration with third-party APIs (Stripe, AWS, 
+                        Monday.com, Kit.com, Facebook Ads, Google Docs, Calendly), and created comprehensive content management 
+                        tools to simplify administrative tasks. This broad responsibility required not only technical skill but 
+                        also tremendous adaptability, creativity, and practical problem-solving.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
