@@ -1,5 +1,4 @@
-import { Github, Zap, Cpu, Layers, Terminal, Clock, Shield, Lock, Gauge, ExternalLink, Braces, BugOff, Lightbulb, Brain, OctagonAlert, Notebook } from 'lucide-react';
-// import { LightBulb, ThinkingFace, Warning, Notebook, CrossedFingers } from 'react-twemoji-components';
+import { Github, Zap, Cpu, Layers, Terminal, Clock, Shield, Lock, Gauge, ExternalLink, Braces, BugOff, Lightbulb, Brain, OctagonAlert, Notebook, Code2 } from 'lucide-react';
 import { projects } from '../../data/projects';
 
 // Commentary/Fun Fact Component
@@ -46,6 +45,8 @@ const numPackages = 700;
 export default function Warble() {
   const project = projects.find(p => p.title == "Warble");
 
+  const docs_url = `${project.github}/blob/main/docs/spec.md`;
+
   const coreInnovations = [
     {
       icon: Braces,
@@ -85,23 +86,23 @@ export default function Warble() {
     },
   ];
 
-  // const technicalHighlights = [
-  //   {
-  //     title: 'Compiler Intelligence',
-  //     description: 'Complete code structure awareness enables deeper optimizations and robust safety guarantees',
-  //     icon: Brain
-  //   },
-  //   {
-  //     title: 'Module-Based Concurrency',
-  //     description: 'Independent "tick" functions with automatic dependency resolution ensure data safety',
-  //     icon: Layers
-  //   },
-  //   {
-  //     title: 'Embeddable Runtime',
-  //     description: '4MB compiler enables runtime scripting for games, tools, and user customization',
-  //     icon: Code2
-  //   }
-  // ];
+  const technicalHighlights = [
+    {
+      title: 'Compiler Intelligence',
+      description: 'Complete code structure awareness enables deeper optimizations and robust safety guarantees',
+      icon: Brain,
+    },
+    {
+      title: 'Module-Based Concurrency',
+      description: 'Independent "tick" functions with automatic dependency resolution ensure data safety',
+      icon: Layers,
+    },
+    {
+      title: 'Embeddable Runtime',
+      description: '4MB compiler enables runtime scripting for games, tools, and user customization',
+      icon: Code2,
+    }
+  ];
 
   return (
     <div className="">
@@ -117,13 +118,11 @@ export default function Warble() {
                 A New Vision for Modern Programming
               </p>
               <p className="text-lg text-purple-200 mb-8 leading-relaxed">
-                Warble revolutionizes software development by prioritizing speed, concurrency, security,
-                and developer experience. Its powerful compiler, innovative runtime, and thoughtful design
-                address the pain points commonly encountered in existing programming languages.
+                Warble revolutionizes software development by prioritizing speed, concurrency, security, and developer experience. Its powerful compiler, innovative runtime, and thoughtful design address the pain points commonly encountered in existing programming languages.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://github.com/sean-andrew-barry/warble/blob/main/docs/spec.md"
+                  href={docs_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -132,7 +131,7 @@ export default function Warble() {
                   <Terminal size={20} />
                 </a>
                 <a
-                  href="#"
+                  href={project.github}
                   className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   <Github size={20} />
@@ -189,18 +188,14 @@ export default function Warble() {
               </h2>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  Concurrency is notoriously challenging yet critically important. Far too many modern
-                  applications, especially games, fail to utilize available hardware fully, relying on
-                  just a fraction of the CPU's potential.
+                  Concurrency is notoriously challenging yet critically important. Far too many modern applications, especially games, fail to utilize available hardware fully, relying on just a fraction of the CPU's potential.
                 </p>
                 <p>
-                  Warble solves this with an advanced, fully concurrent runtime system. Its sophisticated
-                  scheduler ensures safe, efficient concurrency with virtually zero overhead.
+                  Warble solves this with an advanced, fully concurrent runtime system. Its sophisticated scheduler ensures safe, efficient concurrency with virtually zero overhead.
                 </p>
                 <p>
                   Warble's concurrency is built around modules, each containing independent "tick" functions
-                  that automatically execute only after their dependencies have ticked. This approach
-                  guarantees data safety without cumbersome synchronization.
+                  that automatically execute only after their dependencies have ticked. This approach guarantees data safety without cumbersome synchronization.
                 </p>
               </div>
             </div>
@@ -273,13 +268,10 @@ export default function Warble() {
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
                   Security is a fundamental aspect of Warble's design. Unlike the unchecked dependency
-                  chains common in ecosystems like Node.js—where one trusted package can bring along
-                  hundreds of unknown, unverified dependencies—Warble's permission model prevents
-                  packages from escalating privileges or introducing hidden vulnerabilities.
+                  chains common in ecosystems like Node.js—where one trusted package can bring along hundreds of unknown, unverified dependencies—Warble's permission model prevents packages from escalating privileges or introducing hidden vulnerabilities.
                 </p>
                 <p>
-                  Every third-party package explicitly declares its permissions upfront. This transparency
-                  means you can confidently integrate external code without fear of hidden security risks.
+                  Every third-party package explicitly declares its permissions upfront. This transparency means you can confidently integrate external code without fear of hidden security risks.
                 </p>
                 <p>
                   This approach brings clarity, simplicity, and trustworthiness to your dependency management.
@@ -287,8 +279,7 @@ export default function Warble() {
 
                 <Commentary type="fun-fact">
                   <strong>Fun fact:</strong> This website runs on&nbsp;
-                  <span className="font-semibold">{numPackages}</span> dependency packages.
-                  I've personally installed maybe a couple dozen of them, and - like most devs - I haven't pored over the other 95%+. Realistically, nobody does, so we just have to trust the ecosystem - fingers crossed.
+                  <span className="font-semibold">{numPackages}</span> dependency packages. I've personally installed maybe a couple dozen of them, and - like most devs - I haven't pored over the other 95%+. Realistically, nobody does, so we just have to trust the ecosystem - fingers crossed.
                   {/* <CrossedFingers className="inline-block w-6 h-6" /> */}
                 </Commentary>
               </div>
@@ -298,7 +289,7 @@ export default function Warble() {
       </section>
 
       {/* Technical Highlights */}
-      {/* <section className="py-24 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Technical Excellence</h2>
@@ -319,7 +310,7 @@ export default function Warble() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Beyond Syntax */}
       <section className="py-24 bg-gradient-to-r from-slate-900 to-purple-900 text-white">
@@ -360,12 +351,11 @@ export default function Warble() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Explore Warble's Future</h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Dive deeper into Warble's technical specification and discover how it's reshaping
-            the future of programming language design.
+            Dive deeper into Warble's technical specification and discover how it's reshaping the future of programming language design.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://github.com/sean-andrew-barry/warble/blob/main/docs/spec.md"
+              href={docs_url}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -373,7 +363,7 @@ export default function Warble() {
               Read Full Specification
             </a>
             <a
-              href="#"
+              href={project.github}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Follow Development
