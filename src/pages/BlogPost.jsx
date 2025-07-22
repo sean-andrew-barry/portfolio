@@ -1,10 +1,13 @@
 import { useParams, Link } from 'react-router-dom';
 import { posts } from '../data/posts';
 import FormattedDate from '../components/FormattedDate';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function BlogPost() {
   const { slug } = useParams();
   const post = posts.find((p) => p.slug === slug);
+
+  usePageTitle(post ? post.title : 'Post Not Found');
 
   if (!post) {
     return (

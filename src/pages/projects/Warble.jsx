@@ -1,5 +1,6 @@
 import { Github, Zap, Cpu, Layers, Terminal, Clock, Shield, Lock, Gauge, ExternalLink, Braces, BugOff, Lightbulb, Brain, OctagonAlert, Notebook, Code2 } from 'lucide-react';
 import { projects } from '../../data/projects';
+import usePageTitle from '../../hooks/usePageTitle';
 
 // Commentary/Fun Fact Component
 const Commentary = ({ children, type = 'fun-fact' }) => {
@@ -43,6 +44,7 @@ const Commentary = ({ children, type = 'fun-fact' }) => {
 const numPackages = 700;
 
 export default function Warble() {
+  usePageTitle('Warble');
   const project = projects.find(p => p.title == "Warble");
 
   const docs_url = `${project.github}/blob/main/docs/spec.md`;
