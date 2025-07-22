@@ -261,7 +261,7 @@ export default function Taggly() {
                 </p>
               </div>
             </div>
-            <div>
+            <div className="overflow-x-auto min-w-full">
               <h3 className="text-lg font-semibold mb-4">Tag Example</h3>
               <ShikiHighlighter
                 language="js"
@@ -304,7 +304,7 @@ export default function Taggly() {
               </div>
             </div>
 
-            <div>
+            <div className="overflow-x-auto min-w-full">
               <h3 className="text-lg font-semibold mb-4">Custom Div Example</h3>
               <ShikiHighlighter
                 code={`console.log("Hello Shiki!")`}
@@ -380,22 +380,17 @@ export default function Taggly() {
       {/* CTA */}
       <section className={`py-24 bg-gradient-to-r ${project.gradient.join(" ")} text-white`}>
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Development?</h2>
+          <h2 className="text-4xl font-bold mb-6">Explore Taggly's Future</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Experience the future of web development with Taggly's revolutionary approach to building fast, maintainable, and highly customizable applications.
+            Taggly is still a work-in-progress, but it has a lot to offer. Check it out on GitHub to follow its development.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              href={project.github}
+              className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
-              Get Started with Taggly
-            </a>
-            <a
-              href="#"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              Read Documentation
+              <Github size={20} />
+              View Source
             </a>
           </div>
         </div>
