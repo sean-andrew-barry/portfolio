@@ -7,10 +7,8 @@ export default function Blog() {
   const hasPosts = posts.length > 0;
 
   return (
-    <div className="p-8 max-w-3xl mx-auto">
-      <div className="pt-24">
-        <h1 className="text-4xl font-bold mb-6">Blog</h1>
-
+    <div className="">
+      <section className="pt-48 pb-24 text-white">
         {hasPosts ? (
           <ul className="space-y-6">
             {posts.sort((a, b) => b.date - a.date).map((post) => (
@@ -86,7 +84,7 @@ export default function Blog() {
             </div>
           </div>
         )}
-      </div>
+      </section>
     </div>
   );
 }
