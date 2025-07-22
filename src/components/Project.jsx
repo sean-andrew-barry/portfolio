@@ -5,8 +5,7 @@ export default function Project({ project, index }) {
   return (
     <div
       key={project.title}
-      className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-        }`}
+      className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
     >
       <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
         <div className={`relative group overflow-hidden rounded-2xl shadow-2xl ${project.bgColor} p-12`}>
