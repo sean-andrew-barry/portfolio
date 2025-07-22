@@ -96,7 +96,7 @@ export default function Navbar({ hasHero = false }) {
                 </NavLink>
                 {children && (
                   <div className="absolute left-0 mt-2 w-64 rounded-xl bg-white/95 backdrop-blur-md shadow-xl border-4 border-gray-200/50 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 z-50 overflow-hidden">
-                    {children.map(({ to: childTo, label: childLabel, gradient, bgColor, image, icon: ChildIcon, imageAlt }) => (
+                    {children.map(({ to: childTo, label: childLabel, gradient, image, icon: ChildIcon, imageAlt }) => (
                       <NavLink
                         key={childTo}
                         to={childTo}
