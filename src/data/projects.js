@@ -1,6 +1,7 @@
 import { Code, Dumbbell, Zap } from 'lucide-react';
 import BFBF from '/src/assets/images/be-fit-beyond-fifty-sunflower-logo.png';
 import Warble from '/src/assets/images/warble-logo.svg';
+import { identity } from './identity.js';
 
 export const projects = [
   {
@@ -25,7 +26,7 @@ export const projects = [
     tags: ['Custom Framework', 'JavaScript', 'Web Development', 'Performance'],
     link: '/projects/taggly',
     external: undefined,
-    github: 'https://github.com/sean-andrew-barry/taggly/',
+    github: `${identity.github}/taggly/`,
     gradient: ['from-purple-500', 'to-pink-600'],
     bgColor: 'bg-blue-50',
     years: '2022-Present',
@@ -40,7 +41,7 @@ export const projects = [
     tags: ['Programming Language', 'Compiler', 'Systems Programming'],
     link: '/projects/warble',
     external: undefined,
-    github: 'https://github.com/sean-andrew-barry/warble/',
+    github: `${identity.github}/warble/`,
     gradient: ['from-blue-500', 'to-indigo-600'],
     bgColor: 'bg-purple-50',
     years: '2023-Present',
