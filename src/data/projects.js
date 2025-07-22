@@ -6,7 +6,7 @@ import { identity } from './identity.js';
 export const projects = [
   {
     title: 'Be Fit Beyond Fifty',
-    description: 'A fully custom membership and course platform I\'ve built and maintained since 2018 as the sole full-stack engineer. Built from scratch to replace expensive SaaS solutions, saving over $12,000 annually while delivering a professional, unified user experience.',
+    description: 'A fully custom membership and course platform I\'ve built and maintained since 2018 as the sole full-stack engineer. Built from scratch to replace expensive SaaS solutions, saving my client lots of money, while delivering a professional, unified user experience.',
     image: BFBF,
     imageAlt: "Be Fit Beyond Fifty sunflower logo",
     icon: Dumbbell,
@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     title: 'Taggly',
-    description: 'A full-stack JavaScript web development framework I created as an alternative to React and Vue. Focuses on simplicity, performance, and developer experience with innovative approaches to component architecture and state management.',
+    description: 'A full-stack JavaScript web development framework I created as an alternative to frameworks like React or Vue.js. Focuses on simplicity, performance, and developer experience with innovative approaches to component architecture and state management.',
     icon: Code,
     tags: ['Custom Framework', 'JavaScript', 'Web Development', 'Performance'],
     link: '/projects/taggly',
