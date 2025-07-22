@@ -29,7 +29,6 @@ const navLinks = [
 
 export default function Navbar({ hasHero = false }) {
   const location = useLocation();
-  const isHome = location.pathname === '/';
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -96,13 +95,13 @@ export default function Navbar({ hasHero = false }) {
                   {label}
                 </NavLink>
                 {children && (
-                  <div className="absolute left-0 mt-2 w-64 rounded-xl bg-white/95 backdrop-blur-md shadow-xl border border-gray-200/50 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 z-50 overflow-hidden">
+                  <div className="absolute left-0 mt-2 w-64 rounded-xl bg-white/95 backdrop-blur-md shadow-xl border-4 border-gray-200/50 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 z-50 overflow-hidden">
                     {children.map(({ to: childTo, label: childLabel, gradient, bgColor, image, icon: ChildIcon, imageAlt }) => (
                       <NavLink
                         key={childTo}
                         to={childTo}
                         className={({ isActive }) => {
-                          if (isActive) return `flex items-center gap-3 px-6 py-4 text-sm font-medium whitespace-nowrap transition-all duration-150 bg-gradient-to-r ${gradient} text-white border-l-4 border-white/60`;
+                          if (isActive) return `flex items-center gap-3 px-6 py-4 text-sm font-medium whitespace-nowrap transition-all duration-150 bg-gradient-to-r ${gradient.join(" ")} text-white border-l-4 border-white/60`;
                           return `flex items-center gap-3 px-6 py-4 text-sm font-medium whitespace-nowrap transition-all duration-150 text-gray-700 hover:shadow-md hover:bg-gray-200`;
                         }}
                       >
