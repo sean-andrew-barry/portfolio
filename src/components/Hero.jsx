@@ -13,7 +13,7 @@ export default function Hero() {
       
       <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
         <div className="mb-8">
-          <div className="w-64 h-64 mx-auto mb-8 relative">
+          <div className="w-32 h-32 md:w-64 md:h-64 mx-auto mb-8 relative">
             <div className="w-full h-full rounded-full bg-gradient-to-r from-slate-700 to-slate-900 p-1 shadow-2xl">
               <img
                 src={Portrait}
@@ -67,7 +67,7 @@ export default function Hero() {
       </div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
         </div>
