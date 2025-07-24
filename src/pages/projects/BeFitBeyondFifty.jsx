@@ -1,4 +1,4 @@
-import { ExternalLink, Users, TrendingUp, Shield, Smartphone, DollarSign, Zap, Lock, Globe, Server, Database, Code, Lightbulb, Wrench, Heart } from 'lucide-react';
+import { ExternalLink, Users, Shield, DollarSign, Zap, Globe, Server, Database, Code, Lightbulb, Wrench, Heart } from 'lucide-react';
 import { projects } from '../../data/projects';
 import usePageTitle from '../../hooks/usePageTitle';
 
