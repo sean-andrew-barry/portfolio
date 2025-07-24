@@ -15,6 +15,12 @@ This repository contains the source code for my personal portfolio site built wi
 
 ## Getting Started
 
+Create the `.env` file, which you can copy from `.env.example`.
+
+```bash
+cp .env.example .env # then edit .env with real values
+```
+
 Install dependencies with npm:
 
 ```bash
