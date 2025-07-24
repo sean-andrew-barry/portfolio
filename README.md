@@ -1,5 +1,8 @@
 # Personal Portfolio
 
+[![Live Site](https://img.shields.io/badge/demo-online-brightgreen)](https://seanandrewbarry.com)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
 This repository contains the source code for my personal portfolio site built with [React](https://react.dev/) and [Vite](https://vitejs.dev/). The application showcases projects, a blog, and contact information using a modern React stack.
 
 ## Features
@@ -8,7 +11,7 @@ This repository contains the source code for my personal portfolio site built wi
 - **React Router** for client-side navigation between pages
 - **Tailwind CSS** for utility‑first styling
 - **Reusable components** for sections like the hero, skills list, projects, and contact form
-- **Dynamic blog posts** stored in `src/data/posts.js`
+- **Blog posts** stored in `src/data/posts.js`
 
 ## Getting Started
 
@@ -18,13 +21,13 @@ Install dependencies with npm:
 npm install
 ```
 
-Start the development server:
+Start the server:
 
 ```bash
-npm run dev
+npm run start
 ```
 
-Open `http://localhost:5173` in your browser to view the site.
+Open `http://localhost:5000` in your browser to view the site.
 
 Create an optimized production build:
 
@@ -51,7 +54,7 @@ public/          Static assets
 src/
   assets/        Images and media used in the site
   components/    Reusable React components
-  data/          Example blog post content
+  data/          Static data, such as blog post content
   layouts/       Layout wrappers for pages
   pages/         Route components (Home, About, Projects, Blog, Contact)
   index.css      Tailwind CSS entry point
