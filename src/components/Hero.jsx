@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
         <div className="mb-8">
           <div className="w-32 h-32 md:w-64 md:h-64 mx-auto mb-8 relative">
-            <div className="w-full h-full rounded-full bg-gradient-to-r from-slate-700 to-slate-900 p-1 shadow-2xl">
+            <div className="w-full h-full rounded-full p-1 shadow-2xl">
               <img
                 src={Portrait}
                 alt="Sean Barry portrait"
@@ -28,18 +28,14 @@ export default function Hero() {
           {identity.name}
         </h1>
         
-        <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">
-          Experienced Full-Stack Developer & Software Engineer
+        <p className="text-xl md:text-2xl text-gray-100 mb-4 max-w-3xl mx-auto">
+          Full-stack Developer & Computer Scientist
         </p>
 
-        <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-          I build high-performance web applications and innovative development tools, prioritizing efficiency, simplicity, and thoughtful design. I specialize in JavaScript and Node.js, with deep experience in custom frameworks, system architecture, and solving complex technical challenges.
+        <p className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
+          I'm a programmer with 10 years of experience innovating with software. I live for the joy of finding a simple and elegant solution to a complex problem. If there is a better way to do something, I have an obsessive need to find it.
         </p>
 
-        {/* <p className="text-lg md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto">
-          <em>If there is a solution to be found, I'll find it.</em>
-        </p> */}
-        
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
             to="/projects"
